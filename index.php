@@ -1044,7 +1044,7 @@
     <!-- Start Section Loader -->
     <section class="loading_overlay">
       <div class="loader_logo">
-        <img class="logo" src="app/assets/img/logo.svg" />
+        <img class="logo" src="https://www.youroaks.com/assets/oaks-loader.gif" />
       </div>
     </section>
     <!-- End. Loader -->
