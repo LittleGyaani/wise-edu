@@ -200,6 +200,13 @@ body.modal-open {
   overflow: auto;
 }
 
+.centered {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 50% !important;
+}
+
 #wrapper,
 #content {
   width: 100%;
@@ -5531,7 +5538,7 @@ header .navbar .navbar-collapse .nav_account.btn_demo3 .btn_sm_primary {
   banner_demo7
 -----------------------------*/
 .banner_demo7 {
-  background: #ffe7aa !important;
+  background: #b0e2ff !important; /*ffe7aa*/
   border-radius: 12px !important;
   margin-top: 5.625rem;
   padding-top: 0 !important;
@@ -5746,6 +5753,11 @@ header .navbar .navbar-collapse .nav_account.btn_demo3 .btn_sm_primary {
   background-color: rgba(88, 213, 211, 0.09);
   position: relative;
   height: 100%;
+  /* top: 15px; */
+}
+.workspace_title {
+  position: relative;
+  bottom: 35px;
 }
 .demo__workspace::before {
   content: "";
@@ -13249,6 +13261,7 @@ software_web
 .abo_company {
   position: relative;
   margin-top: -16rem;
+  margin-bottom: 0.5rem;
 }
 @media (max-width: 767px) {
   .abo_company {
@@ -13260,8 +13273,10 @@ software_web
   overflow: hidden;
   border-radius: 12px;
   padding: 2rem;
-  height: 530px;
-  min-height: 530px;
+  height: 400px;
+  min-height: auto;
+  /* height: 530px;
+  min-height: 530px; */
 }
 @media (max-width: 767px) {
   .abo_company .gq_item {
@@ -13270,7 +13285,7 @@ software_web
 }
 .abo_company .gq_item .title_sections {
   margin-bottom: 0;
-  margin-top: 9rem;
+  /* margin-top: 9rem; */
 }
 .abo_company .gq_item .title_sections p {
   margin-bottom: 0;

@@ -49,11 +49,11 @@
             <div class="row">
               <div class="col-md-5 my-auto">
                 <div class="banner_title">
-                  <h1>We Make Digital Beautiful.</h1>
+                  <h1>Discover the perfect <strong>University</strong> for you.</h1>
                   <p>
-                    These are the words we live by in everything we do.
+                    We make it simple to find, apply & enroll at universities abroad.
                   </p>
-                  <a href="#" class="btn btn_md_primary rounded-8 bg-blue c-white"><div><span style="--move:0; --rotate:1; --part:1;">D</span><span style="--move:0.25; --rotate:0.75; --part:1;">i</span><span style="--move:0.5; --rotate:0.5; --part:1;">s</span><span style="--move:0.75; --rotate:0.25; --part:1;">c</span><span style="--move:0.75; --rotate:0.25; --part:-1;">o</span><span style="--move:0.5; --rotate:0.5; --part:-1;">v</span><span style="--move:0.25; --rotate:0.75; --part:-1;">e</span><span style="--move:0; --rotate:1; --part:-1;">r</span></div></a>
+                  <a href="#" class="btn btn_md_primary rounded-8 bg-blue c-white"><div>Find a Program</div></a>
                   <div class="margin-t-8">
                     <button type="button" class="btn btn_video" data-toggle="modal" data-src="https://www.youtube.com/embed/VvHoHw5AWTk" data-target="#mdllVideo">
                       <div class="scale rounded-circle play_video">
@@ -65,7 +65,7 @@
                 </div>
               </div>
               <div class="col-md-7">
-                <img class="ill_05" src="app/assets/img/education/graduation.svg"/>
+                <img class="ill_05" src="https://ouch-cdn.icons8.com/preview/281/94c91ae7-7c5d-4817-a79f-a543c364c03c.png" />
               </div>
             </div>
           </div>
@@ -77,40 +77,36 @@
             <div class="row">
               <div class="col-lg-4 emo mb-4 mb-lg-0">
                 <div class="gq_item bg-blue">
-                  <span class="d-block c-white font-s-16">Digital Creative Agency</span>
+                  <!-- <span class="d-block c-white font-s-16">Search.</span> -->
                   <div class="title_sections">
-                    <img class="mb-3" src="../../assets/img/gif/waving_hand.gif" width="60">
-                    <h2 class="c-white">A Brand-First Creative Agency</h2>
+                    <img class="img-fluid mb-3 centered" src="https://img.icons8.com/bubbles/344/graduation-cap.png" />
+                    <h2 class="c-white">University & Program Search</h2>
                     <p class="c-white">
-                      What does that mean? It means that all our solutions
-                      begin with brand research and all of our work is catered
-                      to enhance and work with the brand at hand.
+                      Find the right program for you and your career aspirations.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="col-lg-4 emo mb-4 mb-lg-0">
                 <div class="gq_item ill_item">
-                  <span class="d-block c-dark font-s-16">AMC Networks</span>
-                  <img class="img-fluid ill_sec" src="../../assets/img/agency/Security.png">
+                  <!-- <span class="d-block c-dark font-s-16">Explore.</span> -->
+                  <img class="img-fluid mb-3 centered" src="https://img.icons8.com/bubbles/344/rescan-document.png" />
                   <div class="title_sections">
-                    <h2 class="c-dark">Elevating An Iconic Network</h2>
+                    <h2 class="c-dark">Application Guidance</h2>
                     <p class="c-gray">
-                      Blandit libero volutpat sed cras ornare arcu dui vivamus
-                      arcu.
+                      We'll get you to the right place to start your application.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="col-lg-4 emo">
-                <div class="gq_item ill_item">
-                  <span class="d-block c-dark font-s-16">Musicfolio</span>
-                  <img class="img-fluid ill_sec" src="../../assets/img/agency/Update.png">
+                <div class="gq_item ill_item bg-sky">
+                  <!-- <span class="d-block c-dark font-s-16">Apply.</span> -->
+                  <img class="img-fluid mb-3 centered" src="https://img.icons8.com/bubbles/344/passport.png" />
                   <div class="title_sections">
-                    <h2 class="c-dark">Digital Music Composition</h2>
+                    <h2 class="c-dark">Visa & Travel Assistance</h2>
                     <p class="c-gray">
-                      Blandit libero volutpat sed cras ornare arcu dui vivamus
-                      arcu.
+                      Get help after application, all the way to your first day at university.
                     </p>
                   </div>
                 </div>
@@ -124,13 +120,13 @@
           <div class="container">
             <div class="row">
               <div class="col-md-8 col-lg-6">
-                <div class="banner_title">
+                <div class="banner_title workspace_title">
                   <h1>
-                    Automagically Find Your <span class="c-orange-red">Perfect</span> Office
+                    Planning for a <span class="c-orange-red">Brighter & Better</span> Future?
                   </h1>
                   <p>
-                    Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in. Ut venenatis tellus in
-                    metus vulputate eu scelerisque felis imperdiet.
+                    Our overseas consultancy service focuses on the education especially MBBS, B-TECH, Management, ETC. degree abroad for aspiring Indian students in top universities or colleges in countries like USA,
+                    UK, Ukraine, Newzealand, Canada, France, Poland, Australia, Singapore, etc.
                   </p>
 
                 </div>
@@ -141,7 +137,7 @@
                     <div class="block__srarch">
                       <div class="title__search">
                         <h2>One World. One Search</h2>
-                        <p>Find Place that suits for your needs, its easy</p>
+                        <p>Let's begin a new world of education, all together.</p>
                       </div>
                       <form class="form-row">
                         <div class="col-12">
@@ -1016,7 +1012,7 @@
       </svg>
     </div>
 
-    <!-- Purchase item -->
+    <!-- Website credit -->
     <a href="https://themeforest.net/item/rakon-html-landing-page-templates/27849521" target="_blank" class="rakon_purchase">
       <button type="button" class="btn btn_purch">
         <div class="icon">
