@@ -334,7 +334,7 @@
         <div class="nav_account btn_demo3">
         <button type="button" data-toggle="modal" data-target="#mdllLogin" class="btn btn_sm_primary opacity-1 sweep_letter scale sweep_top rounded-8">
             <div class="inside_item">
-            <span data-hover="Hello !">Sign In</span>
+            <span data-hover="Apply Now">Apply Now</span>
             </div>
         </button>
         </div>

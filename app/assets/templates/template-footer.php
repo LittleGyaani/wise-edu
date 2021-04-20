@@ -68,8 +68,9 @@
         <div class="col-12 text-center padding-t-4">
           <div class="copyright">
             <span>Copyright &copy; <?= Date('Y'); ?> <strong>WISE EDUCATION GROUP.</strong>
-              All Rights Reseved.</span>
-              <p>Beautifully Crafted with <i class="fa fa-heart heart fa-beat" aria-hidden="true"></i> by Little Gyaani.</p>
+              All Rights Reseved.
+              <p>Beautifully Crafted with <i class="fa fa-heart heart fa-beat" aria-hidden="true"></i> by <a href="https://wa.me/919853233951?text=I got your Contact from Wise Education Group Official Website" target="_blank" aria-label="Ping BRAHMA a.k.a Little Gyaani on WhatsApp" data-microtip-position="top" role="tooltip"><b>Little Gyaani</b></a>.</p>
+            </span>
           </div>
         </div>
       </div>

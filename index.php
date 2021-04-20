@@ -14,7 +14,7 @@
   include_once 'app/assets/templates/template-meta.php';
   ?>
 
-  <title>Wise Education - Your Studee Abroad Destination Partner &bull; Home</title>
+  <title>Wise Education - Your Study Abroad Destination Partner &bull; Home</title>
 
   <!-- Include Header Section -->
   <?php
@@ -51,15 +51,15 @@
                 <div class="banner_title">
                   <h1>Discover the perfect <strong>University</strong> for you.</h1>
                   <p>
-                    We make it simple to find, apply & enroll at universities abroad.
+                    We make it simple to <b><i>Find</i></b>, <b><i>Apply</i></b> & <b><i>Enroll</i></b> at <strong>Universities Abroad</strong>.
                   </p>
                   <a href="#" class="btn btn_md_primary rounded-8 bg-blue c-white"><div>Find a Program</div></a>
                   <div class="margin-t-8">
-                    <button type="button" class="btn btn_video" data-toggle="modal" data-src="https://www.youtube.com/embed/VvHoHw5AWTk" data-target="#mdllVideo">
+                    <button type="button" class="btn btn_video" data-toggle="modal" data-src="https://www.youtube.com/embed/ZqTnUbpwSZ4" data-target="#mdllVideo">
                       <div class="scale rounded-circle play_video">
                         <i class="tio play_outlined"></i>
                       </div>
-                      <span class="ml-3 font-s-16 c-dark">Show video</span>
+                      <span class="ml-3 font-s-16 c-dark"><strong>Why they became a Doctor</strong>?</span>
                     </button>
                   </div>
                 </div>
@@ -76,7 +76,7 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-4 emo mb-4 mb-lg-0">
-                <div class="gq_item bg-blue">
+                <div class="gq_item bg-green">
                   <!-- <span class="d-block c-white font-s-16">Search.</span> -->
                   <div class="title_sections">
                     <img class="img-fluid mb-3 centered" src="https://img.icons8.com/bubbles/344/graduation-cap.png" />
@@ -88,24 +88,24 @@
                 </div>
               </div>
               <div class="col-lg-4 emo mb-4 mb-lg-0">
-                <div class="gq_item ill_item">
+                <div class="gq_item ill_item bg-blue">
                   <!-- <span class="d-block c-dark font-s-16">Explore.</span> -->
                   <img class="img-fluid mb-3 centered" src="https://img.icons8.com/bubbles/344/rescan-document.png" />
                   <div class="title_sections">
-                    <h2 class="c-dark">Application Guidance</h2>
-                    <p class="c-gray">
+                    <h2 class="c-white">Application & Document Guide</h2>
+                    <p class="c-white">
                       We'll get you to the right place to start your application.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="col-lg-4 emo">
-                <div class="gq_item ill_item bg-sky">
+                <div class="gq_item ill_item bg-orange">
                   <!-- <span class="d-block c-dark font-s-16">Apply.</span> -->
                   <img class="img-fluid mb-3 centered" src="https://img.icons8.com/bubbles/344/passport.png" />
                   <div class="title_sections">
-                    <h2 class="c-dark">Visa & Travel Assistance</h2>
-                    <p class="c-gray">
+                    <h2 class="c-white">Accomodation & Visa Assistance</h2>
+                    <p class="c-white">
                       Get help after application, all the way to your first day at university.
                     </p>
                   </div>
@@ -119,7 +119,7 @@
         <section class="demo_1 demo__charity demo__workspace" id="Discover">
           <div class="container">
             <div class="row">
-              <div class="col-md-8 col-lg-6">
+              <div class="col-md-4 col-lg-6">
                 <div class="banner_title workspace_title">
                   <h1>
                     Planning for a <span class="c-orange-red">Brighter & Better</span> Future?
@@ -131,7 +131,7 @@
 
                 </div>
               </div>
-              <div class="col-lg-5 ml-auto">
+              <div class="col-lg-6 ml-auto">
                 <div class="row">
                   <div class="col-lg-10 ml-auto">
                     <div class="block__srarch">
@@ -140,18 +140,27 @@
                         <p>Let's begin a new world of education, all together.</p>
                       </div>
                       <form class="form-row">
-                        <div class="col-12">
+                        <div class="col-6">
                           <div class="form-group">
-                            <label>Type</label>
+                            <label>University Type</label>
                             <select class="form-control custom-select">
                               <option>Personal</option>
                               <option>Teams</option>
                             </select>
                           </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-6">
                           <div class="form-group">
-                            <label>Term</label>
+                            <label>Course Type</label>
+                            <select class="form-control custom-select">
+                              <option>Personal</option>
+                              <option>Teams</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label>Country</label>
                             <select class="form-control custom-select">
                               <option>Daily</option>
                               <option>Monthly</option>
@@ -159,9 +168,29 @@
                             </select>
                           </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-6">
                           <div class="form-group">
-                            <label>Space Type</label>
+                            <label>Location</label>
+                            <select class="form-control custom-select">
+                              <option>Daily</option>
+                              <option>Monthly</option>
+                              <option>Annual</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label>Course Option</label>
+                            <select class="form-control custom-select">
+                              <option>Daily</option>
+                              <option>Monthly</option>
+                              <option>Annual</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label>Program Type</label>
                             <select class="form-control custom-select">
                               <option>Creative Studio</option>
                               <option>Small Office</option>
@@ -170,10 +199,9 @@
                           </div>
                         </div>
                         <div class="col-12">
-                          <button type="button" class="btn btn__search">Start Your Search</button>
-                          <p class="text-center font-s-14 c-gray mt-3 mb-0">Call Us: <a href="tel:+44 20 3868 6470" class="c-blue">+44
-                              20 3868
-                              6470</a> </p>
+                          <button type="button" class="btn btn__search rounded-pill scale border-0 sweep_letter sweep_top">Start Your Search <i class="tio chevron_right mr-1 align-middle font-s-16"></i></button>
+                          <p class="text-center font-s-14 c-gray mt-3 mb-0"><i>Need any assistance?</i> <br/> Talk to Us: <a href="tel:+919439937117" class="c-blue">+91 9439937117</a> / <a href="tel:+380636908318" class="c-blue">+380 63 690 8318</a>
+                          </p>
                         </div>
                       </form>
                     </div>

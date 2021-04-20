@@ -18,6 +18,8 @@
 <link rel="stylesheet" href="app/assets/css/normalize.css" type="text/css" />
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+<!-- Microtip CSS -->
+<link rel="stylesheet" href="https://unpkg.com/microtip/microtip.css" />
 <!-- Custom CSS -->
 <link rel="stylesheet" href="app/assets/css/custom.css?v=1.0.0" type="text/css" />
 <!-- js for Brwoser -->
