@@ -1,6 +1,6 @@
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-light px-sm-0">
-    <a class="navbar-brand" href="workspace.html">
+    <a class="navbar-brand" href="./">
         <img class="logo" src="app/assets/img/logos/wise-education-logo.png" alt="WISE EDUCATION" />
     </a>
 
@@ -329,7 +329,6 @@
 
             </div>
         </li>
-
         </ul>
         <div class="nav_account btn_demo3">
         <button type="button" data-toggle="modal" data-target="#mdllLogin" class="btn btn_sm_primary opacity-1 sweep_letter scale sweep_top rounded-8">
@@ -338,6 +337,14 @@
             </div>
         </button>
         </div>
+        <!-- Search Bar -->
+        <!-- <div class="search-wrapper">
+            <div class="input-holder">
+                <input type="text" class="search-input" placeholder="Type to search" />
+                <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+            </div>
+            <span class="close" onclick="searchToggle(this, event);"></span>
+        </div> -->
     </div>
 </nav>
 <!-- End Navbar -->

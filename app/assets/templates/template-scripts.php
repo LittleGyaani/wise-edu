@@ -47,5 +47,24 @@
   <script src="app/assets/js/vendor/aos.js" type="text/javascript"></script>
   <!-- main file -->
   <script src="app/assets/js/main.js" type="text/javascript"></script>
+  <!-- scroll to anchro -->
+  <script src="app/assets/js/vendor/scrolltoanchor.js" type="text/javascript"></script>
 <!-- Script Section Ends -->
-
+<script>
+function searchToggle(obj, evt){
+    var container = $(obj).closest('.search-wrapper');
+        if(!container.hasClass('active')){
+            container.addClass('active');
+            evt.preventDefault();
+        }
+        else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+            container.removeClass('active');
+            // clear input
+            container.find('.search-input').val('');
+        }
+}
+const smoothScroll = new scrolltoanchor({
+  offset: 0, // integer in pixels from the top of window
+  duration: 1000, // integer in ms the scroll animation will go for
+});
+</script>
