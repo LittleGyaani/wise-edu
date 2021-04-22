@@ -8,6 +8,15 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule . index.php [L]
 
+<IfModule mod_rewrite.c>
+<Files ~ "\.(jpg|jpeg|png|gif|pdf|txt|bmp|mp4|mov|ogg|wmv|webm|flv|mpg|mp2|mpeg|mpe|mpv|m4p|m4v|mp3|wav|acc|oga|m4a)$">
+   order deny,allow
+   deny from all
+   Require local
+   allow from all
+</Files>
+</IfModule>
+
 <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
 Header set Access-Control-Allow-Origin "*"
 </FilesMatch>
