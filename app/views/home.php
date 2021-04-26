@@ -1,20 +1,20 @@
 <?php
-  //Calling Global Configuration
-  require_once 'app/config/global.config.php';
+//Calling Global Configuration
+require_once 'app/config/global.config.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  
+
   <!-- Include Meta Section -->
   <?php
   //Calling Meta Template
   include_once 'app/assets/templates/template-meta.php';
   ?>
 
-  <title>Wise Education - Your Study Abroad Destination Partner &bull; Home</title>
+  <title> <?= $title_constant; ?> &bull; Home</title>
 
   <!-- Include Header Section -->
   <?php
@@ -40,11 +40,11 @@
       </header>
       <!-- End header -->
 
-      <!-- Stat main -->
+      <!-- Start main -->
       <main data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-      
-      <!-- Start Banner Section -->
-      <section class="demo_1 banner_section banner_demo7">
+
+        <!-- Start Banner Section -->
+        <section class="demo_1 banner_section banner_demo7">
           <div class="container">
             <div class="row">
               <div class="col-md-5 my-auto">
@@ -53,7 +53,9 @@
                   <p>
                     We make it simple to <b><i>Find</i></b>, <b><i>Apply</i></b> & <b><i>Enroll</i></b> at <strong>Universities Abroad</strong>.
                   </p>
-                  <a href="#" class="btn btn_md_primary rounded-8 bg-blue c-white"><div>Find a Program</div></a>
+                  <a href="#" class="btn btn_md_primary rounded-8 bg-blue c-white">
+                    <div>Find a Program</div>
+                  </a>
                   <div class="margin-t-8">
                     <button type="button" class="btn btn_video" data-toggle="modal" data-src="https://www.youtube.com/embed/ZqTnUbpwSZ4" data-target="#mdllVideo">
                       <div class="scale rounded-circle play_video">
@@ -200,7 +202,7 @@
                         </div>
                         <div class="col-12">
                           <button type="button" class="btn btn__search rounded-pill scale border-0 sweep_letter sweep_top">Start Your Search <i class="tio chevron_right mr-1 align-middle font-s-16"></i></button>
-                          <p class="text-center font-s-14 c-gray mt-3 mb-0"><i>Need any assistance?</i> <br/> Talk to Us: <a href="tel:+919439937117" class="c-blue">+91 9439937117</a> / <a href="tel:+380636908318" class="c-blue">+380 63 690 8318</a>
+                          <p class="text-center font-s-14 c-gray mt-3 mb-0"><i>Need any assistance?</i> <br /> Talk to Us: <a href="tel:+919439937117" class="c-blue">+91 9439937117</a> / <a href="tel:+380636908318" class="c-blue">+380 63 690 8318</a>
                           </p>
                         </div>
                       </form>
@@ -605,25 +607,24 @@
               <div class="col-md-8 col-lg-5">
                 <div class="title_sections">
                   <div class="before_title">
-                    <span class="c-orange-red">Features</span>
+                    <span class="c-orange-red">Services</span>
                   </div>
-                  <h2>How does Rakon help your Coworking Space?</h2>
-                  <p> Rakon was developed to automate these everyday tasks and help other coworking spaces to run
-                    effortlessly.</p>
+                  <h2>Why MBBS Abroad?</h2>
+                  <p> We have a lot of options and services that you will be delightened of and interested in going study abroad.</p>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 col-lg-4 fa_item">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="0">
-                  <div class="media">
+                  <div class="icon--top">
                     <div class="ico">
-                      <i class="tio dashboard_outlined"></i>
+                      <i class="tio money"></i>
                     </div>
                     <div class="media-body">
-                      <div class="t_xt">
-                        <h4>Activity Dashboard</h4>
-                        <p>Have Full Control of Your Space</p>
+                      <div class="t_xt mt-4">
+                        <h4>Low Tution Fees</h4>
+                        <p>Studying MBBS abroad is way cheaper than studying in MBBS India with the fees being as low as ₹11.50 lakh for the entire MBBS course. The college fees will be paid in yearly instalments. Therefore, you don’t have to pay the entire fees at once.</p>
                       </div>
                     </div>
                   </div>
@@ -631,14 +632,14 @@
               </div>
               <div class="col-md-6 col-lg-4 fa_item">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="100">
-                  <div class="media">
-                    <div class="ico">
-                      <i class="tio face_id"></i>
+                  <div class="icon--top">
+                    <div class="ico icon--top">
+                      <i class="tio wallet_outlined"></i>
                     </div>
                     <div class="media-body">
-                      <div class="t_xt">
-                        <h4>White-Label Customization</h4>
-                        <p>Add Your Brand</p>
+                      <div class="t_xt mt-4">
+                        <h4>No Donation</h4>
+                        <p>Apart from the low fee structure, there will be no donation for studying MBBS abroad which is not the case for Indian private colleges. That is right, you will get MBBS admission without any donation.</p>
                       </div>
                     </div>
                   </div>
@@ -646,14 +647,14 @@
               </div>
               <div class="col-md-6 col-lg-4 fa_item">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="200">
-                  <div class="media">
+                  <div class="icon--top">
                     <div class="ico">
-                      <i class="tio account_square_outlined"></i>
+                      <i class="tio top_security_outlined"></i>
                     </div>
                     <div class="media-body">
-                      <div class="t_xt">
-                        <h4>Member Profiles</h4>
-                        <p>Know Your Members</p>
+                      <div class="t_xt mt-4">
+                        <h4>MCI and WHO approved Medical Universities</h4>
+                        <p>All Medical Universities are MCI and WHO approved and also approved by their respective national regulator of education, the student will be eligible to practice in India or any other country subject to fulfilment of the eligibility criteria.</p>
                       </div>
                     </div>
                   </div>
@@ -661,14 +662,14 @@
               </div>
               <div class="col-md-6 col-lg-4 fa_item">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="0">
-                  <div class="media">
+                  <div class="icon--top">
                     <div class="ico">
-                      <i class="tio file_text_outlined"></i>
+                      <i class="tio mic_outlined"></i>
                     </div>
                     <div class="media-body">
-                      <div class="t_xt">
-                        <h4>Plans Setup</h4>
-                        <p>Create Highly Customizable Plans</p>
+                      <div class="t_xt mt-4">
+                        <h4>Medium of Instruction is English</h4>
+                        <p>The medium of instruction will be English for MBBS in Kyrgyzstan, Philippines, Bangladesh, Russia, Ukraine and China. Teachers/lecturers will be adept in the language so as to facilitate learning. Students need not learn the local language for classroom learning.</p>
                       </div>
                     </div>
                   </div>
@@ -676,44 +677,44 @@
               </div>
               <div class="col-md-6 col-lg-4 fa_item">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="100">
-                  <div class="media">
+                  <div class="icon--top">
+                    <div class="ico">
+                      <i class="tio flight"></i>
+                    </div>
+                    <div class="media-body">
+                      <div class="t_xt mt-4">
+                        <h4>Global Job Opportunities</h4>
+                        <p>MBBS abroad opens the doors of the world for you. You can practice anywhere in the world after completing your MBBS degree and complying with the eligibility criteria of the country of your choice where you wish to practice.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 fa_item">
+                <div class="inside__zoop" data-aos="fade-up" data-aos-delay="200">
+                  <div class="icon--top">
+                    <div class="ico">
+                      <i class="tio award_outlined"></i>
+                    </div>
+                    <div class="media-body">
+                      <div class="t_xt mt-4">
+                        <h4>Advance Academic Curriculum</h4>
+                        <p>The structure of the MBBS abroad is based on the latest and updated trends, findings and the most advanced curriculum present currently in the world. This means that the students are fed with the best and latest knowledge which benefits them in their career ahead.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 fa_item">
+                <div class="inside__zoop" data-aos="fade-up" data-aos-delay="0">
+                  <div class="icon--top">
                     <div class="ico">
                       <i class="tio credit_card_outlined"></i>
                     </div>
                     <div class="media-body">
-                      <div class="t_xt">
-                        <h4>Billing & Payments</h4>
-                        <p>Keep your Billings in Check</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 fa_item">
-                <div class="inside__zoop" data-aos="fade-up" data-aos-delay="200">
-                  <div class="media">
-                    <div class="ico">
-                      <i class="tio user_big_outlined"></i>
-                    </div>
-                    <div class="media-body">
-                      <div class="t_xt">
-                        <h4>Member View</h4>
-                        <p>Track Check-Ins</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 fa_item">
-                <div class="inside__zoop" data-aos="fade-up" data-aos-delay="0">
-                  <div class="media">
-                    <div class="ico">
-                      <i class="tio earth_west"></i>
-                    </div>
-                    <div class="media-body">
-                      <div class="t_xt">
-                        <h4>Spaces Mapping</h4>
-                        <p>Open Multiple Locations</p>
+                      <div class="t_xt mt-4">
+                        <h4>No Hidden Cost</h4>
+                        <p>The dealings and consulting provided by <b>Wise Education Group</b> is 100% genuine. We retain the trust of our clients and have emerged as the leading institution. We guarantee 100% satisfaction from our services. There will be no hidden information or cost when you deal with <b>Wise Education Group</b>.</p>
                       </div>
                     </div>
                   </div>
@@ -721,14 +722,29 @@
               </div>
               <div class="col-md-6 col-lg-4 fa_item">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="100">
-                  <div class="media">
+                  <div class="icon--top">
                     <div class="ico">
-                      <i class="tio chart_bar_1"></i>
+                      <i class="tio fastfood"></i>
                     </div>
                     <div class="media-body">
-                      <div class="t_xt">
-                        <h4>Business Analytics</h4>
-                        <p>Learn from Your Data</p>
+                      <div class="t_xt mt-4">
+                        <h4>Indian Food Available</h4>
+                        <p>With so many students studying MBBS abroad, Indian food is now easily accessible for the students via Indian mess. There are many restaurants providing Indian food, both vegetarian and non-vegetarian.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 fa_item">
+                <div class="inside__zoop" data-aos="fade-up" data-aos-delay="100">
+                  <div class="icon--top">
+                    <div class="ico">
+                      <i class="tio user_big_outlined"></i>
+                    </div>
+                    <div class="media-body">
+                      <div class="t_xt mt-4">
+                        <h4>Indian Representative</h4>
+                        <p><b>Wise Education Group</b> has its own office in Ukraine, Russia &amp; Armenia. Our representative lives there permanently and helps students out whenever the need arises. We also have our Indian partners at every university where we send students to. We guide students for the full duration of their stay abroad.</p>
                       </div>
                     </div>
                   </div>

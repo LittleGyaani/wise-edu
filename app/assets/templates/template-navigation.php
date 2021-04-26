@@ -17,7 +17,7 @@
 
         <li class="nav-item dropdown dropdown-hover">
             <a class="nav-link dropdown-toggle dropdown_menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Pages
+            Programs
 
             <div class="icon_arrow">
                 <i class="tio chevron_right"></i>
@@ -79,14 +79,6 @@
 
             </div>
         </li>
-
-        <li class="nav-item">
-            <a class="nav-link" href="#Offices">Offices</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#Features">Features</a>
-        </li>
-
         <li class="nav-item dropdown dropdown-hover dropdown_full position-static">
             <a class="nav-link dropdown-toggle dropdown_menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             elements

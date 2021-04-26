@@ -59,7 +59,7 @@ $router = new AltoRouter();
 //* Varaible Values * //
 
 //Variable Assigns
-$title_constant = "Travel the World!";
+$title_constant = "Wise Education - Your Study Abroad Destination Partner";
 
 $server_protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"], 0, 5)) == 'https' ? 'https' : 'http';
 

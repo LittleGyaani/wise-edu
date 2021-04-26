@@ -4,16 +4,17 @@
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="item_about">
-              <a class="logo" href="workspace.html">
-                <img src="app/assets/img/logo-o.png" alt="" />
+              <a class="logo" href="./">
+                <img src="app/assets/img/logos/wise-education-logo.png" alt="Wise Education Logo" />
               </a>
               <p>
-                Rakon is a simple, elegant, and secure way to build your
-                bitcoin and crypto portfolio.
+                <b>Wise Education</b>, a premier organization in India was founded in 2014 with a vision to provide quality, economically viable education abroad. Wise Education takes great pride in being the pioneer organization to provide admission to worldwide.
               </p>
               <div class="address">
-                <span>1989 Don Jackson Lane</span>
-                <span>Call us: <a href="tel:8089569599">808-956-9599</a></span>
+                <span><i class="tio send"></i> Locate us: Plot No. : 191/A, Kharavela Nagar, Unit-3, Bhubaneswar, Odisha, 751001</span>
+                <span>Call us: <a href="tel:+919439937117">+91 9439 937 117</a> / <a href="tel:+380636908318">+38 0636 908 318</a></span>
+                <span>Office hours: 09:00AM - 09:00PM (IST, MON-SAT)</span>
+                <span>Email us: <a href="mailto:info@wiseeducation.in">info@wiseeducation.in</a></span>
               </div>
             </div>
           </div>
