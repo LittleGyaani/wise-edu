@@ -40,25 +40,28 @@ $router->map('GET', '/locations', __DIR__ . '/app/views/locations.php', 'all-loc
 $router->map('GET', '/universities', __DIR__ . '/app/views/universities.php', 'all-universities');
 
 //Country Details Route
-$router->map('GET', '/country/', __DIR__ . '/app/views/country-details.php', 'country-details');
+$router->map('GET', '/country/[**:country_alias]', __DIR__ . '/app/views/country-details.php', 'country-details');
 
 //Location Details Route
-$router->map('GET', '/location/', __DIR__ . '/app/views/location-details.php', 'location-details');
+$router->map('GET', '/location/[**:location_alias]', __DIR__ . '/app/views/location-details.php', 'location-details');
 
 //University Details Route
-$router->map('GET', '/university/', __DIR__ . '/app/views/university-details.php', 'university-details');
+$router->map('GET', '/university/[**:university_alias]', __DIR__ . '/app/views/university-details.php', 'university-details');
 
 //All Programs Route
 $router->map('GET', '/programs', __DIR__ . '/app/views/programs.php', 'all-programs');
 
 //Program Details Route
-$router->map('GET', '/program/', __DIR__ . '/app/views/program-details.php', 'program-details');
+$router->map('GET', '/program/[**:program_alias]', __DIR__ . '/app/views/program-details.php', 'program-details');
 
 //About Us Page Route
 $router->map('GET', '/site/about', __DIR__ . '/app/views/about-us.php','about');
 
 //Contact Us Page Route
 $router->map( 'GET', '/site/contact', __DIR__ . '/app/views/contact-us.php','contact-us');
+
+//404 error
+$router->map('GET', '/404-error', __DIR__ . '/app/views/errors/error-404.php', 'error-404');
 
 
 //Match Routes
@@ -70,5 +73,5 @@ if($match) {
 }
 else {
   header("HTTP/1.0 404 Not Found");
-  require 'app/views/errors/error-404.php';
+  // require 'app/views/errors/error-404.php';
 }

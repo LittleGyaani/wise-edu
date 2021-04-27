@@ -1,27 +1,27 @@
 
 <!-- Header Section -->
 <!-- favicon -->
-<link rel="shortcut icon" href="app/assets/img/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<?= $base_URI; ?>/app/assets/img/favicon.ico" type="image/x-icon" />
 <!-- Bootstrap 4.5 -->
-<link rel="stylesheet" href="app/assets/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="<?= $base_URI; ?>/app/assets/css/bootstrap.min.css" type="text/css" />
 <!-- animate -->
-<link rel="stylesheet" href="app/assets/css/animate.css" type="text/css" />
+<link rel="stylesheet" href="<?= $base_URI; ?>/app/assets/css/animate.css" type="text/css" />
 <!-- Swiper -->
-<link rel="stylesheet" href="app/assets/css/swiper.min.css" />
+<link rel="stylesheet" href="<?= $base_URI; ?>/app/assets/css/swiper.min.css" />
 <!-- aos -->
-<link rel="stylesheet" href="app/assets/css/aos.css" type="text/css" />
+<link rel="stylesheet" href="<?= $base_URI; ?>/app/assets/css/aos.css" type="text/css" />
 <!-- icons -->
-<link rel="stylesheet" href="app/assets/css/icons.css" type="text/css" />
+<link rel="stylesheet" href="<?= $base_URI; ?>/app/assets/css/icons.css" type="text/css" />
 <!-- Main css -->
-<link rel="stylesheet" href="app/assets/css/main.css" type="text/css" />
+<link rel="stylesheet" href="<?= $base_URI; ?>/app/assets/css/main.css" type="text/css" />
 <!-- Normalize CSS -->
-<link rel="stylesheet" href="app/assets/css/normalize.css" type="text/css" />
+<link rel="stylesheet" href="<?= $base_URI; ?>/app/assets/css/normalize.css" type="text/css" />
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 <!-- Microtip CSS -->
 <link rel="stylesheet" href="https://unpkg.com/microtip/microtip.css" />
 <!-- Custom CSS -->
-<link rel="stylesheet" href="app/assets/css/custom.css?v=1.0.0" type="text/css" />
+<link rel="stylesheet" href="<?= $base_URI; ?>/app/assets/css/custom.css?v=1.0.0" type="text/css" />
 <!-- js for Brwoser -->
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

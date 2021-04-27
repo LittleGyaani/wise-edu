@@ -1,7 +1,7 @@
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-light px-sm-0">
     <a class="navbar-brand" href="./">
-        <img class="logo" src="app/assets/img/logos/wise-education-logo.png" alt="WISE EDUCATION" />
+        <img class="logo" src="<?= $base_URI; ?>/app/assets/img/logos/wise-education-logo.png" alt="WISE EDUCATION" />
     </a>
 
     <button class="navbar-toggler menu ripplemenu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

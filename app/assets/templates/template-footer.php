@@ -1,11 +1,11 @@
     <!-- Start Footer -->
-    <footer class="defalut-footer light padding-py-12 footer__workspace">
+    <footer class="defalut-footer light padding-py-12 footer__workspace bg-grey">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="item_about">
               <a class="logo" href="./">
-                <img src="app/assets/img/logos/wise-education-logo.png" alt="Wise Education Logo" />
+                <img src="<?= $base_URI; ?>/app/assets/img/logos/wise-education-logo.png" alt="Wise Education Logo" />
               </a>
               <p>
                 <b>Wise Education</b>, a premier organization in India was founded in 2014 with a vision to provide quality, economically viable education abroad. Wise Education takes great pride in being the pioneer organization to provide admission to worldwide.
@@ -54,6 +54,12 @@
                 </div>
               </form>
             </div>
+            <a href="#Testimonial" class="btn-social color-instagram border-0 mr-2">
+              <i class="tio instagram"></i>
+            </a>
+            <a href="#Testimonial" class="btn-social color-behance border-0  mr-2">
+              <i class="tio behance"></i>
+            </a>
           </div>
         </div>
         <div class="row">

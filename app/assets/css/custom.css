@@ -141,3 +141,85 @@
     left: 0px;
     top: 10px;
 }
+.card-info {
+    flex: 1 1;
+    background: aliceblue;
+    color: black;
+    /* max-width: 550px !important;
+    height: 350px; */
+    padding: 24px;
+    border-radius: 25px;
+    z-index: 1 !important;
+    top: 15px;
+    padding-left: 0px;
+    font-size: 22px;
+}
+
+@media (max-width: 767px) {
+    .single_blog {
+        width: 100% !important;
+    }
+    .sticky {
+    top: 95px !important;
+    }
+}
+
+@media (max-width: 767px){
+    .blog_slider .swiper-button-next, .blog_slider .swiper-button-prev {
+        display: flex;
+    }
+}
+html, body {
+    overflow-x: hidden !important;
+}
+
+.inf_ico {
+    height: 55px !important;
+    width: 55px !important;
+}
+.inf_sub {
+    margin-top: -5px !important;
+    font-weight: bolder;
+    line-height: 1rem;
+}
+div.scrollmenu {
+  background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    text-align: center;
+    height: 55px;
+    /* padding: 4px; */
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  border-bottom: 2px solid red;
+}
+div.scrollmenu a:active {
+  border-bottom: 2px solid yellow;
+}
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  margin-bottom: 6px;
+  z-index: 1;
+  -webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-ms-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
