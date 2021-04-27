@@ -64,7 +64,7 @@ if ($fetchUniversityInfo->num_rows === 0)
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-8 col-lg-8">
+                            <div class="col-md-7 col-lg-7">
                                 <div class="banner_title_inner">
                                     <div class="about_post">
                                         <span class="c_ategory">
@@ -74,22 +74,22 @@ if ($fetchUniversityInfo->num_rows === 0)
                                         <span class="dot"></span>
                                         <time>15min</time>
                                     </div>
-                                    <h1 class="margin-my-3 font-s-60" data-aos="fade-up" data-aos-delay="0">
+                                    <h1 class="margin-my-3 font-s-55" data-aos="fade-up" data-aos-delay="0">
                                         <?= $listAllUniversityInfo['we_univeristy_name']; ?>
                                     </h1>
                                     <h6 class="margin-my-3 font-s-30 red" data-aos="fade-up" data-aos-delay="0">
-                                        <mark>Explore whether this university is a fit for you.</mark>
+                                        <mark>Explore whether this university is fit for you.</mark>
                                     </h6>
                                     <div class="footer_content">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-lg-12 card-info">
+                            <div class="col-md-5 col-lg-5 card-info">
                                 <div class="row justify-content-center text-center">
                                     <div class="col-lg-12">
                                         <div class="title_sections_inner margin-b-5">
                                             <center>
-                                                <h2>University facts</h2>
+                                                <h2>University Facts</h2>
                                             </center>
                                         </div>
                                     </div>
@@ -99,13 +99,13 @@ if ($fetchUniversityInfo->num_rows === 0)
                                         <div class="item_auther item_feth">
                                             <div class="media">
                                                 <div class="icon_fr">
-                                                    <img class="inf_ico" src="https://img.icons8.com/color/344/university.png" height="25" width="25" />
+                                                    <img class="inf_ico" src="https://img.icons8.com/color/344/university.png" />
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="za_tzt">
                                                         <h5>Type</h5>
                                                         <p class="inf_sub">
-                                                            Public
+                                                            <?= $listAllUniversityInfo['we_university_data_university_type']; ?>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -116,13 +116,13 @@ if ($fetchUniversityInfo->num_rows === 0)
                                         <div class="item_auther item_feth">
                                             <div class="media">
                                                 <div class="icon_fr">
-                                                    <img class="inf_ico" src="https://img.icons8.com/color/344/university.png" height="25" width="25" />
+                                                    <img class="inf_ico" src="https://img.icons8.com/color/2x/courses.png" />
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="za_tzt">
-                                                        <h5>Type</h5>
+                                                        <h5>Course</h5>
                                                         <p class="inf_sub">
-                                                            Public
+                                                            <?= $listAllUniversityInfo['we_university_data_course_offered']; ?>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -133,13 +133,13 @@ if ($fetchUniversityInfo->num_rows === 0)
                                         <div class="item_auther item_feth">
                                             <div class="media">
                                                 <div class="icon_fr">
-                                                    <img class="inf_ico" src="https://img.icons8.com/color/344/university.png" height="25" width="25" />
+                                                    <img class="inf_ico" src="https://img.icons8.com/color/344/google-calendar--v1.png" />
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="za_tzt">
-                                                        <h5>Type</h5>
+                                                        <h5>Duration</h5>
                                                         <p class="inf_sub">
-                                                            Public
+                                                            <?= $listAllUniversityInfo['we_university_data_course_duration']; ?>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -150,13 +150,13 @@ if ($fetchUniversityInfo->num_rows === 0)
                                         <div class="item_auther item_feth">
                                             <div class="media">
                                                 <div class="icon_fr">
-                                                    <img class="inf_ico" src="https://img.icons8.com/color/344/university.png" height="25" width="25" />
+                                                    <img class="inf_ico" src="https://img.icons8.com/color/2x/translation.png" />
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="za_tzt">
-                                                        <h5>Type</h5>
+                                                        <h5>Language</h5>
                                                         <p class="inf_sub">
-                                                            Public
+                                                            <?= $listAllUniversityInfo['we_university_data_course_language']; ?>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -167,13 +167,13 @@ if ($fetchUniversityInfo->num_rows === 0)
                                         <div class="item_auther item_feth">
                                             <div class="media">
                                                 <div class="icon_fr">
-                                                    <img class="inf_ico" src="https://img.icons8.com/color/344/university.png" height="25" width="25" />
+                                                    <img class="inf_ico" src="https://img.icons8.com/officel/344/money.png" />
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="za_tzt">
-                                                        <h5>Type</h5>
+                                                        <h5>Fee</h5>
                                                         <p class="inf_sub">
-                                                            Public
+                                                            <?= $listAllUniversityInfo['we_university_data_course_fee']; ?>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -184,13 +184,13 @@ if ($fetchUniversityInfo->num_rows === 0)
                                         <div class="item_auther item_feth">
                                             <div class="media">
                                                 <div class="icon_fr">
-                                                    <img class="inf_ico" src="https://img.icons8.com/color/344/university.png" height="25" width="25" />
+                                                    <img class="inf_ico" src="https://img.icons8.com/color/344/skyscrapers.png" />
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="za_tzt">
-                                                        <h5>Type</h5>
+                                                        <h5>City</h5>
                                                         <p class="inf_sub">
-                                                            Public
+                                                            <?= $listAllUniversityInfo['we_location_name']; ?>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -205,187 +205,111 @@ if ($fetchUniversityInfo->num_rows === 0)
                 <!-- End banner_about -->
 
                 <div id="navbar" class="scrollmenu">
-                    <a href="#home">Home</a>
-                    <a href="#news">News</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#about">About</a>
-                    <a href="#support">Support</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#tools">Tools</a>
-                    <a href="#base">Base</a>
-                    <a href="#custom">Custom</a>
-                    <a href="#more">More</a>
-                    <a href="#logo">Logo</a>
-                    <a href="#friends">Friends</a>
-                    <a href="#partners">Partners</a>
-                    <a href="#people">People</a>
-                    <a href="#work">Work</a>
+                    <a href="#university-profile" class="scrollTo">University Profile</a>
+                    <a href="#degree-and-duration" class="scrollTo">Degree & Duration</a>
+                    <a href="#accommodation-facility" class="scrollTo">Accommodation Facility</a>
+                    <a href="#fee-structure" class="scrollTo">Fee Structure</a>
+                    <a href="#entry-requirement" class="scrollTo">Entry Requirement</a>
+                    <a href="#university-recognition" class="scrollTo">University Recognition</a>
                 </div>
 
 
                 <!-- Start content-Sblog -->
                 <section class="content-Sblog" data-sticky-container>
                     <div class="container">
+
+                        <div id="university-profile">
+                        </div>
                         <div class="row">
-                            <div class="col-lg-3">
-                                <div class="fixSide_scroll" data-sticky-for="1023" data-margin-top="100">
-                                    <div class="share_socail">
-                                        <div class="title">Share</div>
-
-                                        <button class="btn icon" data-toggle="tooltip" data-placement="right" title="Facebook" data-sharer="facebook" data-hashtag="Rakon" data-url="https://themeforest.net/item/rakon-html-landing-page-templates/27849521">
-                                            <i class="tio facebook"></i>
-                                        </button>
-
-                                        <button class="btn icon" data-toggle="tooltip" data-placement="right" title="Twitter" data-sharer="twitter" data-title="Checkout Rakon!" data-hashtags="theme, Rakon" data-url="https://themeforest.net/item/rakon-html-landing-page-templates/27849521">
-                                            <i class="tio twitter"></i>
-                                        </button>
-
-                                        <button class="btn icon" data-toggle="tooltip" data-placement="right" title="Whatsapp" data-sharer="whatsapp" data-title="Checkout Rakon!" data-url="https://themeforest.net/item/rakon-html-landing-page-templates/27849521">
-                                            <i class="tio whatsapp_outlined"></i>
-                                        </button>
-
-                                        <button class="btn icon" data-toggle="tooltip" data-placement="right" title="Telegram" data-sharer="telegram" data-title="Checkout Rakon!" data-url="https://themeforest.net/item/rakon-html-landing-page-templates/27849521" data-to="+44555-03564">
-                                            <i class="tio telegram"></i>
-                                        </button>
-
-                                        <button class="btn icon" data-toggle="tooltip" data-placement="right" title="Pinterest" data-sharer="pinterest" data-url="https://themeforest.net/item/rakon-html-landing-page-templates/27849521">
-                                            <i class="tio pinterest_circle"></i>
-                                        </button>
-
-                                        <button class="btn icon" data-toggle="tooltip" data-placement="right" title="skype" data-sharer="skype" data-url="https://themeforest.net/item/rakon-html-landing-page-templates/27849521" data-title="Checkout Rakon!">
-                                            <i class="tio skype"></i>
-                                        </button>
-
-                                    </div>
+                            <div class="col-lg-8 margin-t-4">
+                                <div class="body_content">
+                                    <h3 class="mn-title">University Profile</h3>
+                                    <p class="margin-b-3 clr-read"><?= $listAllUniversityInfo['we_university_profile']; ?></p>
                                 </div>
                             </div>
-                            <div class="col-lg-8">
-                                <div class="body_content">
-                                    <p class="margin-b-3">Many people don’t really know the difference between software architecture and
-                                        software design.
-                                        Even for developers, the line is often blurry and they might mix up elements of software
-                                        architecture patterns and design patterns. </p>
-                                    <h3>The Definition of Software Architecture</h3>
-                                    <p class="margin-b-3">In simple words, software architecture is the process of converting software
-                                        characteristics such
-                                        as flexibility, scalability, feasibility, reusability, and <mark>security into a structured
-                                            solution</mark> that
-                                        meets the technical and the business expectations. </p>
-                                    <h3>The Characteristics of Software Architecture</h3>
-                                    <p>
-                                        As explained, software characteristics describe the requirements and the expectations of a software
-                                        in operational and technical levels. Thus, when a product owner says they are competing in a rapidly
-                                        changing markets, and they should adapt their business model quickly. The software should be
-                                        “extendable, modular and <strong>maintainable</strong>” if a business deals with urgent requests
-                                        that need to be
-                                        completed successfully in the matter of time. As a software architect, you should note that the
-                                        performance and low fault tolerance, <u>scalability and reliability</u> are your key
-                                        characteristics. Now,
-                                        after defining the previous characteristics the business owner tells you that they have a limited
-                                        budget for that project, another characteristic
-                                    </p>
-                                    <p>comes up here which is <b>“the feasibility.”</b></p>
-                                    <p>Here you can find a full list of software characteristics, also known as “quality attributes,”
-                                        <a href="#">here.</a>
-                                    </p>
+                            <div class="col-lg-4 margin-t-4">
+                                <div class="image_grid">
+                                    <img class="img-fluid img_one" src="https://kslabs.online/demo/wise-edu/wp-content/uploads/2021/01/university-profile-2-scaled-800x700.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
 
-                                    <img class="img_md" src="../../assets/img/inner/00pxsd.jpg" alt="">
-                                    <p class="margin-b-3"><b>SOLID</b> refers to Single Responsibility, <mark>Open Closed</mark>, Liskov
-                                        substitution,
-                                        Interface
-                                        Segregation and
-                                        Dependency Inversion Principles.
-                                    </p>
-                                    <h3>Software Design</h3>
-                                    <p>While software architecture is responsible for the skeleton and the high-level
-                                        infrastructure of a
-                                        software, the software design is responsible for the code level design such as, what each module is
-                                        doing, the classes scope, and the functions purposes, etc.</p>
-                                    <ul>
-                                        <li>
-                                            <span class="c-dark">Single Responsibility Principle</span> means that each class has to have one
-                                            single purpose, a
-                                            responsibility and a reason to change.
-                                        </li>
-                                        <li>
-                                            <span class="c-dark">Open Closed Principle:</span>
-                                            a class should be open for extension, but closed for modification. In simple words, you should
-                                            be able to add more functionality to the class but do not edit current functions in a way that
-                                            breaks existing code that uses it
-                                        </li>
-                                    </ul>
-                                    <div class="cover_video">
-                                        <img src="../../assets/img/inner/un00640.jpg" alt="">
-                                        <div class="icon_played">
-                                            <button type="button" class="btn btn_video" data-toggle="modal" data-src="https://www.youtube.com/embed/VvHoHw5AWTk" data-target="#mdllVideo">
-                                                <div class="scale rounded-circle b play_video bg-red">
-                                                    <i class="tio play"></i>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <p class="margin-b-3"><b>SOLID</b> refers to Single Responsibility, <mark>Open Closed</mark>, Liskov
-                                        substitution,
-                                        Interface
-                                        Segregation and
-                                        Dependency Inversion Principles.
-                                    </p>
-                                    <p class="txt_quotation">
-                                        Thanks for reading! If you are interested in machine learning (or just want to understand what it
-                                        is), check out my Machine Learning is Fun! series too.
-                                    </p>
+                        <div id="degree-and-duration">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 margin-t-4">
+                                <div class="image_grid">
+                                    <img class="img-fluid img_one" src="https://kslabs.online/demo/wise-edu/wp-content/uploads/2021/01/degree-duration-scaled-500x550.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 margin-t-4">
+                                <div class="body_content">
+                                    <h3 class="mn-title">Degree & Duration</h3>
+                                    <p class="margin-b-3 clr-read"><?= $listAllUniversityInfo['we_university_degree_duration']; ?></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="accommodation-facility">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 margin-t-4">
+                                <div class="body_content">
+                                    <h3 class="mn-title">Accommodation Facility</h3>
+                                    <p class="margin-b-3 clr-read"><?= $listAllUniversityInfo['we_university_accommodation']; ?></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="image_grid">
+                                    <img class="img-fluid img_one" src="https://kslabs.online/demo/wise-edu/wp-content/uploads/2021/01/accomodation-scaled-800x850.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="fee-structure"></div>
+                        <div class="row">
+                            <div class="col-lg-4 margin-t-12">
+                                <div class="image_grid">
+                                    <img class="img-fluid img_one" src="https://ouch-cdn2.icons8.com/U6ACOH1t4TK7cw2vvWtNo6C3aVd93JpZw3g7LgHfMZA/rs:fit:1216:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNjky/Lzc2YWQzNGQ4LWIx/NzEtNDM0YS1iM2Fj/LWE3NjI5YmM0NGMw/Mi5zdmc.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 margin-t-4">
+                                <div class="body_content">
+                                    <h3 class="mn-title">Fee Structure</h3>
+                                    <p class="margin-b-3 clr-read"><?= $listAllUniversityInfo['we_university_fee_structure']; ?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="entry-requirement"></div>
+                        <div class="row">
+                            <div class="col-lg-8 margin-t-8">
+                                <div class="body_content">
+                                    <h3 class="mn-title">Entry Requirement</h3>
+                                    <p class="margin-b-3 clr-read"><?= $listAllUniversityInfo['we_university_entry_requirement']; ?></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 margin-t-14">
+                                <div class="image_grid">
+                                    <img class="img-fluid img_one" src="https://kslabs.online/demo/wise-edu/wp-content/uploads/2021/01/entry-requirements-scaled-800x850.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="university-recognition"></div>
+                        <div class="row">
+                            <div class="col-lg-4 margin-t-4">
+                                <div class="image_grid">
+                                    <img class="img-fluid img_one" src="https://kslabs.online/demo/wise-edu/wp-content/uploads/2021/01/recognization-2-scaled-400x450.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 margin-t-8">
+                                <div class="body_content">
+                                    <h3 class="mn-title">University Recognition</h3>
+                                    <p class="margin-b-3 clr-read"><?= $listAllUniversityInfo['we_university_recognition']; ?></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- End. content-Sblog -->
-                <!-- Start section_tag_auther -->
-                <section class="section_tag_auther">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-5 offset-lg-3">
-                                <div class="box_tags_psot">
-                                    <h4>Tags</h4>
-                                    <a href="" class="btn">Design</a>
-                                    <a href="" class="btn">Developer</a>
-                                    <a href="" class="btn">Product Design</a>
-                                </div>
-                            </div>
-                            <div class="col-lg-9 offset-lg-3">
-                                <div class="block_auther_post margin-t-5">
-                                    <div class="row">
-                                        <div class="col-lg-7">
-                                            <div class="media">
-                                                <img class="img_person" src="../../assets/img/persons/24.jpg" alt="">
-                                                <div class="media-body">
-                                                    <div class="txt">
-                                                        <h4>Rose Schaefer</h4>
-                                                        <p>I help fin-tech digital product teams to create amazing experiences by crafting top-level
-                                                            UI/UX.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 my-auto ml-auto text-lg-right">
-                                            <a href="#Testimonial" class="btn-social color-behance border-0  mr-2">
-                                                <i class="tio behance"></i>
-                                            </a>
-                                            <a href="#Testimonial" class="btn-social color-instagram border-0 mr-2">
-                                                <i class="tio instagram"></i>
-                                            </a>
-                                            <a href="#Testimonial" class="btn-social color-twitter border-0  mr-2">
-                                                <i class="tio twitter"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- End. section_tag_auther -->
-
 
                 <!-- Start blog_masonry -->
                 <section class="blog_masonry three_column height_fixed padding-t-10">
@@ -519,130 +443,7 @@ if ($fetchUniversityInfo->num_rows === 0)
 
                 <!-- Start dividar -->
                 <section class="dividar margin-t-12"></section>
-                <!-- End. dividar -->
-
-                <!-- Start sec_comments -->
-                <section class="sec_comments padding-py-12" id="comment">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-7">
-                                <div class="title_commnt">
-                                    <h2>3 Commtents</h2>
-                                </div>
-                                <div class="body_commnt">
-                                    <div class="item_commnt">
-                                        <div class="media">
-                                            <img class="at_img" src="../../assets/img/persons/default.png" alt="">
-                                            <div class="media-body">
-                                                <div class="txt">
-                                                    <h3>Lakia Rogers</h3>
-                                                    <span class="date">2 days ago</span>
-                                                    <p class="content">
-                                                        Hey Sascha, good addition. The Whole servitization is another development that is causing
-                                                        the shift. ☝️
-                                                    </p>
-                                                    <a href="#addcomment" class="btn_repy">Reply</a>
-                                                </div>
-
-                                                <div class="item_commnt">
-                                                    <div class="media">
-                                                        <img class="at_img" src="../../assets/img/persons/24.jpg" alt="">
-                                                        <div class="media-body">
-                                                            <div class="txt">
-                                                                <h3>Paul Brasseur</h3>
-                                                                <span class="date">2 days ago</span>
-                                                                <p class="content">
-                                                                    Just wanna thank you guys for this fabulous WordPress theme and your post. 🙂
-                                                                </p>
-                                                                <a href="#addcomment" class="btn_repy">Reply</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item_commnt">
-                                        <div class="media">
-                                            <img class="at_img" src="../../assets/img/persons/06.png" alt="">
-                                            <div class="media-body">
-                                                <div class="txt">
-                                                    <h3>Chad Faircloth</h3>
-                                                    <span class="date">2 days ago</span>
-                                                    <p class="content">
-                                                        Hey Sascha, good addition. The Whole servitization is another development that is causing
-                                                        the shift. ☝️
-                                                    </p>
-                                                    <a href="#addcomment" class="btn_repy">Reply</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="form_comment  padding-t-10">
-                                    <div class="row" id="addcomment">
-                                        <div class="col-12">
-                                            <div class="title_sections">
-                                                <h2>Post a comment</h2>
-                                                <p>Your email address will not be published.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-11">
-                                            <div class="section_contact_five contact_six ml-auto">
-                                                <div class="form_cc_four">
-                                                    <form action="" class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <label>Email address</label>
-                                                                <input type="email" class="form-control" placeholder="ex. john@mail.com">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <label>Full Name</label>
-                                                                <input type="text" class="form-control" placeholder="ex. John Doe">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <label>Leave a Reply</label>
-                                                                <textarea class="form-control" rows="7" placeholder="Write your comment here..."></textarea>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-12">
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                                <label class="custom-control-label pl-1 c-gray" for="customCheck1">Save my name, and
-                                                                    email
-                                                                    in this browser for the next time I comment.</label>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-12 d-md-flex justify-content-between margin-t-3">
-                                                            <a href="" class="btn btn_md_primary bg-red rounded-8 c-white h-fit-content">
-                                                                Post Commtent
-                                                            </a>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- End. sec_comments -->
-
+                <!-- End. divider -->
 
             </main>
         </div>

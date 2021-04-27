@@ -143,16 +143,16 @@
 }
 .card-info {
     flex: 1 1;
-    background: aliceblue;
+    background: white;
     color: black;
     /* max-width: 550px !important;
     height: 350px; */
     padding: 24px;
-    border-radius: 25px;
+    border-radius: 10px;
     z-index: 1 !important;
-    top: 15px;
+    /* top: 15px; */
     padding-left: 0px;
-    font-size: 22px;
+    font-size: 17px;
 }
 
 @media (max-width: 767px) {
@@ -178,9 +178,9 @@ html, body {
     width: 55px !important;
 }
 .inf_sub {
-    margin-top: -5px !important;
+    margin-top: -7px !important;
     font-weight: bolder;
-    line-height: 1rem;
+    line-height: 1.5rem;
 }
 div.scrollmenu {
   background-color: #333;
@@ -222,4 +222,24 @@ transition: all 0.3s;
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 60px;
+}
+
+.header-nav-center {
+    background: aliceblue;
+}
+
+.mn-title:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 6px;
+    background: #fde428;
+    border-radius: 3px;
+    margin: 4px 0 0;
+}
+
+.clr-read {
+    font-size: 15px !important;
+    text-align: justify !important;
+    -webkit-user-modify: read-only;
 }

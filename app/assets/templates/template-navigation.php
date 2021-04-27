@@ -1,6 +1,6 @@
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-light px-sm-0">
-    <a class="navbar-brand" href="./">
+    <a class="navbar-brand" href="<?= $base_URI; ?>">
         <img class="logo" src="<?= $base_URI; ?>/app/assets/img/logos/wise-education-logo.png" alt="WISE EDUCATION" />
     </a>
 

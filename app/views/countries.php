@@ -303,9 +303,8 @@ require_once 'app/config/global.config.php';
                                             //Fetch All Universities
                                             $listAllUniversities = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id`";
                                             $fetchAllUniversities = $db_conn->query($listAllUniversities);
-                                            while ($getAllUniversitiesInfo = $fetchAllUniversities->fetch_assoc()) {
-
-                                                $universityFactsInfo = explode(', ', $getAllUniversitiesInfo['we_university_facts']);
+                                            while ($getAllUniversitiesInfo = $fetchAllUniversities->fetch_assoc())
+                                            {
                                             ?>
                                                 <div class="swiper-slide">
                                                     <!-- <img class="icon_popular" src="https://orinostudio.com/assets/img/stars.svg" /> -->
@@ -345,7 +344,7 @@ require_once 'app/config/global.config.php';
                                                                         <div class="media-body">
                                                                             <div class="txt">
                                                                                 <h3><b>University Type</b></h3>
-                                                                                <p><?= explode(':', $universityFactsInfo[0])[1]; ?></p>
+                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_university_type']; ?></p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -356,7 +355,7 @@ require_once 'app/config/global.config.php';
                                                                         <div class="media-body">
                                                                             <div class="txt">
                                                                                 <h3><b>Stay Duration</b></h3>
-                                                                                <p><?= explode(':', $universityFactsInfo[1])[1]; ?></p>
+                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_course_duration']; ?></p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -367,7 +366,7 @@ require_once 'app/config/global.config.php';
                                                                         <div class="media-body">
                                                                             <div class="txt">
                                                                                 <h3><b>Course Offered</b></h3>
-                                                                                <p><?= explode(':', $universityFactsInfo[2])[1]; ?></p>
+                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_course_offered']; ?></p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -378,7 +377,7 @@ require_once 'app/config/global.config.php';
                                                                         <div class="media-body">
                                                                             <div class="txt">
                                                                                 <h3><b>Language Used</b></h3>
-                                                                                <p><?= explode(':', $universityFactsInfo[3])[1]; ?></p>
+                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_course_language']; ?></p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -389,7 +388,7 @@ require_once 'app/config/global.config.php';
                                                                         <div class="media-body">
                                                                             <div class="txt">
                                                                                 <h3><b>Tution Fees</b></h3>
-                                                                                <p><?= str_replace('}', '', explode(':', $universityFactsInfo[4])[1]); ?></p>
+                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_course_fee']; ?></p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -400,7 +399,7 @@ require_once 'app/config/global.config.php';
                                                                         <div class="media-body">
                                                                             <div class="txt">
                                                                                 <h3><b>Yearly In-takes</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_location_name']; ?></p>
+                                                                                <p>5000+</p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -412,7 +411,11 @@ require_once 'app/config/global.config.php';
                                                                     <strong><?= $getAllUniversitiesInfo['we_univeristy_name']; ?></strong>
                                                                 </h6>
                                                                 <p class="short_desc">
-                                                                    <?= $getAllUniversitiesInfo['we_university_profile']; ?>
+                                                                    <?php
+                                                                    $uvshort = str_ireplace('<p>', '', $getAllUniversitiesInfo['we_university_profile']);
+                                                                    $uvshort = str_ireplace('</p>', '', $uvshort);
+                                                                    echo $uvshort;
+                                                                    ?>
                                                                 </p>
                                                             </a>
                                                         </div>
