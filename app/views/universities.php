@@ -52,14 +52,12 @@ require_once 'app/config/global.config.php';
                         <div class="row">
                             <div class="col-md-8 col-lg-8">
                                 <div class="banner_title_inner">
-
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb default">
-                                            <li class="breadcrumb-item"><a href="./">Home</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Countries</li>
+                                            <li class="breadcrumb-item"><a href="<?= $base_URI; ?>">Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Universities</li>
                                         </ol>
                                     </nav>
-
                                     <h1 class="margin-my-3 font-s-60 aos-init aos-animate" data-aos="fade-up" data-aos-delay="0">
                                         Let's Find Your <br />
                                         Dream University
@@ -461,11 +459,6 @@ require_once 'app/config/global.config.php';
                 </section>
                 <!-- End Popular Locations -->
 
-                <!-- Bottom Divider -->
-                <div class="container margin-my-7">
-                    <div class="dividar_line"></div>
-                </div>
-
             </main>
         </div>
         <!-- [id] content -->
@@ -475,42 +468,6 @@ require_once 'app/config/global.config.php';
         //Calling Footer Template
         include_once 'app/assets/templates/template-footer.php';
         ?>
-
-        <!-- Video Modal -->
-        <div class="modal mdll_video fade" id="mdllVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <!-- Close -->
-            <button type="button" class="close bbt_close ripple_circle" data-dismiss="modal" aria-label="Close">
-                <i class="tio clear"></i>
-            </button>
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Back to top with progress indicator-->
-        <div class="prgoress_indicator">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-            </svg>
-        </div>
-
-        <!-- Purchase item -->
-        <a href="https://themeforest.net/item/rakon-html-landing-page-templates/27849521" target="_blank" class="rakon_purchase">
-            <button type="button" class="btn btn_purch">
-                <div class="icon">
-                    <img src="../../assets/img/rakon/envato.svg" />
-                </div>
-                <span class="txt">Purchase</span>
-            </button>
-        </a>
-        <!-- End. -->
-
 
     </div>
     <!-- End. wrapper -->

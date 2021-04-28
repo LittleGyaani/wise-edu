@@ -46,13 +46,37 @@
                     </ul>
                 </div>
             </li>
+            <li class="nav-item dropdown dropdown-hover">
+                <a class="nav-link dropdown-toggle dropdown_menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Collections
+                    <div class="icon_arrow">
+                        <i class="tio chevron_right"></i>
+                    </div>
+                </a>
+                <div class="dropdown-menu single-drop sm_dropdown" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown_menu_nav">
+                        <li class="dropdown-submenu dropdown-hover">
+                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="">Blog</a>
+                        </li>
+                        <li class="dropdown-submenu dropdown-hover">
+                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="">FAQs</a>
+                        </li>
+                        <li class="dropdown-submenu dropdown-hover">
+                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="">Testimonials</a>
+                        </li>
+                        <li class="dropdown-submenu dropdown-hover">
+                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="">Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?= $router->generate('contact-us'); ?>">Contact</a>
             </li>
         </ul>
         <center>
             <div class="nav_account btn_demo3">
-                <a href="<?= $router -> generate('apply-now'); ?>" class="btn btn_sm_primary opacity-1 sweep_letter scale sweep_top rounded-8">
+                <a href="<?= $router->generate('apply-now'); ?>" class="btn btn_sm_primary opacity-1 sweep_letter scale sweep_top rounded-8">
                     <div class="inside_item">
                         <span data-hover="Apply Now">Apply Now</span>
                     </div>

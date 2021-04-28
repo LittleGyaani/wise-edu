@@ -66,14 +66,13 @@ if ($fetchUniversityInfo->num_rows === 0)
                         <div class="row">
                             <div class="col-md-7 col-lg-7">
                                 <div class="banner_title_inner">
-                                    <div class="about_post">
-                                        <span class="c_ategory">
-                                            <a href="#Design">Design</a>
-                                            <a href="#Developer">Developer</a>
-                                        </span>
-                                        <span class="dot"></span>
-                                        <time>15min</time>
-                                    </div>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb default">
+                                            <li class="breadcrumb-item"><a href="<?= $base_URI; ?>">Home</a></li>
+                                            <li class="breadcrumb-item">University</li>
+                                            <li class="breadcrumb-item active" aria-current="page"><?= $listAllUniversityInfo['we_univeristy_name']; ?></li>
+                                        </ol>
+                                    </nav>
                                     <h1 class="margin-my-3 font-s-55" data-aos="fade-up" data-aos-delay="0">
                                         <?= $listAllUniversityInfo['we_univeristy_name']; ?>
                                     </h1>
@@ -82,7 +81,7 @@ if ($fetchUniversityInfo->num_rows === 0)
                                     </h6>
                                     <div class="footer_content">
                                         <div data-aos="fade-up" data-aos-delay="0">
-                                            <a href="<?= $router -> generate('apply-now'); ?>" class="btn btn_sm_primary bg-orange-red c-white rounded-8">Apply Now</a>
+                                            <a href="<?= $router->generate('apply-now'); ?>" class="btn btn_sm_primary bg-orange-red c-white rounded-8">Apply Now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -458,41 +457,6 @@ if ($fetchUniversityInfo->num_rows === 0)
         include_once 'app/assets/templates/template-footer.php';
         ?>
 
-        <!-- Video Modal -->
-        <div class="modal mdll_video fade" id="mdllVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <!-- Close -->
-            <button type="button" class="close bbt_close ripple_circle" data-dismiss="modal" aria-label="Close">
-                <i class="tio clear"></i>
-            </button>
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Back to top with progress indicator-->
-        <div class="prgoress_indicator">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-            </svg>
-        </div>
-
-        <!-- Purchase item -->
-        <a href="https://themeforest.net/item/rakon-html-landing-page-templates/27849521" target="_blank" class="rakon_purchase">
-            <button type="button" class="btn btn_purch">
-                <div class="icon">
-                    <img src="../../assets/img/rakon/envato.svg" />
-                </div>
-                <span class="txt">Purchase</span>
-            </button>
-        </a>
-        <!-- End. -->
-
     </div>
     <!-- End. wrapper -->
 
@@ -505,25 +469,3 @@ if ($fetchUniversityInfo->num_rows === 0)
 //Calling Scripts Template
 include_once 'app/assets/templates/template-scripts.php';
 ?>
-
-<script>
-    // When the user scrolls the page, execute myFunction
-    window.onscroll = function() {
-        myFunction()
-    };
-
-    // Get the navbar
-    var navbar = document.getElementById("navbar");
-
-    // Get the offset position of the navbar
-    var sticky = navbar.offsetTop;
-
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    }
-</script>

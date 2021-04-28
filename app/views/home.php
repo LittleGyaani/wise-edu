@@ -53,7 +53,7 @@ require_once 'app/config/global.config.php';
                   <p>
                     We make it simple to <b><i>Find</i></b>, <b><i>Apply</i></b> & <b><i>Enroll</i></b> at <strong>Universities Abroad</strong>.
                   </p>
-                  <a href="#" class="btn btn_md_primary rounded-8 bg-blue c-white">
+                  <a href="<?= $router -> generate('search-page') ?>" class="btn btn_md_primary rounded-8 bg-blue c-white">
                     <div>Find a Program</div>
                   </a>
                   <div class="margin-t-8">
@@ -819,62 +819,6 @@ require_once 'app/config/global.config.php';
     include_once 'app/assets/templates/template-footer.php';
     ?>
 
-    <!-- Video Modal -->
-    <div class="modal mdll_video fade" id="mdllVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <!-- Close -->
-      <button type="button" class="close bbt_close ripple_circle" data-dismiss="modal" aria-label="Close">
-        <i class="tio clear"></i>
-      </button>
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Back to top with progress indicator-->
-    <div class="prgoress_indicator">
-      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-      </svg>
-    </div>
-
-    <!-- Website credit -->
-    <a href="https://themeforest.net/item/rakon-html-landing-page-templates/27849521" target="_blank" class="rakon_purchase">
-      <button type="button" class="btn btn_purch">
-        <div class="icon">
-          <img src="app/assets/img/rakon/envato.svg" />
-        </div>
-        <span class="txt">Little Gyaani</span>
-      </button>
-    </a>
-    <!-- End. -->
-
-    <!-- Tosts -->
-    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center">
-      <div class="toast toast_demo" id="myTost" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true" data-autohide="false">
-        <div class="toast-body">
-          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-            <i class="tio clear"></i>
-          </button>
-          <h5>Hi there 👋</h5>
-          <p>We are glad you joined us <a href="#">Join us</a></p>
-        </div>
-      </div>
-    </div>
-    <!-- End. Toasts -->
-
-    <!-- Start Section Loader -->
-    <section class="loading_overlay">
-      <div class="loader_logo">
-        <img class="logo" src="https://www.youroaks.com/assets/oaks-loader.gif" />
-      </div>
-    </section>
-    <!-- End. Loader -->
   </div>
   <!-- End. wrapper -->
 
