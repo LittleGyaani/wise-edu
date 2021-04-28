@@ -81,6 +81,9 @@ if ($fetchUniversityInfo->num_rows === 0)
                                         <mark>Explore whether this university is fit for you.</mark>
                                     </h6>
                                     <div class="footer_content">
+                                        <div data-aos="fade-up" data-aos-delay="0">
+                                            <a href="<?= $router -> generate('apply-now'); ?>" class="btn btn_sm_primary bg-orange-red c-white rounded-8">Apply Now</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

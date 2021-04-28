@@ -243,3 +243,11 @@ transition: all 0.3s;
     text-align: justify !important;
     -webkit-user-modify: read-only;
 }
+.item_new {
+    background-color: #31d1ab;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+}

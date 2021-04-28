@@ -46,7 +46,7 @@ require_once 'app/config/global.config.php';
                 <!-- Start banner_about -->
                 <section class="pt_banner_inner banner_px_image single_blog featured_image">
                     <div class="parallax_cover">
-                        <img class="cover-parallax" src="https://images.unsplash.com/photo-1526638684360-95cdcee762ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=cover&w=auto&q=80" alt="Countries WISE EDUCATIONS">
+                        <img class="cover-parallax" src="https://images.unsplash.com/photo-1483247416020-58799b6de4c1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=auto&q=80" alt="Countries WISE EDUCATIONS">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -303,8 +303,7 @@ require_once 'app/config/global.config.php';
                                             //Fetch All Universities
                                             $listAllUniversities = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id`";
                                             $fetchAllUniversities = $db_conn->query($listAllUniversities);
-                                            while ($getAllUniversitiesInfo = $fetchAllUniversities->fetch_assoc())
-                                            {
+                                            while ($getAllUniversitiesInfo = $fetchAllUniversities->fetch_assoc()) {
                                             ?>
                                                 <div class="swiper-slide">
                                                     <!-- <img class="icon_popular" src="https://orinostudio.com/assets/img/stars.svg" /> -->

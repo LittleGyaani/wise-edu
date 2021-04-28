@@ -27,9 +27,6 @@ include __DIR__ . '/app/config/global.config.php';
 //Index Page Route
 $router->map('GET', '/', __DIR__ . '/app/views/home.php','index');
 
-//Home Page Route
-$router->map('GET', '/home', __DIR__ . '/app/views/home.php','home-default');
-
 //All Countries Route
 $router->map('GET', '/countries', __DIR__ . '/app/views/countries.php', 'all-countries');
 
@@ -54,11 +51,17 @@ $router->map('GET', '/programs', __DIR__ . '/app/views/programs.php', 'all-progr
 //Program Details Route
 $router->map('GET', '/program/[**:program_alias]', __DIR__ . '/app/views/program-details.php', 'program-details');
 
+//Search Page Route
+$router->map('GET', '/search', __DIR__ . '/app/views/search.php', 'search-page');
+
 //About Us Page Route
-$router->map('GET', '/site/about', __DIR__ . '/app/views/about-us.php','about');
+$router->map('GET', '/about', __DIR__ . '/app/views/about.php','about-us');
 
 //Contact Us Page Route
-$router->map( 'GET', '/site/contact', __DIR__ . '/app/views/contact-us.php','contact-us');
+$router->map( 'GET', '/contact', __DIR__ . '/app/views/contact.php','contact-us');
+
+//Contact Us Page Route
+$router->map('GET', '/apply', __DIR__ . '/app/views/contact-us.php', 'apply-now');
 
 //404 error
 $router->map('GET', '/404-error', __DIR__ . '/app/views/errors/error-404.php', 'error-404');

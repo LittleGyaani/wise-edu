@@ -407,7 +407,7 @@ require_once 'app/config/global.config.php';
                 <div class="row">
                   <div class="col-lg-4">
                     <div class="title_sections" data-aos="fade-up" data-aos-delay="0">
-                      <h2 class="c-white">About WorkSpace</h2>
+                      <h2 class="c-white">About <strong>Wise Education</strong></h2>
                       <p class="c-white">We use office search alchemy to take the complexity and guesswork out of
                         finding your perfect
                         office space.</p>
@@ -459,155 +459,15 @@ require_once 'app/config/global.config.php';
         </section>
         <!-- End. about__office -->
 
-        <!-- Start service__about -->
-        <section class="service__about padding-py-12">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div class="d-sm-flex justify-content-between">
-                  <div class="title_sections mb-0">
-                    <div class="before_title">
-                      <span class="c-orange-red">Solutions</span>
-                    </div>
-                    <h2>Solutions designed for all <br> your needs</h2>
-                  </div>
-                  <div class="my-auto">
-                    <a href="#" class="btn d-block btn_md_primary sweep_top sweep_letter border-1 opacity-1 rounded-8">
-                      <div class="inside_item">
-                        <span data-hover="All Availability">All Availability</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="body__tab">
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Private Office</a>
-                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Coworking Space</a>
-                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">On-Demand Access</a>
-                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Event Space</a>
-                  </div>
-                </div>
-
-                <div class="col-lg-8 ml-auto">
-                  <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                      <div class="block_video">
-                        <div class="cover_video">
-                          <img src="app/assets/img/workspace/15.jpg" alt="">
-                          <div class="icon_played">
-                            <button type="button" class="btn btn_video" data-toggle="modal" data-src="https://www.youtube.com/embed/VvHoHw5AWTk" data-target="#mdllVideo">
-                              <div class="scale rounded-circle b play_video">
-                                <i class="tio play"></i>
-                              </div>
-                            </button>
-                          </div>
-                        </div>
-                        <div class="about__info">
-                          <p>Volutpat sed cras ornare arcu dui vivamus. Enim praesent elementum facilisis leo vel
-                            fringilla. Eget sit amet tellus cras adipiscing enim eu. Laoreet id donec ultrices tincidunt
-                            arcu. Lectus vestibulum mattis ullamcorper velit.</p>
-                          <a href="#">
-                            View Availability
-                            <i class="tio chevron_right"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                      <div class="block_video">
-                        <div class="cover_video">
-                          <img src="app/assets/img/workspace/16.jpg" alt="">
-                          <div class="icon_played">
-                            <button type="button" class="btn btn_video" data-toggle="modal" data-src="https://www.youtube.com/embed/VvHoHw5AWTk" data-target="#mdllVideo">
-                              <div class="scale rounded-circle b play_video">
-                                <i class="tio play"></i>
-                              </div>
-                            </button>
-                          </div>
-                        </div>
-                        <div class="about__info">
-                          <p>Volutpat sed cras ornare arcu dui vivamus. Enim praesent elementum facilisis leo vel
-                            fringilla. Eget sit amet tellus cras adipiscing enim eu. Laoreet id donec ultrices tincidunt
-                            arcu. Lectus vestibulum mattis ullamcorper velit.</p>
-                          <a href="#">
-                            View Availability
-                            <i class="tio chevron_right"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-
-                      <div class="block_video">
-                        <div class="cover_video">
-                          <img src="app/assets/img/workspace/17.jpg" alt="">
-                          <div class="icon_played">
-                            <button type="button" class="btn btn_video" data-toggle="modal" data-src="https://www.youtube.com/embed/VvHoHw5AWTk" data-target="#mdllVideo">
-                              <div class="scale rounded-circle b play_video">
-                                <i class="tio play"></i>
-                              </div>
-                            </button>
-                          </div>
-                        </div>
-                        <div class="about__info">
-                          <p>Volutpat sed cras ornare arcu dui vivamus. Enim praesent elementum facilisis leo vel
-                            fringilla. Eget sit amet tellus cras adipiscing enim eu. Laoreet id donec ultrices tincidunt
-                            arcu. Lectus vestibulum mattis ullamcorper velit.</p>
-                          <a href="#">
-                            View Availability
-                            <i class="tio chevron_right"></i>
-                          </a>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-
-                      <div class="block_video">
-                        <div class="cover_video">
-                          <img src="app/assets/img/workspace/18.jpg" alt="">
-                          <div class="icon_played">
-                            <button type="button" class="btn btn_video" data-toggle="modal" data-src="https://www.youtube.com/embed/VvHoHw5AWTk" data-target="#mdllVideo">
-                              <div class="scale rounded-circle b play_video">
-                                <i class="tio play"></i>
-                              </div>
-                            </button>
-                          </div>
-                        </div>
-                        <div class="about__info">
-                          <p>Volutpat sed cras ornare arcu dui vivamus. Enim praesent elementum facilisis leo vel
-                            fringilla. Eget sit amet tellus cras adipiscing enim eu. Laoreet id donec ultrices tincidunt
-                            arcu. Lectus vestibulum mattis ullamcorper velit.</p>
-                          <a href="#">
-                            View Availability
-                            <i class="tio chevron_right"></i>
-                          </a>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-        <!-- End. service__about -->
-
-        <!-- Start features__workspace -->
+      
+        <!-- Start Services -->
         <section class="service__workspace features__workspace padding-py-12" id="Features">
           <div class="container">
             <div class="row justify-content-center text-center">
               <div class="col-md-8 col-lg-5">
                 <div class="title_sections">
                   <div class="before_title">
-                    <span class="c-orange-red">Services</span>
+                    <span class="c-orange-red">Our Services</span>
                   </div>
                   <h2>Why MBBS Abroad?</h2>
                   <p> We have a lot of options and services that you will be delightened of and interested in going study abroad.</p>
@@ -753,82 +613,7 @@ require_once 'app/config/global.config.php';
             </div>
           </div>
         </section>
-        <!-- End. features__workspace -->
-
-        <!-- Start news__workspace -->
-        <section class="news__workspace margin-t-5 padding-t-12">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="title_sections">
-                  <div class="before_title">
-                    <span class="c-orange-red">Latest</span>
-                  </div>
-                  <h2>New for you</h2>
-                  <p>Proin sagittis nisl rhoncus mattis rhoncus. </p>
-                </div>
-                <!-- item_news -->
-                <a href="#" class="fa__news mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
-                  <div class="img__cover">
-                    <img src="app/assets/img/workspace/16.jpg" alt="">
-                  </div>
-                  <div class="body__content">
-                    <span class="c-aquamarine">Report</span>
-                    <h3>2020 State of the Flexible Workspace Industry Report</h3>
-                    <p>Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et.</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-3 ml-lg-auto">
-                <!-- item_news -->
-                <a href="#" class="fa__news margin-b-4" data-aos="fade-up" data-aos-delay="0">
-                  <div class="img__cover sm_height">
-                    <img src="app/assets/img/workspace/17.jpg" alt="">
-                  </div>
-                  <div class="body__content">
-                    <span class="c-aquamarine">Report</span>
-                    <h3>Corporate Companies: The 9 Best Executive Office</h3>
-                  </div>
-                </a>
-                <!-- item_news -->
-                <a href="#" class="fa__news" data-aos="fade-up" data-aos-delay="100">
-                  <div class="img__cover sm_height">
-                    <img src="app/assets/img/workspace/20.jpg" alt="">
-                  </div>
-                  <div class="body__content">
-                    <span class="c-orange-red">Guide</span>
-                    <h3>What’s actually included in a Serviced in London?</h3>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-md-6 col-lg-3 ml-lg-auto block_end">
-                <!-- item_news -->
-                <a href="#" class="fa__news margin-b-4" data-aos="fade-up" data-aos-delay="0">
-                  <div class="img__cover sm_height">
-                    <img src="app/assets/img/workspace/15.jpg" alt="">
-                  </div>
-                  <div class="body__content">
-                    <span class="c-orange-red">Guide</span>
-                    <h3>Which Is the Best Serviced Office in London?</h3>
-                  </div>
-                </a>
-                <!-- item_news -->
-                <a href="#" class="fa__news " data-aos="fade-up" data-aos-delay="100">
-                  <div class="img__cover sm_height">
-                    <img src="app/assets/img/workspace/19.jpg" alt="">
-                  </div>
-                  <div class="body__content">
-                    <span class="c-aquamarine">Report</span>
-                    <h3>The Coolest Coworking Spaces in London.</h3>
-                  </div>
-                </a>
-              </div>
-
-            </div>
-          </div>
-        </section>
-        <!-- End news__workspace -->
+        <!-- End. Services -->
 
         <!-- Start test_monials__workspace -->
         <section class="test_monials__workspace margin-t-2 padding-t-10" id="Testimonial">
@@ -843,7 +628,7 @@ require_once 'app/config/global.config.php';
                         <div class="before_title">
                           <span class="c-orange-red">Testimonial</span>
                         </div>
-                        <h2>What Our Clients Say</h2>
+                        <h2>What Our Students Say</h2>
                       </div>
                     </div>
                   </div>
