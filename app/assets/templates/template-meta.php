@@ -35,7 +35,25 @@
 <meta property='og:image:height' content="630" />
 <meta property='og:image:type' content="image/png" />
 <meta property='og:description' content="Wise Education Education Bhubaneswar is pinoeered in providing pathway programs like Abroad Education, Overseas education, VISA Assistantce, Foregin Studies, MBBS ABROAD and only Foreign Education Company in Bhubaneswar which provides various courses for Studying Abroad like MBBS, partnered up with programs like ATMC, AUPP, Manipal and SARASWARIONLINE to make foregin studies easier and better at cheaper costs." />
-<link rel="canonical" href="<?= (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . explode('?',"://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]")[0]; ?>" />
+<link rel="canonical" href="<?= (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . explode('?', "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]")[0]; ?>" />
 <meta name="description" content="Wise Education is more than just a student’s admissions firm. We are a team of doctors, career counselors & management experts with 6 years experience. We walked the same road as our students, going abroad to study. We understand the difficulty to decide whether to stay or leave the country but studying overseas is becoming an increasingly attractive option for students looking to obtain a world-class education." />
 <meta name="keywords" content="Wise Education, Wise Bhubaneswar, Wise Group, Wise Education Consultant, Wise Education Bhubaneswar Abroad Education Consultants, For Visa,  Study In United Kingdom (UK), Study In New Zealand, Study In Canada, Study In Australia, Study In USA, Study In Ireland,Study In Germany, Study In Singapore, Study In Malaysia, Foreign Universities and Educational Institutions, GRE, GMAT, IELTS, SAT, TOEFL, VISA APPLICATION Bhubaneswar, Study Abroad Bhubaneswar, MBBS Abroad Bhubaneswar, MBBS in China, MBBS in Bangladesh, MBBS in Philippines, AUPP, ATMC, Manipal Bhubaneswar, SARASWARIONLINE.com, Wise Education Consulting" />
 <meta name="author" content="Little Gyaani - BRAHMA" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="57x57" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="<?= $base_URI; ?>/app/assets/img/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?= $base_URI; ?>/app/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="<?= $base_URI; ?>/app/assets/img/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?= $base_URI; ?>/app/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="<?= $base_URI; ?>/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="<?= $base_URI; ?>/app/assets/img/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">

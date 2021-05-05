@@ -28,7 +28,7 @@ require_once 'app/config/global.config.php';
   <div id="wrapper">
     <div id="content">
       <!-- Start header -->
-      <header class="header-nav-center no_blur header__workspace active-orange-blue" id="myNavbar">
+      <header class="header-nav-center no_blur header__workspace active-blue-blue" id="myNavbar">
         <div class="container">
           <!-- Include Navigation Section -->
           <?php
@@ -53,7 +53,7 @@ require_once 'app/config/global.config.php';
                   <p>
                     We make it simple to <b><i>Find</i></b>, <b><i>Apply</i></b> & <b><i>Enroll</i></b> at <strong>Universities Abroad</strong>.
                   </p>
-                  <a href="<?= $router -> generate('search-page') ?>" class="btn btn_md_primary rounded-8 bg-blue c-white">
+                  <a href="<?= $router->generate('search-page') ?>" class="btn btn_md_primary rounded-8 bg-blue c-white">
                     <div>Find a Program</div>
                   </a>
                   <div class="margin-t-8">
@@ -102,7 +102,7 @@ require_once 'app/config/global.config.php';
                 </div>
               </div>
               <div class="col-lg-4 emo">
-                <div class="gq_item ill_item bg-orange">
+                <div class="gq_item ill_item bg-blue">
                   <!-- <span class="d-block c-dark font-s-16">Apply.</span> -->
                   <img class="img-fluid mb-3 centered" src="https://img.icons8.com/bubbles/344/passport.png" />
                   <div class="title_sections">
@@ -124,7 +124,7 @@ require_once 'app/config/global.config.php';
               <div class="col-md-4 col-lg-6">
                 <div class="banner_title workspace_title">
                   <h1>
-                    Planning for a <span class="c-orange-red">Brighter & Better</span> Future?
+                    Planning for a <span class="c-blue">Brighter & Better</span> Future?
                   </h1>
                   <p>
                     Our overseas consultancy service focuses on the education especially MBBS, B-TECH, Management, ETC. degree abroad for aspiring Indian students in top universities or colleges in countries like USA,
@@ -231,7 +231,7 @@ require_once 'app/config/global.config.php';
                         <img src="app/assets/img/persons/15.png" alt="">
                         <img src="app/assets/img/persons/02.png" alt="">
                       </div>
-                      <p class="c-gray font-s-14 mb-0">Call Us: <a href="tel:+44 20 3868 6470" class="c-orange-red">+44
+                      <p class="c-gray font-s-14 mb-0">Call Us: <a href="tel:+44 20 3868 6470" class="c-blue-red">+44
                           20
                           3868 6470</a> </p>
                     </div>
@@ -266,7 +266,7 @@ require_once 'app/config/global.config.php';
                     </div>
                     <div class="media-body">
                       <div class="t_xt d-flex justify-content-between">
-                        <h4>Find Your <b>Dream <br>University</h4></b>
+                        <h4>Find your <br /> <b>Dream University</h4></b>
                         <i class="tio arrow_forward my-auto c-gray font-s-18"></i>
                       </div>
                     </div>
@@ -282,7 +282,7 @@ require_once 'app/config/global.config.php';
                     </div>
                     <div class="media-body">
                       <div class="t_xt d-flex justify-content-between">
-                        <h4>Fill the <b>Application <br>Form</h4></b>
+                        <h4>Fill your <br /> <b>Application Form</h4></b>
                         <i class="tio arrow_forward my-auto c-gray font-s-18"></i>
                       </div>
                     </div>
@@ -298,7 +298,7 @@ require_once 'app/config/global.config.php';
                     </div>
                     <div class="media-body">
                       <div class="t_xt d-flex justify-content-between">
-                        <h4>Get <b>Travel VISA & <br>Move</h4></b>
+                        <h4>Get your <br /> <b>Travel VISA</h4></b>
                         <i class="tio arrow_forward my-auto c-gray font-s-18"></i>
                       </div>
                     </div>
@@ -459,7 +459,7 @@ require_once 'app/config/global.config.php';
         </section>
         <!-- End. about__office -->
 
-      
+
         <!-- Start Services -->
         <section class="service__workspace features__workspace padding-py-12" id="Features">
           <div class="container">
@@ -467,7 +467,7 @@ require_once 'app/config/global.config.php';
               <div class="col-md-8 col-lg-5">
                 <div class="title_sections">
                   <div class="before_title">
-                    <span class="c-orange-red">Our Services</span>
+                    <span class="c-blue-red">Our Services</span>
                   </div>
                   <h2>Why MBBS Abroad?</h2>
                   <p> We have a lot of options and services that you will be delightened of and interested in going study abroad.</p>
@@ -626,7 +626,7 @@ require_once 'app/config/global.config.php';
                     <div class="col-lg-5 item_title">
                       <div class="title_sections">
                         <div class="before_title">
-                          <span class="c-orange-red">Testimonial</span>
+                          <span class="c-blue-red">Testimonial</span>
                         </div>
                         <h2>What Our Students Say</h2>
                       </div>

@@ -1,18 +1,17 @@
 @charset "UTF-8";
 /*----------------------------------------------------
 @File: Default Styles
-@Author: Hasan Sibakhi
-@URL: https://themeforest.net/user/orinostu
-
+@Author: Little Gyaani - BRAHMA
+@URL: https://twitter.com/Little Gyaani
 This file contains the styling for the actual template, this
 is the file you need to edit to change the look of the
 template.
 ---------------------------------------------------- */
 /*=====================================================================
-@Template Name: Rakon Landing Page
-@Author: Hasan Sibakhi
-@Developed By: Hasan Sibakhi
-@Developer URL: https://dribbble.com/HasanSib
+@Template Name: Wise Education Website
+@Author: Little Gyaani - BRAHMA
+@Developed By: Little Gyaani
+@Developer URL: https://wa.me/919853233951?text=I got your Contact from Wise Education Group Official Website
 /*===================================================================== */
 /*
     CSS Table of Sections
@@ -543,7 +542,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fef8f2;
+  background-color: #fff;/*#fef8f2*/
   overflow: hidden;
   position: fixed;
   z-index: 999999;

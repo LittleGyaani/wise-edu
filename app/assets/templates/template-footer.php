@@ -114,7 +114,7 @@
 </div>
 
 <!-- Website credit -->
-<a href="https://themeforest.net/item/rakon-html-landing-page-templates/27849521" target="_blank" class="rakon_purchase">
+<a href="https://wa.me/919853233951?text=I got your Contact from Wise Education Group Official Website" target="_blank" class="rakon_purchase">
   <button type="button" class="btn btn_purch">
     <div class="icon">
       <img src="app/assets/img/rakon/envato.svg" />
@@ -141,7 +141,7 @@
 <!-- Start Section Loader -->
 <section class="loading_overlay">
   <div class="loader_logo">
-    <img class="logo" src="https://www.youroaks.com/assets/oaks-loader.gif" />
+    <img class="logo" src="https://pancholiaschool.com/wp-content/uploads/2019/09/plane-loader-slower.gif" />
   </div>
 </section>
 <!-- End. Loader -->
