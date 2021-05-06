@@ -41,7 +41,7 @@ require_once 'app/config/global.config.php';
       <!-- End header -->
 
       <!-- Start main -->
-      <main data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+      <main>
 
         <!-- Start Banner Section -->
         <section class="demo_1 banner_section banner_demo7">
@@ -102,7 +102,7 @@ require_once 'app/config/global.config.php';
                 </div>
               </div>
               <div class="col-lg-4 emo">
-                <div class="gq_item ill_item bg-blue">
+                <div class="gq_item ill_item bg-red">
                   <!-- <span class="d-block c-dark font-s-16">Apply.</span> -->
                   <img class="img-fluid mb-3 centered" src="https://img.icons8.com/bubbles/344/passport.png" />
                   <div class="title_sections">
@@ -138,70 +138,68 @@ require_once 'app/config/global.config.php';
                   <div class="col-lg-10 ml-auto">
                     <div class="block__srarch">
                       <div class="title__search">
-                        <h2>One World. One Search</h2>
-                        <p>Let's begin a new world of education, all together.</p>
+                        <h2>Let your career begin.</h2>
+                        <p>Drop us your details, we will be in touch ASAP.</p>
                       </div>
-                      <form class="form-row">
+                      <form class="form-row" name="student-enquiry" id="studentEnquiry" method="POST" action="javascript:void(0);" enctype="multipart/form-data">
+                        <div class="col-12">
+                          <div class="form-group">
+                            <label>Full Name <sup class="c-red">*</sup></label>
+                            <input type="text" name="full-name" id="fullName" class="form-control" placeholder="Enter your full name" required />
+                          </div>
+                        </div>
                         <div class="col-6">
                           <div class="form-group">
-                            <label>University Type</label>
-                            <select class="form-control custom-select">
-                              <option>Personal</option>
-                              <option>Teams</option>
+                            <label>Email ID <sup class="c-red">*</sup></label>
+                            <input type="email" name="email-id" id="emailID" class="form-control" placeholder="Enter your email id" required />
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label>Phone Number <sup class="c-red">*</sup></label>
+                            <input type="telephone" name="phone-number" id="phoneNumber" class="form-control" placeholder="Enter your phone number" required />
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-group">
+                            <label>Postal Address <sup class="c-red">*</sup></label>
+                            <input type="text" name="postal-address" id="postalAddress" class="form-control" placeholder="Enter your full address" required />
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label>Choose Country <sup class="c-red">*</sup></label>
+                            <select class="form-control custom-select" name="country-choice" id="countryChoice" required>
+                              <option value="null" disabled selected>Select Country</option>
+                              <?php
+                              //List All Countries
+                              $listAllCountries = "SELECT * FROM `we_country_list` WHERE `we_country_status` = 1";
+                              $fetchAllCountries = $db_conn->query($listAllCountries);
+                              while ($getAllCountriesInfo = $fetchAllCountries->fetch_assoc()) {
+                                echo '<option value="' . $getAllCountriesInfo['we_country_alias'] . '">' . $getAllCountriesInfo['we_country_name'] . '</option>';
+                              }
+                              ?>
                             </select>
                           </div>
                         </div>
                         <div class="col-6">
                           <div class="form-group">
-                            <label>Course Type</label>
-                            <select class="form-control custom-select">
-                              <option>Personal</option>
-                              <option>Teams</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label>Country</label>
-                            <select class="form-control custom-select">
-                              <option>Daily</option>
-                              <option>Monthly</option>
-                              <option>Annual</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label>Location</label>
-                            <select class="form-control custom-select">
-                              <option>Daily</option>
-                              <option>Monthly</option>
-                              <option>Annual</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label>Course Option</label>
-                            <select class="form-control custom-select">
-                              <option>Daily</option>
-                              <option>Monthly</option>
-                              <option>Annual</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="form-group">
-                            <label>Program Type</label>
-                            <select class="form-control custom-select">
-                              <option>Creative Studio</option>
-                              <option>Small Office</option>
-                              <option>One-person office</option>
+                            <label>Choose Course <sup class="c-red">*</sup></label>
+                            <select class="form-control custom-select" name="course-choice" id="courseChoice" required>
+                              <option value="null" disabled selected>Select Course</option>
+                              <?php
+                              //List All Countries
+                              $listAllCourses = "SELECT * FROM `we_program_list` WHERE `we_program_status` = 1";
+                              $fetchAllCourses = $db_conn->query($listAllCourses);
+                              while ($getAllCoursesInfo = $fetchAllCourses->fetch_assoc()) {
+                                echo '<option value="' . $getAllCoursesInfo['we_program_alias'] . '">' . $getAllCoursesInfo['we_program_name'] . '</option>';
+                              }
+                              ?>
                             </select>
                           </div>
                         </div>
                         <div class="col-12">
-                          <button type="button" class="btn btn__search rounded-pill scale border-0 sweep_letter sweep_top">Start Your Search <i class="tio chevron_right mr-1 align-middle font-s-16"></i></button>
+                          <button type="submit" class="btn btn__search rounded-pill scale border-0 sweep_letter sweep_top"> Enquire Now <i class="tio chevron_right mr-1 align-middle font-s-16"></i></button>
                           <p class="text-center font-s-14 c-gray mt-3 mb-0"><i>Need any assistance?</i> <br /> Talk to Us: <a href="tel:+919439937117" class="c-blue">+91 9439937117</a> / <a href="tel:+380636908318" class="c-blue">+380 63 690 8318</a>
                           </p>
                         </div>
@@ -222,18 +220,18 @@ require_once 'app/config/global.config.php';
                 <div class="col-lg-4">
                   <div class="item__conatct">
                     <div class="item__top">
-                      <h3>Let us do the heavy lifting</h3>
-                      <p>Our team of personal property advisors will manage your entire search for free</p>
+                      <h3>Let us do the heavy lifting!</h3>
+                      <p>Our expert team of will help you finding the best option for your career.</p>
                     </div>
                     <div class="item__bottom">
                       <div class="person__peo">
-                        <img src="app/assets/img/persons/01.png" alt="">
-                        <img src="app/assets/img/persons/15.png" alt="">
-                        <img src="app/assets/img/persons/02.png" alt="">
+                        <center>
+                          <img src="https://img.icons8.com/color/344/technical-support.png" alt="Wise Education Support" height="100px" width="100px" />
+                        </center>
                       </div>
-                      <p class="c-gray font-s-14 mb-0">Call Us: <a href="tel:+44 20 3868 6470" class="c-blue-red">+44
-                          20
-                          3868 6470</a> </p>
+                      <p class="c-gray font-s-14 mb-0">
+                        Call Us: <a href="tel:+919439937117">+91 9439 937 117</a> / <a href="tel:+380636908318">+38 0636 908 318</a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -311,88 +309,72 @@ require_once 'app/config/global.config.php';
         </section>
         <!-- End. service__workspace -->
 
-        <!-- Start product__office -->
+        <!-- Start Universities -->
         <section class="product__office padding-t-12" id="Offices">
           <div class="container">
             <div class="row justify-content-center text-center">
               <div class="col-lg-5">
                 <div class="title_sections">
-                  <h2>Search Offices. All Of Them.</h2>
-                  <p>From ‘Ready-To-Go’ To ‘Build-Your-Own’, We List Every Office Space In The City. Find Yours.</p>
+                  <h2>Explore <b>Universities</b>. All Of Them.</h2>
+                  <p>From ‘Best-To-Go’ universities to exploring the best locations we have everything sorted.</p>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                <a href="#" class="boo__item" data-aos="fade-up" data-aos-delay="0">
-                  <div class="img__off">
-                    <img src="app/assets/img/workspace/12.jpg">
-                  </div>
-                  <div class="body__txt">
-                    <div class="d-flex justify-content-between">
-                      <div class="title_txt">
-                        <h4>WeWork - Old Street</h4>
-                        <p>N1, London</p>
+              <!-- List All Universities -->
+              <?php
+              //University List
+              $listAllUniversities = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id` LIMIT 5";
+              $fetchAllUniversities = $db_conn->query($listAllUniversities);
+              while ($getAllUniversitiesInfo = $fetchAllUniversities->fetch_assoc()) {
+              ?>
+                <div class="col-md-6 col-lg-4 mb-4 mt-4 mb-lg-0">
+                  <a href="#" class="boo__item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="img__off">
+                      <img src="<?= $getAllUniversitiesInfo['we_university_cover_image']; ?>" height="auto" width="auto" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>" />
+                    </div>
+                    <div class="body__txt">
+                      <div class="d-flex justify-content-between">
+                        <div class="title_txt">
+                          <h4><?= $getAllUniversitiesInfo['we_univeristy_name']; ?></h4>
+                          <p><?= $getAllUniversitiesInfo['we_location_name'] . ', ' . $getAllUniversitiesInfo['we_country_name']; ?></p>
+                        </div>
+                        <div class="price"><?= $getAllUniversitiesInfo['we_university_data_course_fee']; ?></div>
                       </div>
-                      <div class="price">£350.00</div>
-                    </div>
-                    <div class="desc_txt">
-                      <h5 class="font-s-14 c-dark">UK£ 400/m</h5>
-                      <span class="font-12 c-gray mb-0">Size</span>
-                    </div>
-                    <div class="desc_txt">
-                      <h5 class="font-s-14 c-dark">UK£ 400/m</h5>
-                      <span class="font-12 c-gray mb-0">Size</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                <a href="#" class="boo__item" data-aos="fade-up" data-aos-delay="100">
-                  <div class="img__off">
-                    <img src="app/assets/img/workspace/13.jpg">
-                  </div>
-                  <div class="body__txt">
-                    <div class="d-flex justify-content-between">
-                      <div class="title_txt">
-                        <h4>WeWork - Old Street</h4>
-                        <p>N1, London</p>
+                      <div class="desc_txt">
+                        <h5 class="font-s-14 c-dark">Program Offered</h5>
+                        <span class="font-12 c-gray mb-0"><?= $getAllUniversitiesInfo['we_university_data_course_offered']; ?></span>
                       </div>
-                      <div class="price">£225.00</div>
+                      <div class="desc_txt">
+                        <h5 class="font-s-14 c-dark">Program Duration</h5>
+                        <span class="font-12 c-gray mb-0"><?= $getAllUniversitiesInfo['we_university_data_course_duration']; ?></span>
+                      </div>
                     </div>
-                    <div class="desc_txt">
-                      <h5 class="font-s-14 c-dark">UK£ 400/m</h5>
-                      <span class="font-12 c-gray mb-0">Size</span>
-                    </div>
-                    <div class="desc_txt">
-                      <h5 class="font-s-14 c-dark">UK£ 400/m</h5>
-                      <span class="font-12 c-gray mb-0">Size</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
+                  </a>
+                </div>
+              <?php
+              }
+              ?>
               <div class="col-md-6 col-lg-3 mx-lg-auto">
                 <div class="other__office" data-aos="fade-up" data-aos-delay="200">
-                  <h3>Mix Your Own Space</h3>
-                  <p>Looking to build on your brand and not someone else’s? Sprinkle your own </p>
-                  <a href="#" class="btn btn_md_primary sweep_top sweep_letter c-white bg-dark opacity-1 rounded-8">
+                  <h3>Looking for all options?</h3>
+                  <p>Go give us a try to find them, all of them.</p>
+                  <a href="<?= $router->generate('search-page'); ?>" class="btn btn_md_primary sweep_top sweep_letter c-white bg-dark opacity-1 rounded-8">
                     <div class="inside_item">
-                      <span data-hover="Let's go 🏃‍♂️">Talk to expert</span>
+                      <span data-hover="Let's go 🏃‍♂️">Search Now</span>
                     </div>
                   </a>
                 </div>
               </div>
             </div>
             <div class="col-12 text-center margin-t-5">
-              <a href="#" class="btn btn_md_primary rounded-8 border-1 c-dark text-center">
-                Search Office
+              <a href="<?= $router->generate('all-universities'); ?>" class="btn btn_md_primary rounded-8 border-1 c-dark text-center">
+                Explore Universities
               </a>
             </div>
           </div>
         </section>
-        <!-- End. product__office -->
+        <!-- End Universities -->
 
         <!-- Start About_office -->
         <section class="about__office margin-t-6 padding-t-6">
@@ -415,11 +397,10 @@ require_once 'app/config/global.config.php';
                   </div>
                   <div class="col-lg-5 ml-auto mb-4 mb-lg-0">
                     <div class="description_full" data-aos="fade-up" data-aos-delay="100">
-                      <p>We’ve developed the industry’s most advanced tech platform, optimised to simplify and
-                        supercharge
-                        your search.
+                      <p>
+                        Wise Education, a premier organization in India was founded in 2014 with a vision to provide quality, economically viable education abroad.
                       </p>
-                      <a href="#" class="btn btn_md_primary bg-white c-dark rounded-8 opacity-1">Learn More</a>
+                      <a href="<?= $router->generate('about-us'); ?>" class="btn btn_md_primary bg-white c-dark rounded-8 opacity-1">Learn More</a>
                     </div>
                   </div>
                 </div>
@@ -429,30 +410,41 @@ require_once 'app/config/global.config.php';
                 <div class="col-md-3">
                   <div class="item__counter" data-aos="fade-up" data-aos-delay="0">
                     <h4>
-                      <span class="counter">300</span>
-                      %
+                      <span class="counter">60</span>
+                      +
                     </h4>
-                    <p>Faster than the average office search</p>
+                    <p>University partners</p>
                   </div>
                 </div>
                 <div class="col-md-3 mx-auto">
                   <div class="item__counter" data-aos="fade-up" data-aos-delay="100">
                     <h4>
-                      <span>4.7/5</span>
+                      <span class="counter">3000</span>
+                      +
                     </h4>
-                    <p>Google star rating</p>
+                    <p>Faculties onboard</p>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="item__counter" data-aos="fade-up" data-aos-delay="200">
                     <h4>
-                      <span class="counter">100</span>
-                      %
+                      <span class="counter">1500</span>
+                      +
                     </h4>
-                    <p>Market coverage</p>
+                    <p>Classrooms available</p>
                   </div>
                 </div>
               </div>
+              <!-- <div class="col-md-3">
+                <div class="item__counter" data-aos="fade-up" data-aos-delay="200">
+                  <h4>
+                    <span class="counter">20,000</span>
+                    +
+                  </h4>
+                  <p>Satisfied students</p>
+                </div>
+              </div>
+            </div> -->
 
             </div>
           </div>
@@ -793,15 +785,14 @@ require_once 'app/config/global.config.php';
               <div class="col-lg-5">
                 <div class="title_sections mb-0">
                   <h2 class="c-white">Ready to give us a try?</h2>
-                  <p class="c-white mb-0">You will be in company with some of the greatest coworking and shared
-                    workspaces.
+                  <p class="c-white mb-0">Let your beautiful career begin with us, under our expert guidance.
                   </p>
                 </div>
               </div>
               <div class="col-lg-7 mt-4 mt-lg-0 text-lg-right my-lg-auto">
-                <a href="#" class="btn btn_md_primary sweep_top sweep_letter rounded-8 opacity-1">
+                <a href="<?= $router->generate('apply-now'); ?>" class="btn btn_md_primary sweep_top sweep_letter rounded-8 opacity-1">
                   <div class="inside_item">
-                    <span data-hover="Try it free">Try it free</span>
+                    <span data-hover="Explore more">Give us a try</span>
                   </div>
                 </a>
               </div>

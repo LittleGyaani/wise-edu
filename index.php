@@ -63,9 +63,16 @@ $router->map( 'GET', '/contact', __DIR__ . '/app/views/contact.php','contact-us'
 //Contact Us Page Route
 $router->map('GET', '/apply', __DIR__ . '/app/views/contact-us.php', 'apply-now');
 
-//404 error
-$router->map('GET', '/404-error', __DIR__ . '/app/views/errors/error-404.php', 'error-404');
+/* API Routes */
 
+//Quick Contact
+$router->map('GET|POST', '/api/web/v1/quick-contact', __DIR__ . '/app/api/process-requests.php', 'qc-api');
+
+//Contact Us
+$router->map('GET|POST', '/api/web/v1/contact-us', __DIR__ . '/app/api/process-requests.php', 'cu-api');
+
+//404 error
+$router->map('GET', '/404', __DIR__ . '/app/views/errors/error-404.php', 'error-404');
 
 //Match Routes
 $match = $router->match();

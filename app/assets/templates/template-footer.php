@@ -7,16 +7,18 @@
 <footer class="defalut-footer light padding-py-12 footer__workspace bg-grey">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+      <div class="col-md-6 col-lg-4 mb-4 mt-0 mb-lg-0">
         <div class="item_about">
-          <a class="logo" href="./">
-            <img src="<?= $base_URI; ?>/app/assets/img/logos/wise-education-logo.png" alt="Wise Education Logo" />
+          <a class="logo" href="<?= $router->generate('index'); ?>">
+            <center>
+              <img src="<?= $base_URI; ?>/app/assets/img/logos/wise-education-logo.png" alt="Wise Education Group" />
+            </center>
           </a>
           <p>
             <b>Wise Education</b>, a premier organization in India was founded in 2014 with a vision to provide quality, economically viable education abroad. Wise Education takes great pride in being the pioneer organization to provide admission to worldwide.
           </p>
           <div class="address">
-            <span><i class="tio send"></i> Locate us: Plot No. : 191/A, Kharavela Nagar, Unit-3, Bhubaneswar, Odisha, 751001</span>
+            <span>Locate us: Plot No. : 191/A, Kharavela Nagar, Unit-3, Bhubaneswar, Odisha, 751001 India</span>
             <span>Call us: <a href="tel:+919439937117">+91 9439 937 117</a> / <a href="tel:+380636908318">+38 0636 908 318</a></span>
             <span>Office hours: 09:00AM - 09:00PM (IST, MON-SAT)</span>
             <span>Email us: <a href="mailto:info@wiseeducation.in">info@wiseeducation.in</a></span>
@@ -37,7 +39,7 @@
           <h4>Company</h4>
           <a class="nav-link" href="">About</a>
           <a class="nav-link" href="">Affiliates</a>
-          <a class="nav-link" href="">Careers</a>
+          <a class="nav-link" href="">Careers <span class="item_new">We're Hiring</span></a>
           <a class="nav-link" href="">Legal & Privacy</a>
         </div>
       </div>

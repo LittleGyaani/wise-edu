@@ -24,7 +24,8 @@
             </li>
             <li class="nav-item dropdown dropdown-hover">
                 <a class="nav-link dropdown-toggle dropdown_menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Explore <span class="item_new">New</span>
+                    Explore 
+                    <!-- <span class="item_new">New</span> -->
                     <div class="icon_arrow">
                         <i class="tio chevron_right"></i>
                     </div>

@@ -39,6 +39,7 @@
 <meta name="description" content="Wise Education is more than just a student’s admissions firm. We are a team of doctors, career counselors & management experts with 6 years experience. We walked the same road as our students, going abroad to study. We understand the difficulty to decide whether to stay or leave the country but studying overseas is becoming an increasingly attractive option for students looking to obtain a world-class education." />
 <meta name="keywords" content="Wise Education, Wise Bhubaneswar, Wise Group, Wise Education Consultant, Wise Education Bhubaneswar Abroad Education Consultants, For Visa,  Study In United Kingdom (UK), Study In New Zealand, Study In Canada, Study In Australia, Study In USA, Study In Ireland,Study In Germany, Study In Singapore, Study In Malaysia, Foreign Universities and Educational Institutions, GRE, GMAT, IELTS, SAT, TOEFL, VISA APPLICATION Bhubaneswar, Study Abroad Bhubaneswar, MBBS Abroad Bhubaneswar, MBBS in China, MBBS in Bangladesh, MBBS in Philippines, AUPP, ATMC, Manipal Bhubaneswar, SARASWARIONLINE.com, Wise Education Consulting" />
 <meta name="author" content="Little Gyaani - BRAHMA" />
+<meta name="app-url" content="<?= $base_URI; ?>" />
 <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="57x57" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-60x60.png">

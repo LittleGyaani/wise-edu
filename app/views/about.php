@@ -42,7 +42,8 @@ require_once 'app/config/global.config.php';
             <!-- End header -->
 
             <!-- Stat main -->
-            <main data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+            <main>
+
                 <!-- Start banner_about -->
                 <section class="pt_banner_inner banner_px_image" id="Discover">
                     <div class="parallax_cover">
@@ -128,14 +129,14 @@ require_once 'app/config/global.config.php';
                             </div>
                             <div class="col-lg-5 mt-4 mt-lg-0 ml-auto">
                                 <div class="image_grid">
-                                    <img class="img-fluid img_one" src="../../assets/img/inner/123.jpg" alt="">
+                                    <img class="img-fluid img_one" src="https://ouch-cdn2.icons8.com/sWoEeWI4fiaC8ybOmI17I9L-y7p01NlCHaujzeSiFWw/rs:fit:1216:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNTUy/L2ViYzY3MzVlLTAz/YjItNDNmZC1iZjk2/LWExNWU0NGQ5N2I4/Yy5zdmc.png" alt="Wise Education Vision" height="auto" width="auto" />
                                 </div>
                             </div>
                             <div class="w-100"></div>
                             <div class="row">
-                                <div class="col-lg-5 mt-4 mt-lg-0 ml-auto">
+                                <div class="col-lg-5 mt-4 mt-lg-0 mr-auto">
                                     <div class="image_grid">
-                                        <img class="img-fluid img_one" src="../../assets/img/inner/123.jpg" alt="">
+                                        <img class="img-fluid img_one" src="https://ouch-cdn2.icons8.com/SwU1Y0kXoTo5oewfCiC0Wqx6upyy8bbGAAegjaij8eI/rs:fit:1216:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMzY0/LzI0MmZjYjg0LTFm/OWEtNDZiZC05ZDMw/LTE1MzQxZmU3ZGZh/MS5zdmc.png" alt="Wise Education Pursuit" height="auto" width="auto" />
                                     </div>
                                 </div>
                                 <div class="col-lg-5 margin-t-8">
@@ -187,7 +188,7 @@ require_once 'app/config/global.config.php';
                             </div>
                             <div class="col-lg-5 mt-4 mt-lg-0 ml-auto">
                                 <div class="image_grid">
-                                    <img class="img-fluid img_one" src="../../assets/img/inner/123.jpg" alt="">
+                                    <img class="img-fluid img_one" src="https://ouch-cdn2.icons8.com/oYoS7wS6HhqwLFVpBF-AoPjwqM9n2rSOMb4gx3Jq7N8/rs:fit:912:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNjA3/LzAwMTMzYjRhLTNh/ZTYtNDJkOS1hZDdi/LThjZDVkNjZiNDc4/Mi5zdmc.png" alt="Wise Education Mission" height="auto" width="auto" />
                                 </div>
                             </div>
                         </div>
@@ -227,17 +228,12 @@ require_once 'app/config/global.config.php';
                                     <div class="before_title">
                                         <span class="c-orange-red">Our Values</span>
                                     </div>
-                                    <h2>Core Values of 
-                                        <br /> 
-                                        Wise Education Group
+                                    <h2>Core Values of
+                                        <br />
+                                        Wise Group
                                     </h2>
                                     <p> We care for our student’s future. We think and act like parents of the student, not as consultants. We share our student’s and their parent’s aspirations, work to understand their reality, and align our incentives with their objectives — so they know we’re in this together.
                                     </p>
-                                    <a href="" class="btn btn_md_primary sweep_top sweep_letter bg-orange-red c-white rounded-8">
-                                        <div class="inside_item">
-                                            <span data-hover="Say Hello!">Join us</span>
-                                        </div>
-                                    </a>
                                 </div>
                             </div>
                             <div class="col-lg-6 ml-auto mt-4 mt-lg-0">

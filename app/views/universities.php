@@ -41,7 +41,7 @@ require_once 'app/config/global.config.php';
             <!-- End header -->
 
             <!-- Start main -->
-            <main data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+            <main>
 
                 <!-- Start banner_about -->
                 <section class="pt_banner_inner banner_px_image single_blog featured_image">
@@ -50,8 +50,9 @@ require_once 'app/config/global.config.php';
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-8 col-lg-8">
+                            <div class="col-md-7 col-lg-7">
                                 <div class="banner_title_inner">
+
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb default">
                                             <li class="breadcrumb-item"><a href="<?= $base_URI; ?>">Home</a></li>
@@ -62,6 +63,97 @@ require_once 'app/config/global.config.php';
                                         Let's Find Your <br />
                                         Dream University
                                     </h1>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-lg-5 card-info">
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-lg-12">
+                                        <div class="title_sections_inner margin-b-2">
+                                            <center>
+                                                <h2>University Facts</h2><small>One of the popular university in Ukraine<b></b></small>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ml-3">
+                                    <div class="col-12 col-md-12 col-lg-6 tile mt-3">
+                                        <div class="item_auther item_feth">
+                                            <div class="media">
+                                                <div class="media-body ic-inf"><img class="inf_ico" src="https://img.icons8.com/color/344/university.png"></div>
+                                                <div class="media-body mb-inf">
+                                                    <div class="za_tzt">
+                                                        <h5 class="inf_ttl">Type</h5>
+                                                        <p class="inf_sub"> PUBLIC </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-6 tile mt-3">
+                                        <div class="item_auther item_feth">
+                                            <div class="media">
+                                                <div class="media-body ic-inf"><img class="inf_ico" src="https://img.icons8.com/color/2x/courses.png"></div>
+                                                <div class="media-body mb-inf">
+                                                    <div class="za_tzt">
+                                                        <h5 class="inf_ttl">Course</h5>
+                                                        <p class="inf_sub"> M.D. PHYSICIAN </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-6 tile mt-3">
+                                        <div class="item_auther item_feth">
+                                            <div class="media">
+                                                <div class="media-body ic-inf"><img class="inf_ico" src="https://img.icons8.com/color/344/google-calendar--v1.png"></div>
+                                                <div class="media-body mb-inf">
+                                                    <div class="za_tzt">
+                                                        <h5 class="inf_ttl">Duration</h5>
+                                                        <p class="inf_sub"> 6 YEARS </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-6 tile mt-3">
+                                        <div class="item_auther item_feth">
+                                            <div class="media">
+                                                <div class="media-body ic-inf"><img class="inf_ico" src="https://img.icons8.com/color/2x/translation.png"></div>
+                                                <div class="media-body mb-inf">
+                                                    <div class="za_tzt">
+                                                        <h5 class="inf_ttl">Language</h5>
+                                                        <p class="inf_sub"> ENGLISH </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-6 tile mt-3">
+                                        <div class="item_auther item_feth">
+                                            <div class="media">
+                                                <div class="media-body ic-inf"><img class="inf_ico" src="https://img.icons8.com/officel/344/money.png"></div>
+                                                <div class="media-body mb-inf">
+                                                    <div class="za_tzt">
+                                                        <h5 class="inf_ttl">Fee</h5>
+                                                        <p class="inf_sub"> 5000$ </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-6 tile mt-3">
+                                        <div class="item_auther item_feth">
+                                            <div class="media">
+                                                <div class="media-body ic-inf"><img class="inf_ico" src="https://img.icons8.com/color/344/skyscrapers.png"></div>
+                                                <div class="media-body mb-inf">
+                                                    <div class="za_tzt">
+                                                        <h5 class="inf_ttl">City</h5>
+                                                        <p class="inf_sub"> Vinnytsia </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -78,6 +170,7 @@ require_once 'app/config/global.config.php';
                                     <!-- Swiper -->
                                     <div class="swiper-container blog-slider">
                                         <div class="title_sections_inner">
+                                            <span class="item_new">New</span>
                                             <h2>Popular Universities</h2>
                                         </div>
                                         <div class="swiper-wrapper">
@@ -92,107 +185,18 @@ require_once 'app/config/global.config.php';
                                                 <div class="swiper-slide">
                                                     <!-- <img class="icon_popular" src="https://orinostudio.com/assets/img/stars.svg" /> -->
                                                     <div class="grid_blog_avatar">
-                                                        <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="link-poet">
-                                                            <div class="cover_blog cover_link">
-                                                                <img src="<?= $getAllUniversitiesInfo['we_university_cover_image']; ?>" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>">
-                                                            </div>
-                                                        </a>
                                                         <div class="body_blog">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/344/motarboard.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>Country</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_country_name']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/344/skyscrapers.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>City</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_location_name']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/344/university.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>University Type</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_university_type']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/344/google-calendar--v1.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>Stay Duration</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_course_duration']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/2x/courses.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>Course Offered</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_course_offered']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/2x/translation.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>Language Used</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_course_language']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/344/skyscrapers.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>Tution Fees</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_course_fee']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/344/distributed-counter.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>Yearly In-takes</b></h3>
-                                                                                <p>5000+</p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                                             <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="link_blog">
-                                                                <mark>Explore the University</mark>
-                                                                <h6 class="title_blog">
+                                                                <img src="https://img.icons8.com/color/344/university.png" alt="Popular Universities by Wise Education" height="45" />
+                                                                <mark class="bg-blue c-white">Explore the University</mark>
+                                                                <h6 class="title_blog mt-2">
                                                                     <strong><?= $getAllUniversitiesInfo['we_univeristy_name']; ?></strong>
                                                                 </h6>
+                                                                <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="link-poet">
+                                                                    <div class="cover_blog cover_link">
+                                                                        <img src="<?= $getAllUniversitiesInfo['we_university_cover_image']; ?>" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>">
+                                                                    </div>
+                                                                </a>
                                                                 <p class="short_desc">
                                                                     <?php
                                                                     $uvshort = str_ireplace('<p>', '', $getAllUniversitiesInfo['we_university_profile']);
@@ -266,8 +270,13 @@ require_once 'app/config/global.config.php';
                                             ?>
                                                 <div class="swiper-slide">
                                                     <div class="grid_blog_avatar">
+                                                        <h4 class="title_blog">
+                                                            <mark>
+                                                                Let's Explore <b><?= $getAllCountriesInfo['we_country_name']; ?></b>
+                                                            </mark>
+                                                        </h4>
                                                         <a href="<?= $router->generate('country-details') . $getAllCountriesInfo['we_country_alias']; ?>" class="link-poet">
-                                                            <div class="cover_blog cover_link">
+                                                            <div class="cover_blog cover_link margin-t-2">
                                                                 <img src="<?= $getAllCountriesInfo['we_country_cover_image']; ?>" alt="">
                                                             </div>
                                                         </a>
@@ -319,11 +328,6 @@ require_once 'app/config/global.config.php';
                                                                 </div>
                                                             </div>
                                                             <a href="single-blog.html" class="link_blog">
-                                                                <h4 class="title_blog">
-                                                                    <mark>
-                                                                        Let's Know more about <b><?= $getAllCountriesInfo['we_country_name']; ?></b>
-                                                                    </mark>
-                                                                </h4>
                                                                 <p class="short_desc">
                                                                     <?= $getAllCountriesInfo['we_country_demographics']; ?>
                                                                 </p>
@@ -384,8 +388,13 @@ require_once 'app/config/global.config.php';
                                             ?>
                                                 <div class="swiper-slide">
                                                     <div class="grid_blog_avatar">
+                                                        <h4 class="title_blog">
+                                                            <mark>
+                                                                Let's Explore <b><?= $getAllLocationsInfo['we_location_name']; ?></b>
+                                                            </mark>
+                                                        </h4>
                                                         <a href="<?= $router->generate('location-details') . $getAllLocationsInfo['we_location_alias']; ?>" class="link-poet">
-                                                            <div class="cover_blog cover_link">
+                                                            <div class="cover_blog cover_link margin-t-2">
                                                                 <img src="<?= $getAllLocationsInfo['we_location_cover_image']; ?>" alt="">
                                                             </div>
                                                         </a>
@@ -415,11 +424,6 @@ require_once 'app/config/global.config.php';
                                                                 </div>
                                                             </div>
                                                             <a href="single-blog.html" class="link_blog">
-                                                                <h4 class="title_blog">
-                                                                    <mark>
-                                                                        Let's Know more about <b><?= $getAllLocationsInfo['we_location_name']; ?></b>
-                                                                    </mark>
-                                                                </h4>
                                                                 <p class="short_desc">
                                                                     <?= $getAllLocationsInfo['we_location_description']; ?>
                                                                 </p>

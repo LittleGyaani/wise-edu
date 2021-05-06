@@ -58,7 +58,7 @@ if (empty($_GET)) {
             <!-- End header -->
 
             <!-- Stat main -->
-            <main data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+            <main>
 
                 <!-- Start banner_about -->
                 <section class="pt_banner_inner banner_px_image blog-banner_with_image">

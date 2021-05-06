@@ -43,10 +43,34 @@ $server_protocol = ""; ///HTTP or HTTPS
 $site_host = ""; //localhost or live
 
 //Define BASE DIRECTORY
-define('BASE_PATH', dirname(__DIR__, 2));
+if(!defined('BASE_PATH'))
+    define('BASE_PATH', dirname(__DIR__, 2));
 
 /* AltoRouter */
+
 include_once BASE_PATH . '/app/assets/router/AltoRouter/AltoRouter.php';
+
+/* PHPMailer */
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+
+require BASE_PATH . '/app/assets/tools/mail/PHPMailer/Exception.php';
+require BASE_PATH . '/app/assets/tools/mail/PHPMailer/PHPMailer.php';
+require BASE_PATH . '/app/assets/tools/mail/PHPMailer/SMTP.php';
+
+//Instantiation and passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
+//Mail Server Settings
+$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+$mail->isSMTP();                                            //Send using SMTP
+$mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
+$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+$mail->Username   = 'user@example.com';                     //SMTP username
+$mail->Password   = 'secret';                               //SMTP password
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+$mail->Port       = 587;    
 
 //Make Router Global
 global $router;
@@ -95,3 +119,21 @@ $now = Date('d/m/Y H:i:s');
 $current_date = explode(' ',$now)[0];
 $current_time = explode(' ',$now)[1];
 
+if(!function_exists('compress')){
+
+    function compress($string)
+    {
+        // Remove html comments
+        $string = preg_replace('/<!--.*-->/', '', $string);
+
+        // Merge multiple spaces into one space
+        $string = preg_replace('/\s+/', ' ', $string);
+
+        // Remove space between tags. Skip the following if
+        // you want as it will also remove the space 
+        // between <span>Hello</span> <span>World</span>.
+        return preg_replace('/>\s+</', '><', $string);
+    }
+}
+
+ob_start('compress');

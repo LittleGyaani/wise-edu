@@ -41,7 +41,7 @@ require_once 'app/config/global.config.php';
             <!-- End header -->
 
             <!-- Start main -->
-            <main data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+            <main>
 
                 <!-- Start banner_about -->
                 <section class="pt_banner_inner banner_px_image single_blog featured_image">
@@ -460,11 +460,6 @@ require_once 'app/config/global.config.php';
                     </div>
                 </section>
                 <!-- End Popular Universities -->
-
-                <!-- Bottom Divider -->
-                <div class="container margin-my-7">
-                    <div class="dividar_line"></div>
-                </div>
 
             </main>
         </div>

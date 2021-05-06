@@ -37,7 +37,7 @@ if ($fetchUniversityInfo->num_rows === 0)
 
 </head>
 
-<body id="myNavbar">
+<body id="myNavbar" >
     <div id="wrapper">
         <div id="content">
 
@@ -55,8 +55,8 @@ if ($fetchUniversityInfo->num_rows === 0)
             <!-- End header -->
 
             <!-- Start main -->
-            <main data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-
+            <main>
+                
                 <!-- Start banner_about -->
                 <section class="pt_banner_inner banner_px_image single_blog featured_image">
                     <div class="parallax_cover">
@@ -77,7 +77,7 @@ if ($fetchUniversityInfo->num_rows === 0)
                                         <?= $listAllUniversityInfo['we_univeristy_name']; ?>
                                     </h1>
                                     <h6 class="margin-my-3 font-s-30 red" data-aos="fade-up" data-aos-delay="0">
-                                        <mark>Explore whether this university is fit for you.</mark>
+                                        <mark>Explore whether this university is for you!</mark>
                                     </h6>
                                     <div class="footer_content">
                                         <div data-aos="fade-up" data-aos-delay="0">
@@ -89,23 +89,24 @@ if ($fetchUniversityInfo->num_rows === 0)
                             <div class="col-md-5 col-lg-5 card-info">
                                 <div class="row justify-content-center text-center">
                                     <div class="col-lg-12">
-                                        <div class="title_sections_inner margin-b-5">
+                                        <div class="title_sections_inner margin-b-2">
                                             <center>
                                                 <h2>University Facts</h2>
+                                                <small>One of the popular university in <?= $listAllUniversityInfo['we_country_name']; ?><b></b></small>
                                             </center>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row ml-3 mt-2">
-                                    <div class="col-6 col-md-6 col-lg-6">
+                                <div class="row ml-3">
+                                    <div class="col-12 col-md-12 col-lg-6 tile mt-3">
                                         <div class="item_auther item_feth">
                                             <div class="media">
-                                                <div class="icon_fr">
+                                                <div class="media-body ic-inf">
                                                     <img class="inf_ico" src="https://img.icons8.com/color/344/university.png" />
                                                 </div>
-                                                <div class="media-body">
+                                                <div class="media-body mb-inf">
                                                     <div class="za_tzt">
-                                                        <h5>Type</h5>
+                                                        <h5 class="inf_ttl">Type</h5>
                                                         <p class="inf_sub">
                                                             <?= $listAllUniversityInfo['we_university_data_university_type']; ?>
                                                         </p>
@@ -114,15 +115,15 @@ if ($fetchUniversityInfo->num_rows === 0)
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6 col-md-6 col-lg-6">
+                                    <div class="col-12 col-md-12 col-lg-6 tile mt-3">
                                         <div class="item_auther item_feth">
                                             <div class="media">
-                                                <div class="icon_fr">
+                                                <div class="media-body ic-inf">
                                                     <img class="inf_ico" src="https://img.icons8.com/color/2x/courses.png" />
                                                 </div>
-                                                <div class="media-body">
+                                                <div class="media-body mb-inf">
                                                     <div class="za_tzt">
-                                                        <h5>Course</h5>
+                                                        <h5 class="inf_ttl">Course</h5>
                                                         <p class="inf_sub">
                                                             <?= $listAllUniversityInfo['we_university_data_course_offered']; ?>
                                                         </p>
@@ -131,15 +132,15 @@ if ($fetchUniversityInfo->num_rows === 0)
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6 col-md-6 col-lg-6 mt-3">
+                                    <div class="col-12 col-md-12 col-lg-6 tile mt-3">
                                         <div class="item_auther item_feth">
                                             <div class="media">
-                                                <div class="icon_fr">
+                                                <div class="media-body ic-inf">
                                                     <img class="inf_ico" src="https://img.icons8.com/color/344/google-calendar--v1.png" />
                                                 </div>
-                                                <div class="media-body">
+                                                <div class="media-body mb-inf">
                                                     <div class="za_tzt">
-                                                        <h5>Duration</h5>
+                                                        <h5 class="inf_ttl">Duration</h5>
                                                         <p class="inf_sub">
                                                             <?= $listAllUniversityInfo['we_university_data_course_duration']; ?>
                                                         </p>
@@ -148,15 +149,15 @@ if ($fetchUniversityInfo->num_rows === 0)
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6 col-md-6 col-lg-6 mt-3">
+                                    <div class="col-12 col-md-12 col-lg-6 tile mt-3">
                                         <div class="item_auther item_feth">
                                             <div class="media">
-                                                <div class="icon_fr">
+                                                <div class="media-body ic-inf">
                                                     <img class="inf_ico" src="https://img.icons8.com/color/2x/translation.png" />
                                                 </div>
-                                                <div class="media-body">
+                                                <div class="media-body mb-inf">
                                                     <div class="za_tzt">
-                                                        <h5>Language</h5>
+                                                        <h5 class="inf_ttl">Language</h5>
                                                         <p class="inf_sub">
                                                             <?= $listAllUniversityInfo['we_university_data_course_language']; ?>
                                                         </p>
@@ -165,15 +166,15 @@ if ($fetchUniversityInfo->num_rows === 0)
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6 col-md-6 col-lg-6 mt-3">
+                                    <div class="col-12 col-md-12 col-lg-6 tile mt-3">
                                         <div class="item_auther item_feth">
                                             <div class="media">
-                                                <div class="icon_fr">
+                                                <div class="media-body ic-inf">
                                                     <img class="inf_ico" src="https://img.icons8.com/officel/344/money.png" />
                                                 </div>
-                                                <div class="media-body">
+                                                <div class="media-body mb-inf">
                                                     <div class="za_tzt">
-                                                        <h5>Fee</h5>
+                                                        <h5 class="inf_ttl">Fee</h5>
                                                         <p class="inf_sub">
                                                             <?= $listAllUniversityInfo['we_university_data_course_fee']; ?>
                                                         </p>
@@ -182,15 +183,15 @@ if ($fetchUniversityInfo->num_rows === 0)
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6 col-md-6 col-lg-6 mt-3">
+                                    <div class="col-12 col-md-12 col-lg-6 tile mt-3">
                                         <div class="item_auther item_feth">
                                             <div class="media">
-                                                <div class="icon_fr">
+                                                <div class="media-body ic-inf">
                                                     <img class="inf_ico" src="https://img.icons8.com/color/344/skyscrapers.png" />
                                                 </div>
-                                                <div class="media-body">
+                                                <div class="media-body mb-inf">
                                                     <div class="za_tzt">
-                                                        <h5>City</h5>
+                                                        <h5 class="inf_ttl">City</h5>
                                                         <p class="inf_sub">
                                                             <?= $listAllUniversityInfo['we_location_name']; ?>
                                                         </p>
