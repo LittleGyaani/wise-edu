@@ -52,6 +52,10 @@
 <!-- <script defer src="<?= $base_URI; ?>/app/assets/js/vendor/scrolltoanchor.js" type="text/javascript"></script> -->
 <!-- sweetalert2 -->
 <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@10" type="text/javascript"></script>
+<?php if($currentSegment == 'university')
+  echo '<!-- University Page Specific JS -->
+      <script defer src="'.$base_URI.'/app/assets/js/pages/university-details.js?v=1.0.0" type="text/javascript"></script>';
+?>
 <!-- Easy Autcomplete JS -->
 <script defer href="https://raw.githubusercontent.com/pawelczak/EasyAutocomplete/master/dist/jquery.easy-autocomplete.min.js" type="text/javascript"></script>
 <!-- Script Section Ends -->

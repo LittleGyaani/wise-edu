@@ -23,9 +23,9 @@
                 </a>
             </li>
             <li class="nav-item dropdown dropdown-hover">
-                <a class="nav-link dropdown-toggle dropdown_menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle dropdown_menu" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Explore 
-                    <!-- <span class="item_new">New</span> -->
+                    <span class="item_new bg-blue">Start Here</span>
                     <div class="icon_arrow">
                         <i class="tio chevron_right"></i>
                     </div>
@@ -48,7 +48,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown dropdown-hover">
-                <a class="nav-link dropdown-toggle dropdown_menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle dropdown_menu" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Collections
                     <div class="icon_arrow">
                         <i class="tio chevron_right"></i>
@@ -57,16 +57,16 @@
                 <div class="dropdown-menu single-drop sm_dropdown" aria-labelledby="navbarDropdown">
                     <ul class="dropdown_menu_nav">
                         <li class="dropdown-submenu dropdown-hover">
-                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="">Blog</a>
+                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="https://blog.wiseeducation.in/">Blog</a>
                         </li>
                         <li class="dropdown-submenu dropdown-hover">
-                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="">FAQs</a>
+                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="javascript:void(0)">FAQs</a>
                         </li>
                         <li class="dropdown-submenu dropdown-hover">
-                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="">Testimonials</a>
+                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="javascript:void(0)">Testimonials</a>
                         </li>
                         <li class="dropdown-submenu dropdown-hover">
-                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="">Gallery</a>
+                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="javascript:void(0)">Gallery</a>
                         </li>
                     </ul>
                 </div>

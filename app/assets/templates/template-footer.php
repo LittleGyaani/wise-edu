@@ -1,7 +1,7 @@
 <!-- Bottom Divider -->
-<div class="container margin-t-8">
-  <div class="dividar_line"></div>
-</div>
+<!-- Start dividar -->
+<section class="dividar margin-t-12"></section>
+<!-- End. divider -->
 
 <!-- Start Footer -->
 <footer class="defalut-footer light padding-py-12 footer__workspace bg-grey">
@@ -27,20 +27,26 @@
       </div>
       <div class="col-6 col-md-6 col-lg-2">
         <div class="item_links">
-          <h4>Social</h4>
-          <a class="nav-link" href="">Blog</a>
-          <a class="nav-link" href="">Facebook</a>
-          <a class="nav-link" href="">Twitter</a>
-          <a class="nav-link" href="">Instagram</a>
+          <h4>Explore
+            <span class="item_new bg-blue">Start Here</span>
+          </h4>
+          <a class="nav-link" href="<?= $router->generate('search-page'); ?>">Search
+            <span class="item_new">New</span>
+          </a>
+          <a class="nav-link" href="<?= $router->generate('all-programs'); ?>">Programs</a>
+          <a class="nav-link" href="<?= $router->generate('all-countries'); ?>">Countries</a>
+          <a class="nav-link" href="<?= $router->generate('all-locations'); ?>">Locations</a>
+          <a class="nav-link" href="<?= $router->generate('all-universities'); ?>">Universities</a>
         </div>
       </div>
       <div class="col-6 col-md-6 col-lg-2">
         <div class="item_links">
           <h4>Company</h4>
-          <a class="nav-link" href="">About</a>
-          <a class="nav-link" href="">Affiliates</a>
-          <a class="nav-link" href="">Careers <span class="item_new">We're Hiring</span></a>
-          <a class="nav-link" href="">Legal & Privacy</a>
+          <a class="nav-link" href="<?= $router->generate('about-us'); ?>">About</a>
+          <a class="nav-link" href="https://blog.wiseeducation.in/">Blog</a>
+          <a class="nav-link" href="javascript:void(0);">Careers <span class="item_new">Hiring</span></a>
+          <a class="nav-link" href="javascript:void(0);">Services</a>
+          <a class="nav-link" href="<?= $router->generate('contact-us'); ?>">Contact</a>
         </div>
       </div>
       <div class="col-md-6 col-lg-4 mt-4 mt-lg-0">
@@ -61,11 +67,17 @@
             </div>
           </form>
         </div>
-        <a href="#Testimonial" class="btn-social color-instagram border-0 mr-2">
+        <a href="https://www.facebook.com/wiseeducation" target="_blank" aria-label="Like Wise Group on Facebook" data-microtip-position="top" role="tooltip" class="btn-social color-facebook border-0 mr-2">
+          <i class="tio facebook"></i>
+        </a>
+        <a href="https://twitter.com/wiseeducationg2" target="_blank" aria-label="Follow Wise Group on Twitter" data-microtip-position="top" role="tooltip" class="btn-social color-twitter border-0 mr-2">
+          <i class="tio twitter"></i>
+        </a>
+        <a href="https://instagram.com/gwiseeducation/" target="_blank" aria-label="Follow Wise Group on Instagram" data-microtip-position="top" role="tooltip" class="btn-social color-instagram border-0 mr-2">
           <i class="tio instagram"></i>
         </a>
-        <a href="#Testimonial" class="btn-social color-behance border-0  mr-2">
-          <i class="tio behance"></i>
+        <a href="https://www.youtube.com/channel/UC1OlVHFElQ0HTvmXIkaZ28g" target="_blank" aria-label="Subscribe Wise Group on YouTube" data-microtip-position="top" role="tooltip" class="btn-social color-youtube border-0 mr-2">
+          <i class="tio youtube"></i>
         </a>
       </div>
     </div>
@@ -83,7 +95,14 @@
       <div class="copyright">
         <span>Copyright &copy; <?= Date('Y'); ?> <strong>WISE EDUCATION GROUP.</strong>
           All Rights Reseved.
-          <p>Beautifully Crafted with <i class="fa fa-heart heart fa-beat" aria-hidden="true"></i> by <a href="https://wa.me/919853233951?text=I got your Contact from Wise Education Group Official Website" target="_blank" aria-label="Ping BRAHMA a.k.a Little Gyaani on WhatsApp" data-microtip-position="top" role="tooltip"><b>Little Gyaani</b></a>.</p>
+          <p>Beautifully Crafted with <i class="fa fa-heart heart fa-beat" aria-hidden="true"></i> by <a class="ft-lnk" href="https://wa.me/919853233951?text=I got your Contact from Wise Education Group Official Website" target="_blank" aria-label="Ping BRAHMA a.k.a Little Gyaani on WhatsApp" data-microtip-position="top" role="tooltip"><b>Little Gyaani</b></a>.</p>
+          <center>
+            <strong>
+              <a class="ft-lnk" href="javascript:void(0);">Terms & Conditions</a> &bull;
+              <a class="ft-lnk" href="javascript:void(0);">Privacy Policy</a> &bull;
+              <a class="ft-lnk" href="javascript:void(0);">Disclaimer</a>
+            </strong>
+          </center>
         </span>
       </div>
     </div>
@@ -119,15 +138,15 @@
 <a href="https://wa.me/919853233951?text=I got your Contact from Wise Education Group Official Website" target="_blank" class="rakon_purchase">
   <button type="button" class="btn btn_purch">
     <div class="icon">
-      <img src="app/assets/img/rakon/envato.svg" />
+      <img src="https://img.icons8.com/color/344/github-2.png" alt="Meet the Developer" height="auto" width="auto" />
     </div>
-    <span class="txt">Little Gyaani</span>
+    <span class="txt">BRAHMA</span>
   </button>
 </a>
 <!-- End. -->
 
 <!-- Tosts -->
-<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center">
+<!-- <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center">
   <div class="toast toast_demo" id="myTost" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true" data-autohide="false">
     <div class="toast-body">
       <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
@@ -137,13 +156,13 @@
       <p>We are glad you joined us <a href="#">Join us</a></p>
     </div>
   </div>
-</div>
+</div> -->
 <!-- End. Toasts -->
 
 <!-- Start Section Loader -->
 <section class="loading_overlay">
   <div class="loader_logo">
-    <img class="logo" src="https://pancholiaschool.com/wp-content/uploads/2019/09/plane-loader-slower.gif" />
+    <img class="logo" src=<?= $base_URI . "/app/assets/img/loaders/wise-loader.gif" ?> height="auto" width="auto" alt="Wise Education Group" />
   </div>
 </section>
 <!-- End. Loader -->

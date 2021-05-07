@@ -48,48 +48,6 @@ $(document).ready(function () {
 
     // $("#postalAddress").easyAutocomplete(options);
 
-    // $(document).on('click', 'a[href^="#"]', function (e) {
-    //     // target element id
-    //     var id = $(this).attr('href');
-
-    //     // target element
-    //     var $id = $(id);
-    //     if ($id.length === 0) {
-    //         return;
-    //     }
-
-    //     // prevent standard hash navigation (avoid blinking in IE)
-    //     e.preventDefault();
-
-    //     // top position relative to the document
-    //     var pos = $id.offset().top - 100;
-
-    //     // animated top scrolling
-    //     $('body, html').animate({
-    //         scrollTop: pos
-    //     });
-
-    // });
-
-    // window.onscroll = function () {
-    //     myFunction();
-    // };
-
-    // // Get the navbar
-    // var navbar = document.getElementById("navbar");
-
-    // // Get the offset position of the navbar
-    // var sticky = navbar.offsetTop;
-
-    // // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    // function myFunction() {
-    //     if (window.pageYOffset >= sticky) {
-    //         navbar.classList.add("sticky")
-    //     } else {
-    //         navbar.classList.remove("sticky");
-    //     }
-    // }
-
     /* Handle Form Submit */
 
     //Quick Contact Form
@@ -97,10 +55,10 @@ $(document).ready(function () {
         e.preventDefault();
         // console.log('yes');
         //Check for Select Values
-        if ($('#countryChoice option:selected').val() === "null") {
+        if ($('#countryChoice option:selected').val() === "") {
             console.log('Please select Country');
         }
-        else if ($('#courseChoice option:selected').val() === "null")
+        else if ($('#courseChoice option:selected').val() === "")
         {
             console.log('Please select Course');
         }

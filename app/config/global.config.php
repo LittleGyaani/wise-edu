@@ -50,30 +50,79 @@ if(!defined('BASE_PATH'))
 
 include_once BASE_PATH . '/app/assets/router/AltoRouter/AltoRouter.php';
 
+//Make Router Global
+global $router, $mail;
+
 /* PHPMailer */
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
+if (!class_exists('PHPMailer\PHPMailer\Exception'))
+{
 require BASE_PATH . '/app/assets/tools/mail/PHPMailer/Exception.php';
 require BASE_PATH . '/app/assets/tools/mail/PHPMailer/PHPMailer.php';
 require BASE_PATH . '/app/assets/tools/mail/PHPMailer/SMTP.php';
+}
 
-//Instantiation and passing `true` enables exceptions
-$mail = new PHPMailer(true);
+//Fireup PHPMailer
+try
+{
+    $mail = new PHPMailer(true);
 
-//Mail Server Settings
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-$mail->isSMTP();                                            //Send using SMTP
-$mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
-$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-$mail->Username   = 'user@example.com';                     //SMTP username
-$mail->Password   = 'secret';                               //SMTP password
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-$mail->Port       = 587;    
+    //Mail Server Settings
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'user@example.com';                     //SMTP username
+    $mail->Password   = 'secret';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Port       = 587;
 
-//Make Router Global
-global $router;
+}
+catch (Exception $e)
+{
+
+    //echo "fail";
+    // $globals['emailstatus'] =false;
+
+    echo "Message could not be sent.";
+}
+
+if(!function_exists('sendMail'))
+{
+
+    function sendMail($mail, $name, $from, $subject, $message)
+    {
+        //Recipients
+        $mail->setFrom('enquiry@wiseeducation.in', 'Wise Education Enquiry');
+        $mail->addAddress($from, $name);     //Add a recipient
+        $mail->addAddress('enquiry@wiseeducation.in');               //Name is optional
+        $mail->addReplyTo('enquiry@wiseeducation.in', 'Wise Education Enquiry');
+        // $mail->addCC('cc@example.com');
+        // $mail->addBCC('bcc@example.com');
+
+        //Attachments
+        //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+        //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+        //Content
+        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->Subject = $subject;
+        $mail->Body    = $message;
+        $mail->AltBody = $message;
+
+        $mail->send();
+
+        if (!$mail)
+            echo 'Message not sent';
+        else
+            echo 'Message has been sent';
+    }
+    
+}
 
 //Initialize AltoRouter
 $router = new AltoRouter();
@@ -135,5 +184,13 @@ if(!function_exists('compress')){
         return preg_replace('/>\s+</', '><', $string);
     }
 }
+
+//Current URL
+$current_URI = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . explode('?', "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]")[0];
+
+$urlArray = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$segments = explode('/', $urlArray);
+$numSegments = count($segments);
+$currentSegment = $segments[$numSegments - 2];
 
 ob_start('compress');

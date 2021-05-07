@@ -37,7 +37,7 @@ if ($fetchUniversityInfo->num_rows === 0)
 
 </head>
 
-<body id="myNavbar" >
+<body id="myNavbar">
     <div id="wrapper">
         <div id="content">
 
@@ -56,7 +56,7 @@ if ($fetchUniversityInfo->num_rows === 0)
 
             <!-- Start main -->
             <main>
-                
+
                 <!-- Start banner_about -->
                 <section class="pt_banner_inner banner_px_image single_blog featured_image">
                     <div class="parallax_cover">
@@ -320,133 +320,62 @@ if ($fetchUniversityInfo->num_rows === 0)
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="title_sections margin-b-3">
-                                    <h2>Recent Posts</h2>
+                                    <h2>More Popular Universities</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card">
-                                    <a href="#" class="link_poet">
-                                        <div class="cover_link">
-                                            <img class="main_img" src="../../assets/img/inner/px0654.jpg" class="card-img-top" alt="...">
-                                            <div class="auther_post">
-                                                <div class="media">
-                                                    <img src="../../assets/img/persons/23.jpg" alt="">
-                                                    <div class="media-body my-auto">
-                                                        <div class="txt">
-                                                            <h4>Chad Faircloth</h4>
-                                                            <p>30 Sep, 2020</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                            <?php
+                            $getRestUniversityInfo = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id` WHERE wul.`we_univeristy_alias` != '$university_slug' LIMIT 5";
+                            $fetchRestUniversityInfo = $db_conn->query($getRestUniversityInfo);
+                            while ($listAllRestUniversityInfo = $fetchRestUniversityInfo->fetch_assoc()) {
+                            ?>
+                                <!-- Start University Listing -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card">
+                                        <a href="<?= $router->generate('university-details') . $listAllRestUniversityInfo['we_univeristy_alias']; ?>" class=" link_poet">
+                                            <div class="cover_link">
+                                                <img class="main_img" src="<?= $listAllRestUniversityInfo['we_university_cover_image']; ?>" class="card-img-top" alt="<?= $listAllRestUniversityInfo['we_univeristy_name']; ?>">
                                             </div>
-                                        </div>
-                                    </a>
-                                    <div class="card-body">
-                                        <div class="about_post">
-                                            <span class="c_ategory">
-                                                <a href="#Design">Design</a>
-                                                <a href="#Developer">Developer</a>
-                                            </span>
-                                            <span class="dot"></span>
-                                            <time>15min</time>
-                                        </div>
-                                        <a href="#" class="d-block">
-                                            <h5 class="card-title">SpaceX: Simple, beautiful interfaces are the future</h5>
-                                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                                to
-                                                additional content. This content is a little bit longer.
-                                            </p>
                                         </a>
+                                        <div class="card-body">
+                                            <div class="about_post">
+                                                <span class="c_ategory">
+                                                    <a href="<?= $router->generate('country-details') . $listAllRestUniversityInfo['we_univeristy_alias']; ?>"><?= $listAllRestUniversityInfo['we_country_name']; ?></a>
+                                                    <a href="<?= $router->generate('location-details') . $listAllRestUniversityInfo['we_location_alias']; ?>"><?= $listAllRestUniversityInfo['we_location_name']; ?></a>
+                                                </span>
+                                                <span class="dot"></span>
+                                                <time><?= $listAllRestUniversityInfo['we_univeristy_name']; ?></time>
+                                            </div>
+                                            <a href="<?= $router->generate('university-details') . $listAllRestUniversityInfo['we_univeristy_alias']; ?>" class="d-block">
+                                                <h5 class="card-title"><?= $listAllRestUniversityInfo['we_univeristy_name']; ?></h5>
+                                                <p class="card-text short_desc">
+                                                    <?php
+                                                    $uvshort = str_ireplace('<p>', '', $listAllRestUniversityInfo['we_university_profile']);
+                                                    $uvshort = str_ireplace('</p>', '', $uvshort);
+                                                    echo $uvshort;
+                                                    ?>
+                                                </p>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card">
-                                    <a href="#" class="link_poet">
-                                        <div class="cover_link">
-                                            <img class="main_img" src="../../assets/img/inner/px00654.jpg" class="card-img-top" alt="...">
-                                            <div class="auther_post">
-                                                <div class="media">
-                                                    <img src="../../assets/img/persons/23.jpg" alt="">
-                                                    <div class="media-body my-auto">
-                                                        <div class="txt">
-                                                            <h4>Chad Faircloth</h4>
-                                                            <p>30 Sep, 2020</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <!-- End University Listing -->
+                            <?php
+                            }
+                            ?>
+                            <div class="col-md-6 col-lg-4 mx-lg-auto margin-t-12">
+                                <div class="other__office aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                                    <h3>Looking for all options?</h3>
+                                    <p>Go give us a try to find them, all of them.</p><a href="<?= $router->generate('search-page'); ?>" class="btn btn_md_primary sweep_top sweep_letter c-white bg-dark opacity-1 rounded-8">
+                                        <div class="inside_item"><span data-hover="Let's go 🏃‍♂️">Search Now</span></div>
                                     </a>
-                                    <div class="card-body">
-                                        <div class="about_post">
-                                            <span class="c_ategory">
-                                                <a href="#Design">Design</a>
-                                                <a href="#Developer">Developer</a>
-                                            </span>
-                                            <span class="dot"></span>
-                                            <time>15min</time>
-                                        </div>
-                                        <a href="#" class="d-block">
-                                            <h5 class="card-title">10 Insights from Apple’s Human Interface Design Guidelines</h5>
-                                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                                to
-                                                additional content. This content is a little bit longer.
-                                            </p>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
-
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card">
-                                    <a href="#" class="link_poet">
-                                        <div class="cover_link">
-                                            <img class="main_img" src="../../assets/img/inner/00pxsd.jpg" class="card-img-top" alt="...">
-                                            <div class="auther_post">
-                                                <div class="media">
-                                                    <img src="../../assets/img/persons/23.jpg" alt="">
-                                                    <div class="media-body my-auto">
-                                                        <div class="txt">
-                                                            <h4>Chad Faircloth</h4>
-                                                            <p>30 Sep, 2020</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <div class="card-body">
-                                        <div class="about_post">
-                                            <span class="c_ategory">
-                                                <a href="#Design">Design</a>
-                                                <a href="#Developer">Developer</a>
-                                            </span>
-                                            <span class="dot"></span>
-                                            <time>15min</time>
-                                        </div>
-                                        <a href="#" class="d-block">
-                                            <h5 class="card-title">17 UI Design Mistakes That Fails Your Website</h5>
-                                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                                to
-                                                additional content. This content is a little bit longer.
-                                            </p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </section>
                 <!-- End. blog_masonry -->
-
-                <!-- Start dividar -->
-                <section class="dividar margin-t-12"></section>
-                <!-- End. divider -->
 
             </main>
         </div>

@@ -157,13 +157,13 @@ if (empty($_GET)) {
                                 <center>
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <button type="submit" class="btn btn_lg_primary p bg-dark c-white rounded-8">
+                                            <button type="submit" class="btn btn_lg_primary p bg-dark c-white rounded-8 mr-2">
                                                 <span>Search</span>
-                                                <i class="tio search mr-1 align-middle font-s-16"></i>
+                                                <!-- <i class="tio search mr-1 align-middle font-s-16"></i> -->
                                             </button>
                                             <button type="reset" class="btn btn_lg_primary p bg-red c-white rounded-8">
                                                 <span>Reset</span>
-                                                <i class="tio info mr-1 align-middle font-s-16"></i>
+                                                <!-- <i class="tio info mr-1 align-middle font-s-16"></i> -->
                                             </button>
                                         </div>
                                     </div>

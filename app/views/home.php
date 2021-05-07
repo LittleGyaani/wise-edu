@@ -170,7 +170,7 @@ require_once 'app/config/global.config.php';
                           <div class="form-group">
                             <label>Choose Country <sup class="c-red">*</sup></label>
                             <select class="form-control custom-select" name="country-choice" id="countryChoice" required>
-                              <option value="null" disabled selected>Select Country</option>
+                              <option value="" disabled selected>Select Country</option>
                               <?php
                               //List All Countries
                               $listAllCountries = "SELECT * FROM `we_country_list` WHERE `we_country_status` = 1";
@@ -186,7 +186,7 @@ require_once 'app/config/global.config.php';
                           <div class="form-group">
                             <label>Choose Course <sup class="c-red">*</sup></label>
                             <select class="form-control custom-select" name="course-choice" id="courseChoice" required>
-                              <option value="null" disabled selected>Select Course</option>
+                              <option value="" disabled selected>Select Course</option>
                               <?php
                               //List All Countries
                               $listAllCourses = "SELECT * FROM `we_program_list` WHERE `we_program_status` = 1";
@@ -329,7 +329,7 @@ require_once 'app/config/global.config.php';
               while ($getAllUniversitiesInfo = $fetchAllUniversities->fetch_assoc()) {
               ?>
                 <div class="col-md-6 col-lg-4 mb-4 mt-4 mb-lg-0">
-                  <a href="#" class="boo__item" data-aos="fade-up" data-aos-delay="0">
+                  <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="boo__item" data-aos="fade-up" data-aos-delay="0">
                     <div class="img__off">
                       <img src="<?= $getAllUniversitiesInfo['we_university_cover_image']; ?>" height="auto" width="auto" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>" />
                     </div>
@@ -531,7 +531,7 @@ require_once 'app/config/global.config.php';
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="100">
                   <div class="icon--top">
                     <div class="ico">
-                      <i class="tio flight"></i>
+                      <i class="tio globe"></i>
                     </div>
                     <div class="media-body">
                       <div class="t_xt mt-4">
@@ -625,11 +625,12 @@ require_once 'app/config/global.config.php';
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-5 my-lg-auto mx-auto">
+                <!-- <div class="col-lg-5 my-lg-auto mx-auto">
                   <div class="people__say">
-                    <div class="swiper-container gallery-top swipe_circle">
+                    <div class="swiper-container gallery-top swipe_circle"> 
+                -->
                       <!-- item Users -->
-                      <div class="person_thumbs">
+                      <!-- <div class="person_thumbs">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <img class="pagination rounded-circle" src="app/assets/img/persons/04.png" />
@@ -647,9 +648,10 @@ require_once 'app/config/global.config.php';
                             <img class="pagination rounded-circle" src="app/assets/img/persons/01.png" />
                           </div>
                         </div>
-                      </div>
+                      </div> 
+                    -->
                       <!-- item content -->
-                      <div class="swiper-wrapper">
+                      <!-- <div class="swiper-wrapper">
                         <div class="swiper-slide">
                           <div class="img__user">
                             <img src="app/assets/img/persons/04.png" alt="">
@@ -768,10 +770,12 @@ require_once 'app/config/global.config.php';
                       <div></div>
                       <div></div>
                       <div></div>
-                    </div>
+                    </div> -->
                     <!-- End Swiper -->
+                <!--
                   </div>
-                </div>
+                </div> 
+                -->
               </div>
             </div>
           </div>

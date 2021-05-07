@@ -80,34 +80,38 @@ require_once 'app/config/global.config.php';
                                 </div>
                                 <div class="information_agency d-md-flex">
                                     <div class="item_data mr-5">
-                                        <p>Work Inquiries</p>
-                                        <a class="tel" href="tel:+18091206705">+1 002 874 457</a>
+                                        <p>Call Support</p>
+                                        <a class="tel" href="tel:+919439937117">+91 9439 937 117</a>
                                     </div>
                                     <div class="item_data">
-                                        <p>Work Inquiries</p>
-                                        <a class="tel" href="mailto:info@agency.com">info@agency.com</a>
+                                        <p>Mail Support</p>
+                                        <a class="tel" href="mailto:enquiry@wiseeducation.in">enquiry@wiseeducation.in</a>
                                     </div>
                                 </div>
 
-                                <h3 class="font-s-16 font-w-500 c-gray margin-t-4">HQ - San Mateo, CA</h3>
-                                <p class="font-s-16">2950 S. Delaware Street, Suite 201 San Mateo CA 94403</p>
+                                <h3 class="font-s-16 font-w-500 c-gray margin-t-4">HO - Bhubaneswar, OD</h3>
+                                <p class="font-s-16">Plot No. : 191/A, Kharavela Nagar, Unit-3, Bhubaneswar, Odisha, 751001 India</p>
 
                                 <div class="information_agency margin-t-4">
                                     <div class="item_data">
-                                        <p>Availability</p>
-                                        <div>(Mon-Fri) 9am to 5pm PST</div>
+                                        <p>Office Hours</p>
+                                        <div>(Mon-Sat) 9am to 9pm IST/GMT+5:30</div>
                                     </div>
                                 </div>
 
                                 <div class="scoail__media">
-                                    <a href="">
-                                        <i class="tio dribbble"></i>
+
+                                    <a href="https://www.facebook.com/wiseeducation" target="_blank" aria-label="Like Wise Group on Facebook" data-microtip-position="top" role="tooltip">
+                                        <i class="tio facebook"></i>
                                     </a>
-                                    <a href="">
-                                        <i class="tio github"></i>
-                                    </a>
-                                    <a href="">
+                                    <a href="https://twitter.com/wiseeducationg2" target="_blank" aria-label="Follow Wise Group on Twitter" data-microtip-position="top" role="tooltip">
                                         <i class="tio twitter"></i>
+                                    </a>
+                                    <a href="https://instagram.com/gwiseeducation/" target="_blank" aria-label="Follow Wise Group on Instagram" data-microtip-position="top" role="tooltip">
+                                        <i class="tio instagram"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UC1OlVHFElQ0HTvmXIkaZ28g" target="_blank" aria-label="Subscribe Wise Group on YouTube" data-microtip-position="top" role="tooltip">
+                                        <i class="tio youtube"></i>
                                     </a>
                                 </div>
 
