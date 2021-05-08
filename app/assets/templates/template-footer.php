@@ -1,6 +1,6 @@
 <!-- Bottom Divider -->
 <!-- Start dividar -->
-<section class="dividar margin-t-12"></section>
+<section class="dividar margin-t-2"></section>
 <!-- End. divider -->
 
 <!-- Start Footer -->

@@ -65,11 +65,8 @@ $router->map('GET', '/apply', __DIR__ . '/app/views/contact-us.php', 'apply-now'
 
 /* API Routes */
 
-//Quick Contact
-$router->map('GET|POST', '/api/web/v1/quick-contact', __DIR__ . '/app/api/process-requests.php', 'qc-api');
-
-//Contact Us
-$router->map('GET|POST', '/api/web/v1/contact-us', __DIR__ . '/app/api/process-requests.php', 'cu-api');
+//Form Process
+$router->map('GET|POST', '/api/web/v1/process-form', __DIR__ . '/app/api/process-requests.php', 'process-form');
 
 //404 error
 $router->map('GET', '/404', __DIR__ . '/app/views/errors/error-404.php', 'error-404');
@@ -83,5 +80,5 @@ if($match) {
 }
 else {
   header("HTTP/1.0 404 Not Found");
-  // require 'app/views/errors/error-404.php';
+  require __DIR__ . '/app/views/errors/error-404.php';
 }

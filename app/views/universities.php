@@ -192,7 +192,7 @@ require_once 'app/config/global.config.php';
                                                                 <h6 class="title_blog mt-2">
                                                                     <strong><?= $getAllUniversitiesInfo['we_univeristy_name']; ?></strong>
                                                                 </h6>
-                                                                <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="link-poet">
+                                                                <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="link_poet margin-t-1">
                                                                     <div class="cover_blog cover_link">
                                                                         <img src="<?= $getAllUniversitiesInfo['we_university_cover_image']; ?>" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>">
                                                                     </div>

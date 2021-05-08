@@ -358,3 +358,10 @@ img {border : 0;}
 .ft-lnk{
     text-decoration: none !important;
 }
+.grid_blog_avatar .body_blog .title_blog {
+    font-size: 19px !important;
+}
+.with_map_office .block_loaction .item_locat .add_ress {
+    font-size: 15px !important;
+    margin-bottom: 2.375rem !important;
+}

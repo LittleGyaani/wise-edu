@@ -42,9 +42,30 @@ $now = "";
 $server_protocol = ""; ///HTTP or HTTPS
 $site_host = ""; //localhost or live
 
+
 //Define BASE DIRECTORY
 if(!defined('BASE_PATH'))
     define('BASE_PATH', dirname(__DIR__, 2));
+
+//Global Define for EMAIL Service
+if  (
+        (!defined('MAIL_PORT'))//Mail PORT
+        && 
+        (!defined('MAIL_HOST'))//Mail HOST
+        && 
+        (!defined('MAIL_USERNAME'))//Mail USERNAME
+        && 
+        (!defined('MAIL_PASSWORD'))//Mail PASSWORD
+    )
+{
+
+    //Put all values here
+    define('MAIL_PORT', 587);
+    define('MAIL_HOST', 'smtp.wiseeducation.in');
+    define('MAIL_USERNAME', 'enquiry@wiseducation.in');
+    define('MAIL_PASSWORD', '');
+
+}
 
 /* AltoRouter */
 
@@ -66,62 +87,115 @@ require BASE_PATH . '/app/assets/tools/mail/PHPMailer/PHPMailer.php';
 require BASE_PATH . '/app/assets/tools/mail/PHPMailer/SMTP.php';
 }
 
-//Fireup PHPMailer
-try
+if((!function_exists('sendEnquiryMail')) && (!function_exists('sendEnquiryMail')))
 {
-    $mail = new PHPMailer(true);
-
-    //Mail Server Settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'user@example.com';                     //SMTP username
-    $mail->Password   = 'secret';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Port       = 587;
-
-}
-catch (Exception $e)
-{
-
-    //echo "fail";
-    // $globals['emailstatus'] =false;
-
-    echo "Message could not be sent.";
-}
-
-if(!function_exists('sendMail'))
-{
-
-    function sendMail($mail, $name, $from, $subject, $message)
-    {
-        //Recipients
-        $mail->setFrom('enquiry@wiseeducation.in', 'Wise Education Enquiry');
-        $mail->addAddress($from, $name);     //Add a recipient
-        $mail->addAddress('enquiry@wiseeducation.in');               //Name is optional
-        $mail->addReplyTo('enquiry@wiseeducation.in', 'Wise Education Enquiry');
-        // $mail->addCC('cc@example.com');
-        // $mail->addBCC('bcc@example.com');
-
-        //Attachments
-        //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-        //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
-
-        //Content
-        $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = $subject;
-        $mail->Body    = $message;
-        $mail->AltBody = $message;
-
-        $mail->send();
-
-        if (!$mail)
-            echo 'Message not sent';
-        else
-            echo 'Message has been sent';
-    }
     
+        function sendEnquiryMail($name, $to, $subject, $message)
+        {
+            //Fireup PHPMailer
+            try {
+
+                $mail = new PHPMailer(true);
+
+                //Mail Server Settings
+                $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                $mail->isSMTP();                                            //Send using SMTP
+                $mail->Host       = MAIL_HOST;                     //Set the SMTP server to send through
+                $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                $mail->Username   = MAIL_USERNAME;                     //SMTP username
+                $mail->Password   = MAIL_PASSWORD;                               //SMTP password
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+                $mail->Port       = MAIL_PORT;
+
+                //Recipients
+                $mail->setFrom('enquiry@wiseeducation.in', 'Wise Education Enquiry');
+                $mail->addAddress($to, $name);     //Add a recipient
+                $mail->addAddress('enquiry@wiseeducation.in');               //Name is optional
+                $mail->addReplyTo('enquiry@wiseeducation.in', 'Wise Education Enquiry');
+                // $mail->addCC('cc@example.com');
+                // $mail->addBCC('bcc@example.com');
+
+                //Attachments
+                //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+                //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+                //Content
+                $mail->isHTML(true);                                  //Set email format to HTML
+                $mail->Subject = 'We have received your ticket. Ticket ID - '. $subject . ' : WISE EDUCATION';
+                $mail->Body    = $message;
+                $mail->AltBody = $message;
+
+                echo $mail;
+
+                $mail->send();
+
+                if (!$mail)
+                    echo '0';
+                else
+                    echo '1';
+            }
+            catch (Exception $e)
+            {
+
+            //echo "fail";
+            // $globals['emailstatus'] =false;
+
+            echo "Message could not be sent.";
+
+            }
+        }
+
+        function sendTeamMail($teammail, $ticketid, $teammaildata)
+        {
+            //Fireup PHPMailer
+            try {
+
+                $mail = new PHPMailer(true);
+
+                //Mail Server Settings
+                $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                $mail->isSMTP();                                            //Send using SMTP
+                $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
+                $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                $mail->Username   = 'user@example.com';                     //SMTP username
+                $mail->Password   = 'secret';                               //SMTP password
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+                $mail->Port       = 587;
+
+                //Recipients
+                $mail->setFrom('enquiry@wiseeducation.in', 'Wise Education Enquiry');
+                $mail->addAddress($teammail, 'WISE EDUCATION ENQUIRY');     //Add a recipient
+                //$mail->addAddress('enquiry@wiseeducation.in');               //Name is optional
+                //$mail->addReplyTo('enquiry@wiseeducation.in', 'Wise Education Enquiry');
+                // $mail->addCC('cc@example.com');
+                // $mail->addBCC('bcc@example.com');
+
+                //Attachments
+                //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+                //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+                //Content
+                $mail->isHTML(true);                                  //Set email format to HTML
+                $mail->Subject = 'A new enquiry has been received. Ticket'. $ticketid;
+                $mail->Body    = $teammaildata;
+                $mail->AltBody = $teammaildata;
+
+                $mail->send();
+
+                if (!$mail)
+                    echo '0';
+                else
+                    echo '1';
+            } 
+            catch (Exception $e)
+            {
+
+            //echo "fail";
+            // $globals['emailstatus'] =false;
+
+            echo "Message could not be sent.";
+            }
+        }
 }
 
 //Initialize AltoRouter

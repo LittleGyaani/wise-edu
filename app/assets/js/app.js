@@ -69,7 +69,7 @@ $(document).ready(function () {
             //Send FORM Data
             $.ajax({
                 'type': 'POST',
-                'url': apiUri + 'quick-contact',
+                'url': apiUri + 'process-form?req=qc',
                 data: $(this).serialize(),
                 dataType: 'JSON',
                 success: function (quickContactResponse) {
@@ -77,6 +77,21 @@ $(document).ready(function () {
                 }
             });
         }
+    });
+
+    //Quick Contact Form
+    $('#contactForm').submit(function (e) {
+        e.preventDefault();
+            //Send FORM Data
+            $.ajax({
+                'type': 'POST',
+                'url': apiUri + 'process-form?req=ge',
+                data: $(this).serialize(),
+                dataType: 'JSON',
+                success: function (enquiryResponse) {
+                    console.log(enquiryResponse);
+                }
+            });
     });
 
 });
