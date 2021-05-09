@@ -22,15 +22,15 @@
 <meta http-equiv="expires" content="0" />
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
-<meta name="rating" content="General">
-<meta name="audience" content="All">
-<meta name="doc-type" content="Web Page">
-<meta name="doc-class" content="Published">
+<meta name="rating" content="General" />
+<meta name="audience" content="All" />
+<meta name="doc-type" content="Web Page" />
+<meta name="doc-class" content="Published" />
 <meta property="og:locale" content="en_US" />
 <meta property='og:title' content="Study Abroad, Study MBBS Abroad, Overseas Education Consultants in Bhubaneswar - Wise Education Education" />
 <meta property='og:type' content="Website" />
 <meta property='og:url' content="<?= $base_URI; ?>" />
-<meta property="og:image" content="<?= $base_URI; ?>/app/assets/img/logos/wise-education-logo.png" />
+<meta property="og:image" content="app/assets/img/logos/wise-education-logo.png" />
 <meta property='og:image:width' content="1200" />
 <meta property='og:image:height' content="630" />
 <meta property='og:image:type' content="image/png" />
@@ -41,20 +41,20 @@
 <meta name="author" content="Little Gyaani - BRAHMA" />
 <meta name="app-url" content="<?= $base_URI; ?>" />
 <!-- Favicons -->
-<link rel="apple-touch-icon" sizes="57x57" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-57x57.png" />
-<link rel="apple-touch-icon" sizes="60x60" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-60x60.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-72x72.png" />
-<link rel="apple-touch-icon" sizes="76x76" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-76x76.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-114x114.png" />
-<link rel="apple-touch-icon" sizes="120x120" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-120x120.png" />
-<link rel="apple-touch-icon" sizes="144x144" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-144x144.png" />
-<link rel="apple-touch-icon" sizes="152x152" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-152x152.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="<?= $base_URI; ?>/app/assets/img/favicons/apple-icon-180x180.png" />
-<link rel="icon" type="image/png" sizes="192x192" href="<?= $base_URI; ?>/app/assets/img/favicons/android-icon-192x192.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="<?= $base_URI; ?>/app/assets/img/favicons/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="96x96" href="<?= $base_URI; ?>/app/assets/img/favicons/favicon-96x96.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="<?= $base_URI; ?>/app/assets/img/favicons/favicon-16x16.png" />
-<link rel="manifest" href="<?= $base_URI; ?>/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="<?= $base_URI; ?>/app/assets/img/favicons/ms-icon-144x144.png" />
-<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" sizes="57x57" href="app/assets/img/favicons/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="app/assets/img/favicons/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="app/assets/img/favicons/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="app/assets/img/favicons/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="app/assets/img/favicons/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="app/assets/img/favicons/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="app/assets/img/favicons/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="app/assets/img/favicons/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="app/assets/img/favicons/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="app/assets/img/favicons/android-icon-192x192.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="app/assets/img/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="app/assets/img/favicons/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="app/assets/img/favicons/favicon-16x16.png" />
+<link rel="manifest" href="<?= $base_URI; ?>/manifest.json" />
+<meta name="msapplication-TileColor" content="#ffffff" />
+<meta name="msapplication-TileImage" content="app/assets/img/favicons/ms-icon-144x144.png" />
+<meta name="theme-color" content="#ffffff" />

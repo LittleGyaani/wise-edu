@@ -1,4 +1,5 @@
 <?php
+
 //Calling Global Configuration
 require_once 'app/config/global.config.php';
 
@@ -7,7 +8,7 @@ $university_slug = $match["params"]["university_alias"];
 $university_name = ucwords(str_replace('-', ' ', $university_slug));
 
 $getUniversityInfo = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id` WHERE wul.`we_univeristy_alias` = '$university_slug' ";
-$fetchUniversityInfo = $db_conn->query($getUniversityInfo);
+$fetchUniversityInfo = $db_conn -> query($getUniversityInfo);
 $listAllUniversityInfo = $fetchUniversityInfo->fetch_assoc();
 
 //Redirect to 404 Error Page, if no such University Exists
@@ -27,7 +28,7 @@ if ($fetchUniversityInfo->num_rows === 0)
     include_once 'app/assets/templates/template-meta.php';
     ?>
 
-    <title> <?= $title_constant; ?> &bull; <?= $university_name; ?> Details</title>
+    <title> <?= $title_constant . '&bull' . $university_name; ?> Details</title>
 
     <!-- Include Header Section -->
     <?php

@@ -11,7 +11,7 @@
         <div class="item_about">
           <a class="logo" href="<?= $router->generate('index'); ?>">
             <center>
-              <img src="<?= $base_URI; ?>/app/assets/img/logos/wise-education-logo.png" alt="Wise Education Group" />
+              <img src="app/assets/img/logos/wise-education-logo.png" alt="Wise Education Group" />
             </center>
           </a>
           <p>

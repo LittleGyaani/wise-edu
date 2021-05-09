@@ -157,15 +157,6 @@
     font-size: 17px;
 }
 
-@media (max-width: 767px) {
-    .single_blog {
-        width: 100% !important;
-    }
-    .sticky {
-    top: 95px !important;
-    }
-}
-
 @media (max-width: 767px){
     .blog_slider .swiper-button-next, .blog_slider .swiper-button-prev {
         display: flex;
@@ -173,6 +164,15 @@
     .card-info {
         top: 8px;
     }
+	.single_blog {
+		width: 100% !important;
+    }
+    .sticky {
+    	top: 95px !important;
+    }
+	.tile {
+		max-width: 100% !important;
+	}
 }
 
 /* Scrolling Off */
@@ -260,6 +260,8 @@ div.scrollmenu a:active {
     padding: 0.1rem 0.5rem;
     border-radius: 4px;
     display: inline-block;
+    margin: 0 auto 0 auto;
+    margin-left: 5px;
 }
 
 /* For IE9 */
@@ -279,15 +281,10 @@ img {border : 0;}
 
 .tile {
     background-color: #F7F8F9;
-    border-radius: 5px !important;
-    height: 75px;
-    max-width: 225px !important;
+    border-radius: 5px ;
+    max-width: 215px;
     text-shadow: rgb(0 0 0 / 40%) 1.33995px 0.33995px 0px;
-    position: relative;
-    flex: 1 1;
-    margin-right: 0.9rem !important;
-    padding-right: 13px;
-    padding-left: 15px;
+    margin-right: 0.6rem;
 }
 
 .mb-inf {
@@ -364,4 +361,7 @@ img {border : 0;}
 .with_map_office .block_loaction .item_locat .add_ress {
     font-size: 15px !important;
     margin-bottom: 2.375rem !important;
+}
+.title_sections_inner h2 {
+	font-size: 1.759rem !important;
 }

@@ -5,10 +5,10 @@
 //** to be used in different files and will be called back in header file.**//
 
 //Errors and notices
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);//E_ALL
-//error_reporting(0);//Hide All errors
+//ini_set('display_errors', '1');
+//ini_set('display_startup_errors', '1');
+//error_reporting(E_ALL);//E_ALL
+error_reporting(0);//Hide All errors
 
 //Enable gzip Compression
 if (!in_array('ob_gzhandler', ob_list_handlers()))
@@ -27,7 +27,24 @@ include_once 'db.config.php';
 date_default_timezone_set('Asia/Kolkata');
 
 //Allow Cross Access from Origin
-header("Access-Control-Allow-Origin: *");
+if (isset($_SERVER['HTTP_ORIGIN'])) {
+    header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+    header('Access-Control-Allow-Credentials: true');
+    header('Access-Control-Max-Age: 86400');    // cache for 1 day
+}
+
+// Access-Control headers are received during OPTIONS requests
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS");         
+
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
+        header("Access-Control-Allow-Headers:        {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+
+    exit(0);
+}
+
 
 //Initialize the global session
 if(!isset($_SESSION))
@@ -227,14 +244,14 @@ if ($site_status === 'DEVELOPMENT') //If Site is still under development
     }
     else
     {
-        $base_URI = $server_protocol . 'demo.kslabs.online/demo/drafticode'; //Our Demo Website or Preproduction URL
-        $router->setBasePath('/demo/drafticode'); //Our Demo Website or Preproduction URL
+        $base_URI = $server_protocol . 'dev.wiseeducation.in'; //Our Demo Website or Preproduction URL
+        $router->setBasePath(''); //Our Demo Website or Preproduction URL
     }
 }
 else
 {
     $base_URI = $server_protocol . 'wiseeducation.in'; //Live Production Website
-    $router->setBasePath('/'); //Live Production Website
+    $router->setBasePath(''); //Live Production Website
 }
 
 //Date & Time
@@ -266,5 +283,7 @@ $urlArray = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $segments = explode('/', $urlArray);
 $numSegments = count($segments);
 $currentSegment = $segments[$numSegments - 2];
+
+//print_r($segments);
 
 ob_start('compress');

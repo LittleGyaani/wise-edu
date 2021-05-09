@@ -420,19 +420,6 @@
     });
 
     /*-----------------------------
-      bxslider for Logos (animation like news)
-    -----------------------------*/
-    $('.bxslider').bxSlider({
-      minSlides: 1,
-      maxSlides: 8,
-      slideWidth: 160,
-      slideMargin: 0,
-      ticker: true,
-      speed: 20000
-    });
-
-
-    /*-----------------------------
       COUNTER-UP JQUERY PLUGIN
     -----------------------------*/
     $('.counter').counterUp({

@@ -1,20 +1,27 @@
 SetEnv TZ Asia/Kolkata
 
-Options Indexes SymLinksIfOwnerMatch
-
-Options -Indexes 
-
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule . index.php [L]
-
 <IfModule mod_rewrite.c>
-<Files ~ "\.(jpg|jpeg|png|gif|pdf|txt|bmp|mp4|mov|ogg|wmv|webm|flv|mpg|mp2|mpeg|mpe|mpv|m4p|m4v|mp3|wav|acc|oga|m4a)$">
-   order deny,allow
-   deny from all
-   Require local
-   allow from all
-</Files>
+    Options +FollowSymLinks
+	Options -Indexes 
+
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule . index.php [L]
+
+	RewriteCond %{HTTP_HOST} ^www.wiseeducation.in$ [NC] 
+	RewriteCond %{HTTPS} =on 
+	RewriteRule ^(.*)$ https://wiseeducation.in/$1 [R=301,L]
+
+	RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC] 
+	RewriteCond %{HTTPS} =on 
+	RewriteRule ^ http://%1%{REQUEST_URI} [NE,R=301,L]
+
+	<Files ~ "\.				         (jpg|jpeg|png|gif|pdf|txt|bmp|mp4|mov|ogg|wmv|webm|flv|mpg|mp2|mpeg|mpe|mpv|m4p|m4v|mp3|wav|acc|oga|m4a)$">
+	   order deny,allow
+	   deny from all
+	   Require local
+	   allow from all
+	</Files>
 </IfModule>
 
 <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
