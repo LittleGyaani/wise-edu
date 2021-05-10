@@ -8,7 +8,7 @@ $university_slug = $match["params"]["university_alias"];
 $university_name = ucwords(str_replace('-', ' ', $university_slug));
 
 $getUniversityInfo = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id` WHERE wul.`we_univeristy_alias` = '$university_slug' ";
-$fetchUniversityInfo = $db_conn -> query($getUniversityInfo);
+$fetchUniversityInfo = $db_conn->query($getUniversityInfo);
 $listAllUniversityInfo = $fetchUniversityInfo->fetch_assoc();
 
 //Redirect to 404 Error Page, if no such University Exists
@@ -61,7 +61,7 @@ if ($fetchUniversityInfo->num_rows === 0)
                 <!-- Start banner_about -->
                 <section class="pt_banner_inner banner_px_image single_blog featured_image">
                     <div class="parallax_cover">
-                        <img class="cover-parallax" src="<?= $listAllUniversityInfo['we_university_cover_image']; ?>" alt="image">
+                        <img class="px_cv" src="<?= $base_URI; ?>/app/assets/img/universities/<?= (($listAllUniversityInfo['we_university_cover_image'] === '') ? 'university-default.jpeg' : '' . $listAllUniversityInfo["we_university_cover_image"]) . ''; ?>" alt="<?= $listAllUniversityInfo['we_univeristy_name']; ?>">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -78,7 +78,7 @@ if ($fetchUniversityInfo->num_rows === 0)
                                         <?= $listAllUniversityInfo['we_univeristy_name']; ?>
                                     </h1>
                                     <h6 class="margin-my-3 font-s-30 red" data-aos="fade-up" data-aos-delay="0">
-                                        <mark>Explore whether this university is for you!</mark>
+                                        <mark>Explore whether this University is for you!</mark>
                                     </h6>
                                     <div class="footer_content">
                                         <div data-aos="fade-up" data-aos-delay="0">
@@ -336,7 +336,7 @@ if ($fetchUniversityInfo->num_rows === 0)
                                     <div class="card">
                                         <a href="<?= $router->generate('university-details') . $listAllRestUniversityInfo['we_univeristy_alias']; ?>" class=" link_poet">
                                             <div class="cover_link">
-                                                <img class="main_img" src="<?= $listAllRestUniversityInfo['we_university_cover_image']; ?>" class="card-img-top" alt="<?= $listAllRestUniversityInfo['we_univeristy_name']; ?>">
+                                                <img class="main_img" src="<?= $base_URI; ?>/app/assets/img/universities/<?= (($listAllRestUniversityInfo['we_university_cover_image'] === '') ? 'university-default.jpeg' : '' . $listAllRestUniversityInfo["we_university_cover_image"]) . ''; ?>" alt="<?= $listAllRestUniversityInfo['we_univeristy_name']; ?>">
                                             </div>
                                         </a>
                                         <div class="card-body">

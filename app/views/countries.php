@@ -46,7 +46,7 @@ require_once 'app/config/global.config.php';
                 <!-- Start banner_about -->
                 <section class="pt_banner_inner banner_px_image single_blog featured_image">
                     <div class="parallax_cover">
-                        <img class="cover-parallax" src="https://images.unsplash.com/photo-1483247416020-58799b6de4c1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=auto&q=80" alt="Countries WISE EDUCATIONS">
+                        <img class="cover-parallax" src="app/assets/img/backgrounds/country-banner.jpeg" height="auto" width="auto" alt="Countries WISE EDUCATIONS" />
                     </div>
                     <div class="container">
                         <div class="row">
@@ -92,8 +92,13 @@ require_once 'app/config/global.config.php';
                                             ?>
                                                 <div class="swiper-slide">
                                                     <div class="grid_blog_avatar">
+                                                        <h4 class="title_blog mb-2">
+                                                            <mark>
+                                                                Let's Explore <b><?= $getAllCountriesInfo['we_country_name']; ?></b>
+                                                            </mark>
+                                                        </h4>
                                                         <a href="<?= $router->generate('country-details') . $getAllCountriesInfo['we_country_alias']; ?>" class="link-poet">
-                                                            <div class="cover_blog cover_link">
+                                                            <div class="cover_blog cover_link margin-t-2">
                                                                 <img src="<?= $getAllCountriesInfo['we_country_cover_image']; ?>" alt="">
                                                             </div>
                                                         </a>
@@ -145,11 +150,6 @@ require_once 'app/config/global.config.php';
                                                                 </div>
                                                             </div>
                                                             <a href="single-blog.html" class="link_blog">
-                                                                <h4 class="title_blog">
-                                                                    <mark>
-                                                                        Let's Know more about <b><?= $getAllCountriesInfo['we_country_name']; ?></b>
-                                                                    </mark>
-                                                                </h4>
                                                                 <p class="short_desc">
                                                                     <?= $getAllCountriesInfo['we_country_demographics']; ?>
                                                                 </p>
@@ -210,8 +210,13 @@ require_once 'app/config/global.config.php';
                                             ?>
                                                 <div class="swiper-slide">
                                                     <div class="grid_blog_avatar">
+                                                        <h4 class="title_blog">
+                                                            <mark>
+                                                                Let's Explore <b><?= $getAllLocationsInfo['we_location_name']; ?></b>
+                                                            </mark>
+                                                        </h4>
                                                         <a href="<?= $router->generate('location-details') . $getAllLocationsInfo['we_location_alias']; ?>" class="link-poet">
-                                                            <div class="cover_blog cover_link">
+                                                            <div class="cover_blog cover_link margin-t-2">
                                                                 <img src="<?= $getAllLocationsInfo['we_location_cover_image']; ?>" alt="">
                                                             </div>
                                                         </a>
@@ -241,11 +246,6 @@ require_once 'app/config/global.config.php';
                                                                 </div>
                                                             </div>
                                                             <a href="single-blog.html" class="link_blog">
-                                                                <h4 class="title_blog">
-                                                                    <mark>
-                                                                        Let's Know more about <b><?= $getAllLocationsInfo['we_location_name']; ?></b>
-                                                                    </mark>
-                                                                </h4>
                                                                 <p class="short_desc">
                                                                     <?= $getAllLocationsInfo['we_location_description']; ?>
                                                                 </p>
@@ -286,7 +286,7 @@ require_once 'app/config/global.config.php';
                 <!-- End Popular Locations -->
 
                 <!-- Start Popular Universities -->
-                <section class="section__stories blog_slider padding-t-9">
+                <section class="section__stories blog_slider padding-t-9 margin-b-8">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-12">
@@ -294,6 +294,7 @@ require_once 'app/config/global.config.php';
                                     <!-- Swiper -->
                                     <div class="swiper-container blog-slider">
                                         <div class="title_sections_inner">
+                                            <span class="item_new inx">New</span>
                                             <h2>Popular Universities</h2>
                                         </div>
                                         <div class="swiper-wrapper">
@@ -306,109 +307,18 @@ require_once 'app/config/global.config.php';
                                             while ($getAllUniversitiesInfo = $fetchAllUniversities->fetch_assoc()) {
                                             ?>
                                                 <div class="swiper-slide">
-                                                    <!-- <img class="icon_popular" src="https://orinostudio.com/assets/img/stars.svg" /> -->
                                                     <div class="grid_blog_avatar">
+                                                        <mark>Explore University</mark>
+                                                        <h5 class="ttl_blog">
+                                                            <strong><?= $getAllUniversitiesInfo['we_univeristy_name']; ?></strong>
+                                                        </h5>
                                                         <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="link-poet">
                                                             <div class="cover_blog cover_link">
-                                                                <img src="<?= $getAllUniversitiesInfo['we_university_cover_image']; ?>" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>">
+                                                                <img src="app/assets/img/universities/<?= (($getAllUniversitiesInfo['we_university_cover_image'] === '') ? 'university-default.jpeg' : '' . $getAllUniversitiesInfo["we_university_cover_image"]) . ''; ?>" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>">
                                                             </div>
                                                         </a>
                                                         <div class="body_blog">
-                                                            <div class="row">
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/344/motarboard.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>Country</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_country_name']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/344/skyscrapers.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>City</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_location_name']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/344/university.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>University Type</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_university_type']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/344/google-calendar--v1.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>Stay Duration</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_course_duration']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/2x/courses.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>Course Offered</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_course_offered']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/2x/translation.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>Language Used</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_course_language']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/344/skyscrapers.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>Tution Fees</b></h3>
-                                                                                <p><?= $getAllUniversitiesInfo['we_university_data_course_fee']; ?></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="person media">
-                                                                        <img src="https://img.icons8.com/color/344/distributed-counter.png" alt="" />
-                                                                        <div class="media-body">
-                                                                            <div class="txt">
-                                                                                <h3><b>Yearly In-takes</b></h3>
-                                                                                <p>5000+</p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                                             <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="link_blog">
-                                                                <mark>Explore the University</mark>
-                                                                <h6 class="title_blog">
-                                                                    <strong><?= $getAllUniversitiesInfo['we_univeristy_name']; ?></strong>
-                                                                </h6>
                                                                 <p class="short_desc">
                                                                     <?php
                                                                     $uvshort = str_ireplace('<p>', '', $getAllUniversitiesInfo['we_university_profile']);
@@ -419,24 +329,26 @@ require_once 'app/config/global.config.php';
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <!-- End grid_blog_avatar -->
+                                                    <!-- End University -->
                                                     <br />
-                                                    <center>
-                                                        <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="btn btn_lg_primary scale border-0 sweep_letter sweep_top bg-orange-red c-white rounded-pill">
-                                                            <div class="inside_item">
-                                                                <span data-hover="Let's Explore →">Explore the University</span>
-                                                            </div>
-                                                        </a>
+                                                    <div class="row">
+                                                        <center>
+                                                            <div class="col-12 col-md-12 col-lg-12">
 
-                                                        <br />
-                                                        <br />
+                                                                <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="btn btn_lg_primary scale border-0 sweep_letter sweep_top bg-orange-red c-white rounded-pill">
+                                                                    <div class="inside_item">
+                                                                        <span data-hover="Let's Explore →">Explore University</span>
+                                                                    </div>
+                                                                </a>
 
-                                                        <a type="button" href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="btn btn_lg_primary scale border-0 sweep_letter sweep_top bg-red c-white rounded-pill">
-                                                            <div class="inside_item">
-                                                                <span data-hover="Let's Apply →">Apply to University</span>
+                                                                <a type="button" href="javascript:void(0);" class="btn btn_lg_primary scale border-0 sweep_letter sweep_top bg-red c-white rounded-pill ml-1">
+                                                                    <div class="inside_item">
+                                                                        <span data-hover="Let's Apply">Apply Now</span>
+                                                                    </div>
+                                                                </a>
                                                             </div>
-                                                        </a>
-                                                    </center>
+                                                        </center>
+                                                    </div>
                                                 </div>
                                             <?php
                                             }
@@ -470,7 +382,7 @@ require_once 'app/config/global.config.php';
         //Calling Footer Template
         include_once 'app/assets/templates/template-footer.php';
         ?>
-        
+
     </div>
     <!-- End. wrapper -->
 

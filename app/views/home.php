@@ -51,9 +51,9 @@ require_once 'app/config/global.config.php';
                 <div class="banner_title">
                   <h1>Discover the perfect <strong>University</strong> for you.</h1>
                   <p>
-                    We make it simple to <b><i>Find</i></b>, <b><i>Apply</i></b> & <b><i>Enroll</i></b> at <strong>Universities Abroad</strong>.
+                    We made it simple to <b><i>Find</i></b>, <b><i>Apply</i></b> & <b><i>Enroll</i></b> at <strong>Universities Abroad</strong>.
                   </p>
-                  <a href="<?= $router->generate('search-page') ?>" class="btn btn_md_primary rounded-8 bg-blue c-white">
+                  <a href="<?= $router->generate('search-page'); ?>" class="btn btn_md_primary rounded-8 bg-blue c-white">
                     <div>Find a Program</div>
                   </a>
                   <div class="margin-t-8">
@@ -67,7 +67,7 @@ require_once 'app/config/global.config.php';
                 </div>
               </div>
               <div class="col-md-7">
-                <img class="ill_05" src="https://ouch-cdn.icons8.com/preview/281/94c91ae7-7c5d-4817-a79f-a543c364c03c.png" />
+                <img class="ill_05" src="app/assets/img/icons/hero-globe-icon.png" alt="Wise Education Degree Programs" />
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@ require_once 'app/config/global.config.php';
                 <div class="gq_item bg-green">
                   <!-- <span class="d-block c-white font-s-16">Search.</span> -->
                   <div class="title_sections">
-                    <img class="img-fluid mb-3 centered" src="https://img.icons8.com/bubbles/344/graduation-cap.png" />
+                    <img class="img-fluid mb-3 centered" src="app/assets/img/icons/graduation-cap.png" alt="Wise Education Graduation Program" />
                     <h2 class="c-white">University & Program Search</h2>
                     <p class="c-white">
                       Find the right program for you and your career aspirations.
@@ -92,7 +92,7 @@ require_once 'app/config/global.config.php';
               <div class="col-lg-4 emo mb-4 mb-lg-0">
                 <div class="gq_item ill_item bg-blue">
                   <!-- <span class="d-block c-dark font-s-16">Explore.</span> -->
-                  <img class="img-fluid mb-3 centered" src="https://img.icons8.com/bubbles/344/rescan-document.png" />
+                  <img class="img-fluid mb-3 centered" src="app/assets/img/icons/documentation-service.png" alt="Wise Education Documentation Service" />
                   <div class="title_sections">
                     <h2 class="c-white">Application & Document Guide</h2>
                     <p class="c-white">
@@ -104,7 +104,7 @@ require_once 'app/config/global.config.php';
               <div class="col-lg-4 emo">
                 <div class="gq_item ill_item bg-red">
                   <!-- <span class="d-block c-dark font-s-16">Apply.</span> -->
-                  <img class="img-fluid mb-3 centered" src="https://img.icons8.com/bubbles/344/passport.png" />
+                  <img class="img-fluid mb-3 centered" src="app/assets/img/icons/visa-service.png" alt="Wise Education VISA Service" />
                   <div class="title_sections">
                     <h2 class="c-white">Accomodation & Visa Assistance</h2>
                     <p class="c-white">
@@ -200,7 +200,7 @@ require_once 'app/config/global.config.php';
                         </div>
                         <div class="col-12">
                           <button type="submit" class="btn btn__search rounded-pill scale border-0 sweep_letter sweep_top"> Enquire Now <i class="tio chevron_right mr-1 align-middle font-s-16"></i></button>
-                          <p class="text-center font-s-14 c-gray mt-3 mb-0"><i>Need any assistance?</i> <br /> Talk to Us: <a href="tel:+919439937117" class="c-blue">+91 9439937117</a> / <a href="tel:+380636908318" class="c-blue">+380 63 690 8318</a>
+                          <p class="text-center font-s-14 c-gray mt-3 mb-0"><i>Need any assistance?</i> <br /> Talk to Us: <a href="tel:+919439937117" class="c-blue">+91 9439 937 117</a> / <a href="tel:+380636908318" class="c-blue">+380 63 690 8318</a>
                           </p>
                         </div>
                       </form>
@@ -213,7 +213,7 @@ require_once 'app/config/global.config.php';
 
           <div class="bg__cover_office">
             <div class="img__off">
-              <img src="app/assets/img/workspace/office.jpg" alt="">
+              <img src="app/assets/img/backgrounds/office.jpg" alt="Wise Education Group Bhubaneswar Office" />
             </div>
             <div class="container">
               <div class="row">
@@ -221,12 +221,12 @@ require_once 'app/config/global.config.php';
                   <div class="item__conatct">
                     <div class="item__top">
                       <h3>Let us do the heavy lifting!</h3>
-                      <p>Our expert team of will help you finding the best option for your career.</p>
+                      <p>Our expert team will help you in finding the best option for your career.</p>
                     </div>
                     <div class="item__bottom">
                       <div class="person__peo">
                         <center>
-                          <img src="https://img.icons8.com/color/344/technical-support.png" alt="Wise Education Support" height="100px" width="100px" />
+                          <img src="app/assets/img/icons/call-support.png" alt="Wise Education Support" height="100px" width="100px" />
                         </center>
                       </div>
                       <p class="c-gray font-s-14 mb-0">
@@ -331,7 +331,7 @@ require_once 'app/config/global.config.php';
                 <div class="col-md-6 col-lg-4 mb-4 mt-4 mb-lg-0">
                   <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="boo__item" data-aos="fade-up" data-aos-delay="0">
                     <div class="img__off">
-                      <img src="<?= $getAllUniversitiesInfo['we_university_cover_image']; ?>" height="auto" width="auto" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>" />
+                      <img src="app/assets/img/universities/<?= ($getAllUniversitiesInfo['we_university_cover_image'] == '' ? 'university-default.jpeg' : ''.$getAllUniversitiesInfo["we_university_cover_image"].''); ?>" height="auto" width="auto" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>" />
                     </div>
                     <div class="body__txt">
                       <div class="d-flex justify-content-between">
@@ -380,7 +380,7 @@ require_once 'app/config/global.config.php';
         <section class="about__office margin-t-6 padding-t-6">
           <div class="container">
             <div class="head__picture">
-              <img src="app/assets/img/workspace/0654.jpg" alt="">
+              <img src="app/assets/img/backgrounds/banner-home-about.jpg" alt="About Wise Education" />
             </div>
           </div>
           <div class="body__content padding-b-12">
@@ -614,7 +614,7 @@ require_once 'app/config/global.config.php';
               <div class="row">
                 <div class="col-lg-5 pl-lg-0">
                   <div class="img__people">
-                    <img src="app/assets/img/workspace/others.svg" alt="">
+                    <img src="app/assets/img/backgrounds/testimonials.svg" alt="">
                     <div class="col-lg-5 item_title">
                       <div class="title_sections">
                         <div class="before_title">
@@ -629,8 +629,8 @@ require_once 'app/config/global.config.php';
                   <div class="people__say">
                     <div class="swiper-container gallery-top swipe_circle"> 
                 -->
-                      <!-- item Users -->
-                      <!-- <div class="person_thumbs">
+                <!-- item Users -->
+                <!-- <div class="person_thumbs">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <img class="pagination rounded-circle" src="app/assets/img/persons/04.png" />
@@ -650,8 +650,8 @@ require_once 'app/config/global.config.php';
                         </div>
                       </div> 
                     -->
-                      <!-- item content -->
-                      <!-- <div class="swiper-wrapper">
+                <!-- item content -->
+                <!-- <div class="swiper-wrapper">
                         <div class="swiper-slide">
                           <div class="img__user">
                             <img src="app/assets/img/persons/04.png" alt="">
@@ -771,7 +771,7 @@ require_once 'app/config/global.config.php';
                       <div></div>
                       <div></div>
                     </div> -->
-                    <!-- End Swiper -->
+                <!-- End Swiper -->
                 <!--
                   </div>
                 </div> 

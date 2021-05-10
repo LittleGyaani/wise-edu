@@ -58,3 +58,31 @@
 <meta name="msapplication-TileColor" content="#ffffff" />
 <meta name="msapplication-TileImage" content="app/assets/img/favicons/ms-icon-144x144.png" />
 <meta name="theme-color" content="#ffffff" />
+
+<!-- Schema.org JSON -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Wise Education",
+        "alternateName": "Wise Education Group",
+        "url": "https://wiseeducation.in/",
+        "logo": "https://wiseeducation.in/app/assets/img/logos/wise-education-logo.png",
+        "contactPoint": [{
+            "@type": "ContactPoint",
+            "telephone": "tel:+919439937117",
+            "contactType": "customer service"
+        }, {
+            "@type": "ContactPoint",
+            "telephone": "tel:+380636908318",
+            "contactType": "technical support"
+        }],
+        "sameAs": [
+            "https://www.facebook.com/wiseeducation",
+            "https://twitter.com/wiseeducationg2",
+            "https://instagram.com/gwiseeducation/",
+            "https://www.youtube.com/channel/UC1OlVHFElQ0HTvmXIkaZ28g",
+            "https://wiseeducation.in/"
+        ]
+    }
+</script>

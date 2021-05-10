@@ -46,7 +46,7 @@ require_once 'app/config/global.config.php';
                 <!-- Start banner_about -->
                 <section class="pt_banner_inner banner_px_image single_blog featured_image">
                     <div class="parallax_cover">
-                        <img class="cover-parallax" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=auto&q=80" alt="Universities WISE EDUCATIONS">
+                        <img class="cover-parallax" src="app/assets/img/backgrounds/universities-banner.jpeg" height="auto" width="auto" alt="Universities WISE EDUCATIONS">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -170,7 +170,7 @@ require_once 'app/config/global.config.php';
                                     <!-- Swiper -->
                                     <div class="swiper-container blog-slider">
                                         <div class="title_sections_inner">
-                                            <span class="item_new">New</span>
+                                            <span class="item_new inx">New</span>
                                             <h2>Popular Universities</h2>
                                         </div>
                                         <div class="swiper-wrapper">
@@ -183,18 +183,16 @@ require_once 'app/config/global.config.php';
                                             while ($getAllUniversitiesInfo = $fetchAllUniversities->fetch_assoc()) {
                                             ?>
                                                 <div class="swiper-slide">
-                                                    <!-- <img class="icon_popular" src="https://orinostudio.com/assets/img/stars.svg" /> -->
                                                     <div class="grid_blog_avatar">
                                                         <div class="body_blog">
                                                             <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="link_blog">
-                                                                <img src="https://img.icons8.com/color/344/university.png" alt="Popular Universities by Wise Education" height="45" />
-                                                                <mark class="bg-blue c-white">Explore the University</mark>
+                                                                <mark>Explore University</mark>
                                                                 <h6 class="title_blog mt-2">
                                                                     <strong><?= $getAllUniversitiesInfo['we_univeristy_name']; ?></strong>
                                                                 </h6>
                                                                 <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="link_poet margin-t-1">
                                                                     <div class="cover_blog cover_link">
-                                                                        <img src="<?= $getAllUniversitiesInfo['we_university_cover_image']; ?>" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>">
+                                                                        <img src="app/assets/img/universities/<?= (($getAllUniversitiesInfo['we_university_cover_image'] === '') ? 'university-default.jpeg' : '' . $getAllUniversitiesInfo["we_university_cover_image"]) . ''; ?>" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>">
                                                                     </div>
                                                                 </a>
                                                                 <p class="short_desc">
@@ -207,24 +205,26 @@ require_once 'app/config/global.config.php';
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <!-- End grid_blog_avatar -->
+                                                    <!-- End University -->
                                                     <br />
-                                                    <center>
-                                                        <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="btn btn_lg_primary scale border-0 sweep_letter sweep_top bg-orange-red c-white rounded-pill">
-                                                            <div class="inside_item">
-                                                                <span data-hover="Let's Explore →">Explore the University</span>
-                                                            </div>
-                                                        </a>
+                                                    <div class="row">
+                                                        <center>
+                                                            <div class="col-12 col-md-12 col-lg-12">
 
-                                                        <br />
-                                                        <br />
+                                                                <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="btn btn_lg_primary scale border-0 sweep_letter sweep_top bg-orange-red c-white rounded-pill">
+                                                                    <div class="inside_item">
+                                                                        <span data-hover="Let's Explore →">Explore University</span>
+                                                                    </div>
+                                                                </a>
 
-                                                        <a type="button" href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="btn btn_lg_primary scale border-0 sweep_letter sweep_top bg-red c-white rounded-pill">
-                                                            <div class="inside_item">
-                                                                <span data-hover="Let's Apply →">Apply to University</span>
+                                                                <a type="button" href="javascript:void(0);" class="btn btn_lg_primary scale border-0 sweep_letter sweep_top bg-red c-white rounded-pill ml-1">
+                                                                    <div class="inside_item">
+                                                                        <span data-hover="Let's Apply">Apply Now</span>
+                                                                    </div>
+                                                                </a>
                                                             </div>
-                                                        </a>
-                                                    </center>
+                                                        </center>
+                                                    </div>
                                                 </div>
                                             <?php
                                             }

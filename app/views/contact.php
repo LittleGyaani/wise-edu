@@ -81,16 +81,14 @@ require_once 'app/config/global.config.php';
                                     <h2>Get in touch</h2>
                                 </div>
                                 <div class="information_agency d-md-flex">
-                                    <div class="item_data mr-4">
+                                    <div class="item_data mr-4 mt-4">
                                         <p>Call Support</p>
                                         <a class="tel" href="tel:+919439937117">+91 9439 937 117</a>
-                                        <br />
                                         <a class="tel" href="tel:+380636908318">+38 0636 908 318</a>
                                     </div>
-                                    <div class="item_data">
+                                    <div class="item_data mt-4">
                                         <p>Mail Support</p>
                                         <a class="tel" href="mailto:enquiry@wiseeducation.in">enquiry@wiseeducation.in</a>
-                                        <br/>
                                         <a class="tel" href="mailto:info@wiseeducation.in">info@wiseeducation.in</a>
                                     </div>
                                 </div>
@@ -212,11 +210,11 @@ require_once 'app/config/global.config.php';
                                                     <span>Office Timing</span>
                                                     <p><?= $listAllOfficeLocations['we_contact_timing']; ?></p>
                                                 </div>
-                                                <div class="availability mb-0">
+                                                <div class="availability mb-0 mt-2">
                                                     <span>General enquiries</span>
                                                     <a href="mailto:<?= $listAllOfficeLocations['we_contact_email']; ?>" class="c-blue"><?= $listAllOfficeLocations['we_contact_email']; ?></a>
                                                 </div>
-                                                <div class="availability mb-0 mt-1">
+                                                <div class="availability mb-0 mt-2">
                                                     <span>Call Support</span>
                                                     <a href="javascript:void(0);" class="c-blue"><?= str_replace(',', ', ', $listAllOfficeLocations['we_contact_phone']); ?></a>
                                                 </div>

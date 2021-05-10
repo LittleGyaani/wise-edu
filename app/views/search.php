@@ -63,7 +63,7 @@ if (empty($_GET)) {
                 <!-- Start banner_about -->
                 <section class="pt_banner_inner banner_px_image blog-banner_with_image">
                     <div class="parallax_cover">
-                        <img class="cover-parallax" src="https://images.unsplash.com/photo-1542650742-d3150fb66298?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=auto&q=80" alt="Search Wise Education" />
+                        <img class="cover-parallax" src="app/assets/img/backgrounds/search-banner.jpeg" height="auto" width="auto" alt="Search Wise Education" />
                     </div>
                     <div class="container">
                         <div class="row">

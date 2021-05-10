@@ -7,6 +7,9 @@ $(document).ready(function () {
     var appUri = $('meta[name=app-url]').attr('content');
     var apiUri = appUri + '/api/web/v1/';
 
+    //Open Toast
+    launch_toast();
+
     function searchToggle(obj, evt) {
         var container = $(obj).closest('.search-wrapper');
         if (!container.hasClass('active')) {
@@ -93,5 +96,10 @@ $(document).ready(function () {
                 }
             });
     });
+    function launch_toast() {
+    var x = document.getElementById("toast")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+    }
 
 });

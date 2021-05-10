@@ -47,7 +47,7 @@ require_once 'app/config/global.config.php';
                 <!-- Start banner_about -->
                 <section class="pt_banner_inner banner_px_image" id="Discover">
                     <div class="parallax_cover">
-                        <img class="cover-parallax" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=auto&q=80" alt="Wise Education About">
+                        <img class="cover-parallax" src="app/assets/img/backgrounds/banner-about.jpeg" alt="Wise Education About" height="auto" width="auto" />
                     </div>
                     <div class="container">
                         <div class="row">
@@ -129,14 +129,14 @@ require_once 'app/config/global.config.php';
                             </div>
                             <div class="col-lg-5 mt-4 mt-lg-0 ml-auto">
                                 <div class="image_grid">
-                                    <img class="img-fluid img_one" src="https://ouch-cdn2.icons8.com/sWoEeWI4fiaC8ybOmI17I9L-y7p01NlCHaujzeSiFWw/rs:fit:1216:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNTUy/L2ViYzY3MzVlLTAz/YjItNDNmZC1iZjk2/LWExNWU0NGQ5N2I4/Yy5zdmc.png" alt="Wise Education Vision" height="auto" width="auto" />
+                                    <img class="img-fluid img_one" src="app/assets/img/backgrounds/our-vision.png" alt="Wise Education Vision" height="auto" width="auto" />
                                 </div>
                             </div>
                             <div class="w-100"></div>
                             <div class="row">
                                 <div class="col-lg-5 mt-4 mt-lg-0 mr-auto">
                                     <div class="image_grid">
-                                        <img class="img-fluid img_one" src="https://ouch-cdn2.icons8.com/SwU1Y0kXoTo5oewfCiC0Wqx6upyy8bbGAAegjaij8eI/rs:fit:1216:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMzY0/LzI0MmZjYjg0LTFm/OWEtNDZiZC05ZDMw/LTE1MzQxZmU3ZGZh/MS5zdmc.png" alt="Wise Education Pursuit" height="auto" width="auto" />
+                                        <img class="img-fluid img_one" src="app/assets/img/backgrounds/our-pursuit.png" alt="Wise Education Pursuit" height="auto" width="auto" />
                                     </div>
                                 </div>
                                 <div class="col-lg-5 margin-t-8">
@@ -188,7 +188,7 @@ require_once 'app/config/global.config.php';
                             </div>
                             <div class="col-lg-5 mt-4 mt-lg-0 ml-auto">
                                 <div class="image_grid">
-                                    <img class="img-fluid img_one" src="https://ouch-cdn2.icons8.com/oYoS7wS6HhqwLFVpBF-AoPjwqM9n2rSOMb4gx3Jq7N8/rs:fit:912:912/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNjA3/LzAwMTMzYjRhLTNh/ZTYtNDJkOS1hZDdi/LThjZDVkNjZiNDc4/Mi5zdmc.png" alt="Wise Education Mission" height="auto" width="auto" />
+                                    <img class="img-fluid img_one" src="app/assets/img/backgrounds/our-mission.png" alt="Wise Education Mission" height="auto" width="auto" />
                                 </div>
                             </div>
                         </div>
@@ -202,15 +202,25 @@ require_once 'app/config/global.config.php';
                         <div class="row">
                             <div class="col-lg-3 my-auto">
                                 <div class="title_section mb-0">
-                                    <p>Trusted by content creators across the world</p>
+                                    <p><strong>Trust us</strong>, we work with best <b>Universities</b> in the world.</p>
                                 </div>
                             </div>
                             <div class="col-lg-9 ml-auto my-auto">
                                 <div class="item_tto">
-                                    <img src="../../assets/img/logos/uber.png" alt="">
-                                    <img src="../../assets/img/logos/netflix.png" alt="">
-                                    <img src="../../assets/img/logos/google.png" alt="">
-                                    <img src="../../assets/img/logos/aust.png" alt="">
+
+                                    <a href="https://vnmu.edu.ua/en" target="_blank">
+                                        <img src="app/assets/img/logos/universities/vnmu.png" alt="Vinnytsia National Pirogov Medical University" height="auto" width="auto" />
+                                    </a>
+                                    <a href="https://tdmu.edu.ua/en/" target="_blank">
+                                        <img src="app/assets/img/logos/universities/tnmu.png" alt="Ternopil National Medical University" height="auto" width="auto" />
+                                    </a>
+                                    <a href="https://nmuofficial.com/" target="_blank">
+                                        <img src="app/assets/img/logos/universities/bogomolets.png" alt="Natsionalʹnyy Medychnyy Universytet Imeni O.o. Bohomolʹtsya" height="auto" width="auto" />
+                                    </a>
+                                    <a href="https://bsmu.edu.ua/" target="_blank">
+                                        <img src="app/assets/img/logos/universities/bukovinian.png" alt="Bukovinian State Medical University" height="auto" width="auto" />
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -343,162 +353,75 @@ require_once 'app/config/global.config.php';
                             <div class="col-lg-3">
                                 <div class="item_group" data-aos="fade-up" data-aos-delay="0">
                                     <div class="image_ps">
-                                        <img src="../../assets/img/persons/17.jpg" alt="">
+                                        <img src="app/assets/img/team/team-default.jpeg" alt="Wise Education Team">
                                     </div>
                                     <div class="share_soisal">
-                                        <a href="">
+                                        <a href="javascript:void(0);">
                                             <i class="tio instagram"></i>
                                         </a>
-                                        <a href="">
+                                        <a href="javascript:void(0);">
                                             <i class="tio twitter"></i>
                                         </a>
-                                        <a href="">
+                                        <a href="javascript:void(0);">
                                             <i class="tio messenger_outlined"></i>
                                         </a>
                                     </div>
                                     <div class="content_txt">
-                                        <h3>Christopher L. Belle</h3>
-                                        <p>Co-Founder & CEO</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="item_group" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="image_ps">
-                                        <img src="../../assets/img/persons/20.jpg" alt="">
-                                    </div>
-                                    <div class="share_soisal">
-                                        <a href="">
-                                            <i class="tio instagram"></i>
-                                        </a>
-                                        <a href="">
-                                            <i class="tio twitter"></i>
-                                        </a>
-                                        <a href="">
-                                            <i class="tio messenger_outlined"></i>
-                                        </a>
-                                    </div>
-                                    <div class="content_txt">
-                                        <h3>CLee Carter </h3>
-                                        <p>Managing Partner</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="item_group" data-aos="fade-up" data-aos-delay="200">
-                                    <div class="image_ps">
-                                        <img src="../../assets/img/persons/19.jpg" alt="">
-                                    </div>
-                                    <div class="share_soisal">
-                                        <a href="">
-                                            <i class="tio instagram"></i>
-                                        </a>
-                                        <a href="">
-                                            <i class="tio twitter"></i>
-                                        </a>
-                                        <a href="">
-                                            <i class="tio messenger_outlined"></i>
-                                        </a>
-                                    </div>
-                                    <div class="content_txt">
-                                        <h3>Mary Merrill </h3>
-                                        <p>Operations Director</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="item_group" data-aos="fade-up" data-aos-delay="300">
-                                    <div class="image_ps">
-                                        <img src="../../assets/img/persons/22.jpg" alt="">
-                                    </div>
-                                    <div class="share_soisal">
-                                        <a href="">
-                                            <i class="tio instagram"></i>
-                                        </a>
-                                        <a href="">
-                                            <i class="tio twitter"></i>
-                                        </a>
-                                        <a href="">
-                                            <i class="tio messenger_outlined"></i>
-                                        </a>
-                                    </div>
-                                    <div class="content_txt">
-                                        <h3>John Myers </h3>
-                                        <p>Operations Director</p>
+                                        <h3><b>Sushil Kumar</b> Das</h3>
+                                        <p><strong>Co-Founder</strong></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
                                 <div class="item_group" data-aos="fade-up" data-aos-delay="0">
                                     <div class="image_ps">
-                                        <img src="../../assets/img/persons/16.png" alt="">
+                                        <img src="app/assets/img/team/team-default.jpeg" alt="Wise Education Team">
                                     </div>
                                     <div class="share_soisal">
-                                        <a href="">
+                                        <a href="javascript:void(0);">
                                             <i class="tio instagram"></i>
                                         </a>
-                                        <a href="">
+                                        <a href="javascript:void(0);">
                                             <i class="tio twitter"></i>
                                         </a>
-                                        <a href="">
+                                        <a href="javascript:void(0);">
                                             <i class="tio messenger_outlined"></i>
                                         </a>
                                     </div>
                                     <div class="content_txt">
-                                        <h3>Christopher L. Belle</h3>
-                                        <p>Co-Founder & CEO</p>
+                                        <h3><b>Sushil Kumar</b> Das</h3>
+                                        <p><strong>Co-Founder</strong></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-3">
-                                <div class="item_group" data-aos="fade-up" data-aos-delay="100">
+                                <div class="item_group" data-aos="fade-up" data-aos-delay="0">
                                     <div class="image_ps">
-                                        <img src="../../assets/img/persons/18.png" alt="">
+                                        <img src="app/assets/img/team/team-default.jpeg" alt="Wise Education Team">
                                     </div>
                                     <div class="share_soisal">
-                                        <a href="">
+                                        <a href="javascript:void(0);">
                                             <i class="tio instagram"></i>
                                         </a>
-                                        <a href="">
+                                        <a href="javascript:void(0);">
                                             <i class="tio twitter"></i>
                                         </a>
-                                        <a href="">
+                                        <a href="javascript:void(0);">
                                             <i class="tio messenger_outlined"></i>
                                         </a>
                                     </div>
                                     <div class="content_txt">
-                                        <h3>CLee Carter </h3>
-                                        <p>Managing Partner</p>
+                                        <h3><b>Sushil Kumar</b> Das</h3>
+                                        <p><strong>Co-Founder</strong></p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="item_group" data-aos="fade-up" data-aos-delay="200">
-                                    <div class="image_ps">
-                                        <img src="../../assets/img/persons/23.jpg" alt="">
-                                    </div>
-                                    <div class="share_soisal">
-                                        <a href="">
-                                            <i class="tio instagram"></i>
-                                        </a>
-                                        <a href="">
-                                            <i class="tio twitter"></i>
-                                        </a>
-                                        <a href="">
-                                            <i class="tio messenger_outlined"></i>
-                                        </a>
-                                    </div>
-                                    <div class="content_txt">
-                                        <h3>Mary Merrill </h3>
-                                        <p>Operations Director</p>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="col-lg-2 my-auto mx-auto" data-aos="fade-up" data-aos-delay="200">
                                 <p class="font-s-20 c-dark font-w-600">You’ll work with creative people.</p>
-                                <a href="" class="btn btn_md_primary sweep_top sweep_letter bg-orange-red c-white rounded-8">
+                                <a href="javascript:void(0);" class="btn btn_md_primary sweep_top sweep_letter bg-orange-red c-white rounded-8">
                                     <div class="inside_item">
-                                        <span data-hover="Welcome !">Join us now</span>
+                                        <span data-hover="Welcome!">Join us now</span>
                                     </div>
                                 </a>
                             </div>
