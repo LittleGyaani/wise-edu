@@ -4,6 +4,13 @@ Developer : Little Gyaani
 */
 $(document).ready(function () {
 
+    //First Console Message to Stucker
+    if (typeof console != "undefined") {
+        console.log("Wise Education - Official Website. (c) 2021 Wise Education Group.");
+        console.log("Hello Stucker! Thank you for digging-in 😜. This is Little Gyaani 😎, developer of this Portal. Want to hire me!");
+        console.log("Connect with me : BRAHMA | P/WA : 9853 233 951 | E : bmohanty@live.com | W : www.meetlittlegyaani.com | twitter.com/LittleGyaani | facebook.com/brahmanmohanty | linkedin.com/in/brahmanmohanty");
+    }
+
     var appUri = $('meta[name=app-url]').attr('content');
     var apiUri = appUri + '/api/web/v1/';
 

@@ -1,0 +1,3 @@
+User-agent: * 
+Disallow: app/assets/
+Sitemap: https://wiseeducation.in/sitemap.xml
