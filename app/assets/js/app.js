@@ -15,7 +15,7 @@ $(document).ready(function () {
     var apiUri = appUri + '/api/web/v1/';
 
     //Open Toast
-    launch_toast();
+    // launch_toast();
 
     function searchToggle(obj, evt) {
         var container = $(obj).closest('.search-wrapper');

@@ -20,8 +20,8 @@
           <div class="address">
             <span>Locate us: Plot No. - 191/A, Kharavela Nagar, Unit-3, Bhubaneswar, Odisha, 751001 India</span>
             <span>Call us: <a href="tel:+919439937117">+91 9439 937 117</a> / <a href="tel:+380636908318">+38 0636 908 318</a></span>
-            <span>Office hours: 09:00AM - 09:00PM (IST, MON-SAT)</span>
-            <span>Email us: <a href="mailto:info@wiseeducation.in">info@wiseeducation.in</a></span>
+            <span>Office hours: 09:00AM - 09:00PM (IST/GMT+5:30, MON-SAT)</span>
+            <span>Email us: <a href="mailto:info@wiseeducation.in">info@wiseeducation.in</a> / <a href="mailto:enquiry@wiseeducation.in">enquiry@wiseeducation.in</a></span>
           </div>
         </div>
       </div>
@@ -168,9 +168,8 @@
 <!-- End. Loader -->
 
 <!-- COVID Toast -->
-<div id="toast">
+<!-- <div id="toast">
   <div id="img"><img src="https://img.icons8.com/color/344/virus.png" height="35" width="35" alt="WISE GROUP COVID MESSAGE" /></div>
   <div id="desc">COVID is still here. <strong>Stay Home, Stay Safe.</strong></div>
-</div>
-
+</div> -->
 <!-- COVID Toast End -->

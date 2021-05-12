@@ -7,7 +7,7 @@ include BASE_PATH . '/app/config/global.config.php';
 // print_r($_GET);
 
 //Accept Header
-// header('Content-Type: application/json; charset=utf-8');
+header('Content-Type: application/json; charset=utf-8');
 
 /* Global Declarations for API */
 $status = '';//Type Boolean

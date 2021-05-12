@@ -331,7 +331,7 @@ require_once 'app/config/global.config.php';
                 <div class="col-md-6 col-lg-4 mb-4 mt-4 mb-lg-0">
                   <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="boo__item" data-aos="fade-up" data-aos-delay="0">
                     <div class="img__off">
-                      <img src="app/assets/img/universities/<?= ($getAllUniversitiesInfo['we_university_cover_image'] == '' ? 'university-default.jpeg' : ''.$getAllUniversitiesInfo["we_university_cover_image"].''); ?>" height="auto" width="auto" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>" />
+                      <img src="app/assets/img/universities/<?= ($getAllUniversitiesInfo['we_university_cover_image'] == '' ? 'university-default.jpeg' : '' . $getAllUniversitiesInfo["we_university_cover_image"] . ''); ?>" height="auto" width="auto" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>" />
                     </div>
                     <div class="body__txt">
                       <div class="d-flex justify-content-between">
@@ -467,7 +467,7 @@ require_once 'app/config/global.config.php';
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6 col-lg-4 fa_item">
+              <div class="col-md-6 col-lg-4 fa_item mt-2">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="0">
                   <div class="icon--top">
                     <div class="ico">
@@ -482,7 +482,7 @@ require_once 'app/config/global.config.php';
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 fa_item">
+              <div class="col-md-6 col-lg-4 fa_item mt-2">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="100">
                   <div class="icon--top">
                     <div class="ico icon--top">
@@ -497,7 +497,7 @@ require_once 'app/config/global.config.php';
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 fa_item">
+              <div class="col-md-6 col-lg-4 fa_item mt-2">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="200">
                   <div class="icon--top">
                     <div class="ico">
@@ -512,7 +512,7 @@ require_once 'app/config/global.config.php';
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 fa_item">
+              <div class="col-md-6 col-lg-4 fa_item mt-2">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="0">
                   <div class="icon--top">
                     <div class="ico">
@@ -527,7 +527,7 @@ require_once 'app/config/global.config.php';
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 fa_item">
+              <div class="col-md-6 col-lg-4 fa_item mt-2">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="100">
                   <div class="icon--top">
                     <div class="ico">
@@ -542,7 +542,7 @@ require_once 'app/config/global.config.php';
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 fa_item">
+              <div class="col-md-6 col-lg-4 fa_item mt-2">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="200">
                   <div class="icon--top">
                     <div class="ico">
@@ -557,7 +557,7 @@ require_once 'app/config/global.config.php';
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 fa_item">
+              <div class="col-md-6 col-lg-4 fa_item mt-2">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="0">
                   <div class="icon--top">
                     <div class="ico">
@@ -572,14 +572,14 @@ require_once 'app/config/global.config.php';
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 fa_item">
+              <div class="col-md-6 col-lg-4 fa_item mt-2">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="100">
                   <div class="icon--top">
                     <div class="ico">
                       <i class="tio fastfood"></i>
                     </div>
                     <div class="media-body">
-                      <div class="t_xt mt-4">
+                      <div class="t_xt mt-4 mb-4">
                         <h4>Indian Food Available</h4>
                         <p>With so many students studying MBBS abroad, Indian food is now easily accessible for the students via Indian mess. There are many restaurants providing Indian food, both vegetarian and non-vegetarian.</p>
                       </div>
@@ -587,7 +587,7 @@ require_once 'app/config/global.config.php';
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 fa_item">
+              <div class="col-md-6 col-lg-4 fa_item mt-4">
                 <div class="inside__zoop" data-aos="fade-up" data-aos-delay="100">
                   <div class="icon--top">
                     <div class="ico">

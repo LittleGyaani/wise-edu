@@ -2,21 +2,17 @@
 //Calling Global Configuration
 require_once 'app/config/global.config.php';
 
-$attr = "";
+//Global Declarations
+$university_course = "";
+$university_program = "";
+$university_type = "";
+$university_country = "";
 
-if (empty($_GET)) {
-    $university_type = "";
-    // header('Location:' . $router->generate('search-page') . '?show=all');
-} else {
-    // header('Location:' . $router->generate('search-page') . '?show=all');
-    $university_type = empty($_GET['university-type']) ? 'all' . $university_type = '' . '' : '' . $_GET['university-type'] . '';
-}
-// header('Location:' . $router->generate('search-page') . '?show=all');
-
-// if($_GET['show'] === 'all')
-//     $attr = "selected="selected"";
-// else if 
-
+//Receive GET Parameters
+$university_course = filter_var($_GET['university-course'], FILTER_SANITIZE_STRING);
+$university_program = filter_var($_GET['university-program'], FILTER_SANITIZE_STRING);
+$university_type = filter_var($_GET['university-type'], FILTER_SANITIZE_STRING);
+$university_country = filter_var($_GET['university-country'], FILTER_SANITIZE_STRING);
 
 ?>
 
@@ -73,51 +69,61 @@ if (empty($_GET)) {
                                         Let's find out what suits You!
                                     </h1>
                                     <p data-aos="fade-up" data-aos-delay="100">
-                                        Share your stories and news with everyone.
+                                        Choose from below options, and see the magic.
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="filter_form" data-aos="fade-up" data-aos-delay="200">
-                            <form method="GET" action="" enctype="multipart/form-data">
+                            <form method="GET" action="" enctype="application/x-www-form-urlencoded">
                                 <div class="row">
-                                    <!-- <div class="col-md-6 col-lg-3">
-                                    <div class="simple_search">
-                                        <div class="form-group">
-                                            <div class="input_group">
-                                                <input type="search" class="form-control" placeholder="Type your search word">
-                                                <i class="tio search"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
+
+                                    <!-- Course Selector -->
                                     <div class="col-md-6 col-lg-3">
                                         <div class="form-group">
-                                            <select class="form-control custom-select" id="universityType" name="university-type">
-                                                <option value="null" selected disabled>University Type</option>
-                                                <option value="all" <?= ($university_type === 'all' ? 'selected' : ''); ?>>All Types</option>
-                                                <option value="public" <?= ($university_type === 'public' ? 'selected' : ''); ?>>Public</option>
-                                                <option value="private" <?= ($university_type === 'private' ? 'selected' : ''); ?>>Private</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-3">
-                                        <div class="form-group">
-                                            <select class="form-control custom-select" id="universityLocation" name="university-location">
-                                                <option value="null" selected="selected" disabled>University Location</option>
-                                                <!-- List All Locations -->
+                                            <select class="form-control custom-select" id="universityCourse" name="university-course">
+
+                                                <option value="null" selected="selected" disabled>Choose Course</option>
+                                                <!-- List All Courses -->
                                                 <?php
-                                                $getAllLocationDetails = "SELECT * FROM `we_location_list`";
-                                                $fetchAllLocationDetails = $db_conn->query($getAllLocationDetails);
-                                                while ($listAllLocationDetails = $fetchAllLocationDetails->fetch_assoc()) {
+                                                $getAllProgramDetails = "SELECT * FROM `we_program_list`";
+                                                $fetchAllProgramDetails = $db_conn->query($getAllProgramDetails);
+                                                while ($listAllProgramDetails = $fetchAllProgramDetails->fetch_assoc()) {
+                                                    $course_name = $listAllProgramDetails['we_program_name'];
                                                 ?>
-                                                    <option value="<?= $listAllLocationDetails['we_location_id']; ?>"><?= $listAllLocationDetails['we_location_name']; ?></option>
+                                                    <option value="<?= $course_name; ?>" <?= (($course_name === $university_course) ? 'selected' : ''); ?>><?= $listAllProgramDetails['we_program_name']; ?></option>
                                                 <?php
                                                 }
                                                 ?>
                                             </select>
                                         </div>
                                     </div>
+
+                                    <!-- Program Selector -->
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="form-group">
+                                            <select class="form-control custom-select" id="universityProgram" name="university-program">
+
+                                                <option value="null" selected disabled>Choose Program</option>
+                                                <!-- List All Programs -->
+                                                <option value="under-graduate" <?= (($university_program === 'under-graduate') ? 'selected' : ''); ?>>Under Graduate</option>
+                                                <option value="post-graduate" <?= (($university_program === 'post-graduate') ? 'selected' : ''); ?>>Post Graduate</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Type Selector -->
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="form-group">
+                                            <select class="form-control custom-select" id="universityType" name="university-type">
+                                                <option value="null" selected disabled>University Type</option>
+                                                <option value="public" <?= (($university_type === 'public') ? 'selected' : ''); ?>>Public</option>
+                                                <option value="private" <?= (($university_type === 'private') ? 'selected' : ''); ?>>Private</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Country Selector -->
                                     <div class="col-md-6 col-lg-3">
                                         <div class="form-group">
                                             <select class="form-control custom-select" id="universityCountry" name="university-country">
@@ -127,32 +133,16 @@ if (empty($_GET)) {
                                                 $getAllCountryDetails = "SELECT * FROM `we_country_list`";
                                                 $fetchAllCountryDetails = $db_conn->query($getAllCountryDetails);
                                                 while ($listAllCountryDetails = $fetchAllCountryDetails->fetch_assoc()) {
+                                                    $country_university = $listAllCountryDetails['we_country_id'];
                                                 ?>
-                                                    <option value="<?= $listAllCountryDetails['we_country_id']; ?>"><?= $listAllCountryDetails['we_country_name']; ?></option>
+                                                    <option value="<?= $country_university; ?>" <?= (($country_university === $university_country) ? 'selected' : ''); ?>><?= $listAllCountryDetails['we_country_name']; ?></option>
                                                 <?php
                                                 }
                                                 ?>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3">
-                                        <div class="form-group">
-                                            <select class="form-control custom-select" id="universityProgram" name="university-program">
 
-                                                <option value="null" selected="selected" disabled>University Program</option>
-                                                <!-- List All Programs -->
-                                                <?php
-                                                $getAllProgramDetails = "SELECT * FROM `we_program_list`";
-                                                $fetchAllProgramDetails = $db_conn->query($getAllProgramDetails);
-                                                while ($listAllProgramDetails = $fetchAllProgramDetails->fetch_assoc()) {
-                                                ?>
-                                                    <option value="<?= $listAllProgramDetails['we_program_name']; ?>"><?= $listAllProgramDetails['we_program_name']; ?></option>
-                                                <?php
-                                                }
-                                                ?>
-                                            </select>
-                                        </div>
-                                    </div>
                                 </div>
                                 <center>
                                     <div class="row">
@@ -161,7 +151,7 @@ if (empty($_GET)) {
                                                 <span>Search</span>
                                                 <!-- <i class="tio search mr-1 align-middle font-s-16"></i> -->
                                             </button>
-                                            <button type="reset" class="btn btn_lg_primary p bg-red c-white rounded-8">
+                                            <button type="reset" onclick="location.href='<?= $router -> generate('search-page'); ?>';" class="btn btn_lg_primary p bg-red c-white rounded-8">
                                                 <span>Reset</span>
                                                 <!-- <i class="tio info mr-1 align-middle font-s-16"></i> -->
                                             </button>
@@ -174,15 +164,82 @@ if (empty($_GET)) {
                 </section>
                 <!-- End banner_about -->
 
-            </main>
-        </div>
-        <!-- [id] content -->
+                <!-- University Section -->
+                <section class="section__stories blog_slider margin-b-12 margin-t-12">
+                    <div class="container">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-5">
+                                <div class="title_sections margin-b-5">
+                                    <h2>All Universities & Programs</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <?php
+                            //List All Universities
+                            if($_GET)
+                                echo $getAllUniversityDetails = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id` WHERE wul.`we_univeristy_country_id` = $university_country OR wud.`we_university_data_university_type` = '$university_type' OR wud.`we_university_data_program_type` = '$university_program' OR wud.`we_university_data_course_offered` = '$university_course'";
+                            else
+                                $getAllUniversityDetails = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id`";
+                            
+                            $fetchAllUniversityDetails = $db_conn->query($getAllUniversityDetails);
+                            while ($listAllUniversityDetails = $fetchAllUniversityDetails->fetch_assoc()) {
+                            ?>
+                                <div class="col-lg-6">
+                                    <div class="grid_blog_avatar list_style">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="cover_blog">
+                                                    <a href="<?= $router->generate('university-details') . $listAllUniversityDetails['we_univeristy_alias']; ?>">
+                                                        <img src="app/assets/img/universities/<?= (($listAllUniversityDetails['we_university_cover_image'] === '') ? 'university-default.jpeg' : '' . $listAllUniversityDetails["we_university_cover_image"]) . ''; ?>" alt="<?= $listAllUniversityDetails['we_univeristy_name']; ?>" height="auto" width="auto" />
+                                                    </a>
 
-        <!-- Include Footer -->
-        <?php
-        //Calling Footer Template
-        include_once 'app/assets/templates/template-footer.php';
-        ?>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 my-auto">
+                                                <div class="body_blog">
+                                                    <a href="<?= $listAllUniversityDetails['we_university_website_url']; ?>" target="_blank">
+                                                        <div class="person media">
+                                                            <img src="app/assets/img/logos/universities/<?= $listAllUniversityDetails['we_university_logo']; ?>" alt="<?= $listAllUniversityDetails['we_univeristy_name']; ?>" />
+                                                        </div>
+                                                    </a>
+                                                    <a href="<?= $router->generate('university-details') . $listAllUniversityDetails['we_univeristy_alias']; ?>" class="link_blog">
+                                                        <h4 class="sp_ttl_blog">
+                                                            <?= $listAllUniversityDetails['we_univeristy_name']; ?>
+                                                        </h4>
+                                                        <p class="short_desc">
+                                                            <?php
+                                                            $uvshort = str_ireplace('<p>', '', $listAllUniversityDetails['we_university_profile']);
+                                                            $uvshort = str_ireplace('</p>', '', $uvshort);
+                                                            echo $uvshort;
+                                                            ?>
+                                                        </p>
+                                                    </a>
+                                                    <a href="<?= $router->generate('university-details') . $listAllUniversityDetails['we_univeristy_alias']; ?>" class="btn btn_sm_primary bg-red c-white rounded-8"><span>Visit University</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End grid_blog_avatar -->
+                                </div>
+                            <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+        </div>
+        </section>
+        <!-- University Section End -->
+
+        </main>
+    </div>
+    <!-- [id] content -->
+
+    <!-- Include Footer -->
+    <?php
+    //Calling Footer Template
+    include_once 'app/assets/templates/template-footer.php';
+    ?>
 
     </div>
     <!-- End. wrapper -->

@@ -77,10 +77,10 @@ if  (
 {
 
     //Put all values here
-    define('MAIL_PORT', 587);
-    define('MAIL_HOST', 'smtp.wiseeducation.in');
-    define('MAIL_USERNAME', 'enquiry@wiseducation.in');
-    define('MAIL_PASSWORD', '');
+    define('MAIL_PORT', 465);
+    define('MAIL_HOST', 'mail.wiseeducation.in');
+    define('MAIL_USERNAME', 'enquiry@wiseeducation.in');
+    define('MAIL_PASSWORD', 'b#ed5X14');
 
 }
 
