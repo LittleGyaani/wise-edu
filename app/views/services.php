@@ -14,7 +14,7 @@ require_once 'app/config/global.config.php';
     include_once 'app/assets/templates/template-meta.php';
     ?>
 
-    <title> <?= $title_constant; ?> &bull; About Us</title>
+    <title> <?= $title_constant; ?> &bull; Services</title>
 
     <!-- Include Header Section -->
     <?php
@@ -228,8 +228,8 @@ require_once 'app/config/global.config.php';
                 </section>
                 <!-- End. group_logo_list -->
 
-                <!-- Start Core Values -->
-                <section class="service__workspace features__workspace padding-py-12">
+                <!-- Start features__workspace -->
+                <section class="service__workspace features__workspace padding-py-12" id="Services">
                     <div class="container">
 
                         <div class="row">
@@ -337,89 +337,15 @@ require_once 'app/config/global.config.php';
                         </div>
                     </div>
                 </section>
-                <!-- End Core Values -->
+                <!-- End. features__workspace -->
 
-                <!-- History Timeline WISE -->
-                <div class="container">
-                    <h3>
-                        <center>A little history of <b>WISE GROUP</b></center>
-                    </h3>
-                    <div class="row margin-t-4">
-                        <div class="col-md-12">
-                            <div class="main-timeline6">
-                                <div class="timeline">
-                                    <div class="timeline-content">
-                                        <span class="year">2018</span>
-                                        <div class="content-inner">
-                                            <span class="icon"><i class="fa fa-building"></i></span>
-                                            <h3 class="title">New Office</h3>
-                                            <p class="description">
-                                                Building up on our success in the starting years, Wise Education Group inaugurated its new office in 4 more states. We hope to serve the students for years to come and grow together with them.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline">
-                                    <div class="timeline-content">
-                                        <span class="year">2017</span>
-                                        <div class="content-inner">
-                                            <span class="icon"><i class="fa fa-rocket"></i></span>
-                                            <h3 class="title">WISE EDUCATION GROUP</h3>
-                                            <p class="description">
-                                                With the hard work, dedication & the will of helping students, we managed to be noticed by the aspiring students from all over Odisha as well as the neighbouring states.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline">
-                                    <div class="timeline-content">
-                                        <span class="year">2016</span>
-                                        <div class="content-inner">
-                                            <span class="icon"><i class="fa fa-briefcase"></i></span>
-                                            <h3 class="title">Up for the Challenge</h3>
-                                            <p class="description">
-                                                Our company starts the process of sending its first Batch of students abroad. It was a great year as they managed to exceed all expectations and set a new benchmark in quality service.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline">
-                                    <div class="timeline-content">
-                                        <span class="year">2015</span>
-                                        <div class="content-inner">
-                                            <span class="icon"><i class="fa fa-users"></i></span>
-                                            <h3 class="title">Starts the Company</h3>
-                                            <p class="description">
-                                                Our founders started their operations with the head office in Odisha. It has been a story of success till now with the company growing and diversifying every year. They had no idea how far they would go, they weren’t even sure that they would be able to survive for a few years.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="timeline">
-                                    <div class="timeline-content">
-                                        <span class="year">2014</span>
-                                        <div class="content-inner">
-                                            <span class="icon"><i class="fa fa-hands-helping"></i></span>
-                                            <h3 class="title">Start with Assisting</h3>
-                                            <p class="description">
-                                                Our founders began guiding, helping and assisting students by providing them career counselling.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- History Timeline End -->
-
-                <!-- Start Wise TEAM -->
-                <section class="team_overlay_style margin-b-7 margin-t-10">
+                <!-- Start team_overlay_style -->
+                <section class="team_overlay_style margin-b-7">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="title_sections_inner margin-b-5">
-                                    <h2>People who work at <br /> <strong>Wise Group</strong> share the vision of our community.</h2>
+                                    <h2>People who work at <br /> <strong>Wise Education Group</strong> share the vision of our community.</h2>
                                 </div>
                             </div>
                         </div>

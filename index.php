@@ -57,6 +57,9 @@ $router->map('GET', '/search', __DIR__ . '/app/views/search.php', 'search-page')
 //About Us Page Route
 $router->map('GET', '/about', __DIR__ . '/app/views/about.php','about-us');
 
+//Services Page Route
+$router->map('GET', '/services', __DIR__ . '/app/views/services.php', 'our-services');
+
 //Contact Us Page Route
 $router->map( 'GET', '/contact', __DIR__ . '/app/views/contact.php','contact-us');
 

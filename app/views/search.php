@@ -75,9 +75,9 @@ $university_country = filter_var($_GET['university-country'], FILTER_SANITIZE_ST
                             </div>
                         </div>
                         <div class="filter_form" data-aos="fade-up" data-aos-delay="200">
-                            <form method="GET" action="" enctype="application/x-www-form-urlencoded">
-                                <div class="row">
+                            <form method="GET" id="universityFilter" name="university-filter" action="" enctype="application/x-www-form-urlencoded">
 
+                                <div class="row">
                                     <!-- Course Selector -->
                                     <div class="col-md-6 col-lg-3">
                                         <div class="form-group">
@@ -151,7 +151,7 @@ $university_country = filter_var($_GET['university-country'], FILTER_SANITIZE_ST
                                                 <span>Search</span>
                                                 <!-- <i class="tio search mr-1 align-middle font-s-16"></i> -->
                                             </button>
-                                            <button type="reset" onclick="location.href='<?= $router -> generate('search-page'); ?>';" class="btn btn_lg_primary p bg-red c-white rounded-8">
+                                            <button type="reset" onclick="location.href='<?= $router->generate('search-page'); ?>';" class="btn btn_lg_primary p bg-red c-white rounded-8">
                                                 <span>Reset</span>
                                                 <!-- <i class="tio info mr-1 align-middle font-s-16"></i> -->
                                             </button>
@@ -175,15 +175,28 @@ $university_country = filter_var($_GET['university-country'], FILTER_SANITIZE_ST
                             </div>
                         </div>
                         <div class="row justify-content-center">
+                            <!-- <div class="col-md-offset-3">
+                                <div class="loader"></div>
+                            </div> -->
                             <?php
                             //List All Universities
-                            if($_GET)
-                                echo $getAllUniversityDetails = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id` WHERE wul.`we_univeristy_country_id` = $university_country OR wud.`we_university_data_university_type` = '$university_type' OR wud.`we_university_data_program_type` = '$university_program' OR wud.`we_university_data_course_offered` = '$university_course'";
-                            else
-                                $getAllUniversityDetails = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id`";
+                            $getAllUniversityDetails = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id`";
+
+                            if($university_course)
+                                $getAllUniversityDetails .= " AND wud.`we_university_data_course_offered` IN('" . $university_course . "')";
+                            if($university_program)
+                                $getAllUniversityDetails .= " AND wud.`we_university_data_program_type` IN('" . $university_program . "')";
+                            if($university_type)
+                                $getAllUniversityDetails .= " AND wud.`we_university_data_university_type` IN('" . $university_type . "')";
+                            if($university_country)
+                                $getAllUniversityDetails .= " AND wul.`we_univeristy_country_id` IN('" . $university_country . "')";
                             
                             $fetchAllUniversityDetails = $db_conn->query($getAllUniversityDetails);
-                            while ($listAllUniversityDetails = $fetchAllUniversityDetails->fetch_assoc()) {
+                            // echo $fetchAllUniversityDetails->num_rows;
+                            if ($fetchAllUniversityDetails->num_rows > 0)
+                            {
+                                while ($listAllUniversityDetails = $fetchAllUniversityDetails->fetch_assoc()) 
+                                {
                             ?>
                                 <div class="col-lg-6">
                                     <div class="grid_blog_avatar list_style">
@@ -223,6 +236,19 @@ $university_country = filter_var($_GET['university-country'], FILTER_SANITIZE_ST
                                     <!-- End grid_blog_avatar -->
                                 </div>
                             <?php
+                                }
+                            }
+                            else
+                            {
+
+                                echo '<div class="col-12">
+                                    <center>
+                                        <strong>
+                                            <h3 color="red">No University Found with your criteria, please try a different combination.</h3>
+                                        </strong>    
+                                    </center>
+                                </div>';
+
                             }
                             ?>
                         </div>

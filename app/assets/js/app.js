@@ -109,4 +109,20 @@ $(document).ready(function () {
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
     }
 
+    // function filterUniversities(terms) {
+    //     var fTerms = terms;
+    //     console.log(fTerms);
+    // }
+    // $('#universityFilter').submit(function (e) {
+    //     e.preventDefault();
+
+    //     var universityType = $('#universityType :selected').val();
+    //     var universityProgram = $('#universityProgram :selected').val();
+    //     var universityCountry = $('#universityCountry :selected').val();
+    //     var universityCourse = $('#universityCourse :selected').val();
+    //     console.log(universityType + universityProgram + universityCountry + universityCourse);
+    //     // console.log($(this).serialize());
+        
+    // });
+
 });
