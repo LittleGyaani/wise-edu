@@ -63,7 +63,7 @@
                             <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="https://blog.wiseeducation.in/">Blog</a>
                         </li>
                         <li class="dropdown-submenu dropdown-hover">
-                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="javascript:void(0)">FAQs</a>
+                            <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="<?= $router -> generate('faqs-page'); ?>">FAQs</a>
                         </li>
                         <li class="dropdown-submenu dropdown-hover">
                             <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="javascript:void(0)">Testimonials</a>

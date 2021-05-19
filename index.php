@@ -5,12 +5,12 @@ header("Content-Type: text/html");
 
 /**
  * Main Route Controller File 
- * Copyright (C) 2020 Little Gyaani.
- * Company : Fun At City
- * Domain : www.funatcity.com
+ * Copyright (C) 2021 Little Gyaani.
+ * Company : WISE EDUCATION GROUP
+ * Domain : www.wiseeducation.in
  * Package : Main
  * Source : Main
- * DTStamp : 03/09/2020 17:01:47
+ * DTStamp : 03/04/2021 17:01:47
  * **/
 
 //All Necessary Includes
@@ -59,6 +59,10 @@ $router->map('GET', '/about', __DIR__ . '/app/views/about.php','about-us');
 
 //Services Page Route
 $router->map('GET', '/services', __DIR__ . '/app/views/services.php', 'our-services');
+
+//FAQ Page Route
+$router->map('GET', '/faqs', __DIR__ . '/app/views/faqs.php', 'faqs-page');
+
 
 //Contact Us Page Route
 $router->map( 'GET', '/contact', __DIR__ . '/app/views/contact.php','contact-us');

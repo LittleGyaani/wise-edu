@@ -784,7 +784,7 @@ require_once 'app/config/global.config.php';
         <!-- End Testimonials -->
 
         <!-- Start CTA -->
-        <section class="contact__workspace margin-t-12 padding-py-10 margin-b-10">
+        <section class="contact__workspace margin-t-2 padding-py-10 margin-b-10">
           <div class="container">
             <div class="row">
               <div class="col-lg-5">
