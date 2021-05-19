@@ -20,7 +20,7 @@
 <!-- Microtip CSS -->
 <link rel="preload" as="style" onload="this.rel='stylesheet'" href="<?=  $base_URI; ?>/app/assets/css/vendor/microtip.min.css?v=0.2.2" type="text/css" />
 <!-- Custom CSS -->
-<link rel="preload" as="style" onload="this.rel='stylesheet'" href="<?=  $base_URI; ?>/app/assets/css/custom.css?v=1.0.1" type="text/css" />
+<link rel="preload" as="style" onload="this.rel='stylesheet'" href="<?=  $base_URI; ?>/app/assets/css/custom.css?v=1.0.1.<?= date('dmyhis');?>" type="text/css" />
 <!-- Easy Autocomplete Library -->
 <link src="https://raw.githubusercontent.com/pawelczak/EasyAutocomplete/master/dist/easy-autocomplete.min.css" rel="stylesheet" type="text/css" />
 <link src="https://raw.githubusercontent.com/pawelczak/EasyAutocomplete/master/dist/easy-autocomplete.themes.min.css" rel="stylesheet" type="text/css" />

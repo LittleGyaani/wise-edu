@@ -74,6 +74,7 @@ require_once 'app/config/global.config.php';
         </section>
         <!-- End Banner Section -->
 
+        <!-- Start Quick Feature -->
         <section class="abo_company">
           <div class="container">
             <div class="row">
@@ -116,6 +117,7 @@ require_once 'app/config/global.config.php';
             </div>
           </div>
         </section>
+        <!-- End Quick Feature Section -->
 
         <!-- Start Banner Section -->
         <section class="demo_1 demo__charity demo__workspace" id="Discover">
@@ -238,11 +240,10 @@ require_once 'app/config/global.config.php';
               </div>
             </div>
           </div>
-
         </section>
         <!-- End Banner -->
 
-        <!-- Start service__workspace -->
+        <!-- Start Info -->
         <section class="service__workspace padding-py-12" id="Service">
           <div class="container">
             <div class="row justify-content-center text-center">
@@ -307,150 +308,7 @@ require_once 'app/config/global.config.php';
             </div>
           </div>
         </section>
-        <!-- End. service__workspace -->
-
-        <!-- Start Universities -->
-        <section class="product__office padding-t-12" id="Offices">
-          <div class="container">
-            <div class="row justify-content-center text-center">
-              <div class="col-lg-5">
-                <div class="title_sections">
-                  <h2>Explore <b>Universities</b>. All Of Them.</h2>
-                  <p>From ‘Best-To-Go’ universities to exploring the best locations we have everything sorted.</p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <!-- List All Universities -->
-              <?php
-              //University List
-              $listAllUniversities = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id` LIMIT 5";
-              $fetchAllUniversities = $db_conn->query($listAllUniversities);
-              while ($getAllUniversitiesInfo = $fetchAllUniversities->fetch_assoc()) {
-              ?>
-                <div class="col-md-6 col-lg-4 mb-4 mt-4 mb-lg-0">
-                  <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="boo__item" data-aos="fade-up" data-aos-delay="0">
-                    <div class="img__off">
-                      <img src="app/assets/img/universities/<?= ($getAllUniversitiesInfo['we_university_cover_image'] == '' ? 'university-default.jpeg' : '' . $getAllUniversitiesInfo["we_university_cover_image"] . ''); ?>" height="auto" width="auto" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>" />
-                    </div>
-                    <div class="body__txt">
-                      <div class="d-flex justify-content-between">
-                        <div class="title_txt">
-                          <h4><?= $getAllUniversitiesInfo['we_univeristy_name']; ?></h4>
-                          <p><?= $getAllUniversitiesInfo['we_location_name'] . ', ' . $getAllUniversitiesInfo['we_country_name']; ?></p>
-                        </div>
-                        <div class="price"><?= $getAllUniversitiesInfo['we_university_data_course_fee']; ?></div>
-                      </div>
-                      <div class="desc_txt">
-                        <h5 class="font-s-14 c-dark">Program Offered</h5>
-                        <span class="font-12 c-gray mb-0"><?= $getAllUniversitiesInfo['we_university_data_course_offered']; ?></span>
-                      </div>
-                      <div class="desc_txt">
-                        <h5 class="font-s-14 c-dark">Program Duration</h5>
-                        <span class="font-12 c-gray mb-0"><?= $getAllUniversitiesInfo['we_university_data_course_duration']; ?></span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              <?php
-              }
-              ?>
-              <div class="col-md-6 col-lg-3 mx-lg-auto">
-                <div class="other__office" data-aos="fade-up" data-aos-delay="200">
-                  <h3>Looking for all options?</h3>
-                  <p>Go give us a try to find them, all of them.</p>
-                  <a href="<?= $router->generate('search-page'); ?>" class="btn btn_md_primary sweep_top sweep_letter c-white bg-dark opacity-1 rounded-8">
-                    <div class="inside_item">
-                      <span data-hover="Let's go 🏃‍♂️">Search Now</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 text-center margin-t-5">
-              <a href="<?= $router->generate('all-universities'); ?>" class="btn btn_md_primary rounded-8 border-1 c-dark text-center">
-                Explore Universities
-              </a>
-            </div>
-          </div>
-        </section>
-        <!-- End Universities -->
-
-        <!-- Start About_office -->
-        <section class="about__office margin-t-6 padding-t-6">
-          <div class="container">
-            <div class="head__picture">
-              <img src="app/assets/img/backgrounds/banner-home-about.jpg" alt="About Wise Education" />
-            </div>
-          </div>
-          <div class="body__content padding-b-12">
-            <div class="container">
-              <div class="info__company">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <div class="title_sections" data-aos="fade-up" data-aos-delay="0">
-                      <h2 class="c-white">About <strong>Wise Education</strong></h2>
-                      <p class="c-white">We use office search alchemy to take the complexity and guesswork out of
-                        finding your perfect
-                        office space.</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-5 ml-auto mb-4 mb-lg-0">
-                    <div class="description_full" data-aos="fade-up" data-aos-delay="100">
-                      <p>
-                        Wise Education, a premier organization in India was founded in 2014 with a vision to provide quality, economically viable education abroad.
-                      </p>
-                      <a href="<?= $router->generate('about-us'); ?>" class="btn btn_md_primary bg-white c-dark rounded-8 opacity-1">Learn More</a>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="item__counter" data-aos="fade-up" data-aos-delay="0">
-                    <h4>
-                      <span class="counter">60</span>
-                      +
-                    </h4>
-                    <p>University partners</p>
-                  </div>
-                </div>
-                <div class="col-md-3 mx-auto">
-                  <div class="item__counter" data-aos="fade-up" data-aos-delay="100">
-                    <h4>
-                      <span class="counter">3000</span>
-                      +
-                    </h4>
-                    <p>Faculties onboard</p>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="item__counter" data-aos="fade-up" data-aos-delay="200">
-                    <h4>
-                      <span class="counter">1500</span>
-                      +
-                    </h4>
-                    <p>Classrooms available</p>
-                  </div>
-                </div>
-              </div>
-              <!-- <div class="col-md-3">
-                <div class="item__counter" data-aos="fade-up" data-aos-delay="200">
-                  <h4>
-                    <span class="counter">20,000</span>
-                    +
-                  </h4>
-                  <p>Satisfied students</p>
-                </div>
-              </div>
-            </div> -->
-
-            </div>
-          </div>
-        </section>
-        <!-- End. about__office -->
-
+        <!-- End. Info -->
 
         <!-- Start Services -->
         <section class="service__workspace features__workspace padding-py-12" id="Features">
@@ -607,7 +465,150 @@ require_once 'app/config/global.config.php';
         </section>
         <!-- End. Services -->
 
-        <!-- Start test_monials__workspace -->
+        <!-- Start Universities -->
+        <section class="product__office padding-t-12" id="Offices">
+          <div class="container">
+            <div class="row justify-content-center text-center">
+              <div class="col-lg-5">
+                <div class="title_sections">
+                  <h2>Explore <b>Universities</b>. <br /> All Of Them.</h2>
+                  <p>From ‘Best-To-Go’ universities to exploring the best locations we have everything sorted.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- List All Universities -->
+              <?php
+              //University List
+              $listAllUniversities = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wul.`we_univeristy_id` = wud.`we_university_id` JOIN `we_location_list` wll ON wll.`we_location_id` = wul.`we_univeristy_location_id` JOIN `we_country_list` wcl ON wcl.`we_country_id` = wul.`we_univeristy_country_id` LIMIT 5";
+              $fetchAllUniversities = $db_conn->query($listAllUniversities);
+              while ($getAllUniversitiesInfo = $fetchAllUniversities->fetch_assoc()) {
+              ?>
+                <div class="col-md-6 col-lg-4 mb-4 mt-4 mb-lg-0">
+                  <a href="<?= $router->generate('university-details') . $getAllUniversitiesInfo['we_univeristy_alias']; ?>" class="boo__item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="img__off">
+                      <img src="app/assets/img/universities/<?= ($getAllUniversitiesInfo['we_university_cover_image'] == '' ? 'university-default.jpeg' : '' . $getAllUniversitiesInfo["we_university_cover_image"] . ''); ?>" height="auto" width="auto" alt="<?= $getAllUniversitiesInfo['we_univeristy_name']; ?>" />
+                    </div>
+                    <div class="body__txt">
+                      <div class="d-flex justify-content-between">
+                        <div class="title_txt">
+                          <h4><?= $getAllUniversitiesInfo['we_univeristy_name']; ?></h4>
+                          <p><?= $getAllUniversitiesInfo['we_location_name'] . ', ' . $getAllUniversitiesInfo['we_country_name']; ?></p>
+                        </div>
+                        <div class="price"><?= $getAllUniversitiesInfo['we_university_data_course_fee']; ?></div>
+                      </div>
+                      <div class="desc_txt">
+                        <h5 class="font-s-14 c-dark">Program Offered</h5>
+                        <span class="font-12 c-gray mb-0"><?= $getAllUniversitiesInfo['we_university_data_course_offered']; ?></span>
+                      </div>
+                      <div class="desc_txt">
+                        <h5 class="font-s-14 c-dark">Program Duration</h5>
+                        <span class="font-12 c-gray mb-0"><?= $getAllUniversitiesInfo['we_university_data_course_duration']; ?></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              <?php
+              }
+              ?>
+              <div class="col-md-6 col-lg-3 mx-lg-auto">
+                <div class="other__office" data-aos="fade-up" data-aos-delay="200">
+                  <h3>Looking for all options?</h3>
+                  <p>Go give us a try to find them, all of them.</p>
+                  <a href="<?= $router->generate('search-page'); ?>" class="btn btn_md_primary sweep_top sweep_letter c-white bg-dark opacity-1 rounded-8">
+                    <div class="inside_item">
+                      <span data-hover="Let's go 🏃‍♂️">Search Now</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 text-center margin-t-5">
+              <a href="<?= $router->generate('all-universities'); ?>" class="btn btn_md_primary rounded-8 border-1 c-dark text-center">
+                Explore Universities
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- End Universities -->
+
+        <!-- Start About_office -->
+        <section class="about__office margin-t-6 padding-t-6">
+          <div class="container">
+            <div class="head__picture">
+              <!-- <img src="app/assets/img/backgrounds/banner-home-about.jpg" alt="About Wise Education" /> -->
+              <iframe width="1110" height="650" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLvBdY4ulW2Bn6yiigZr2UiG6ha6oCwLcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="body__content padding-b-12">
+            <div class="container">
+              <div class="info__company">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="title_sections" data-aos="fade-up" data-aos-delay="0">
+                      <h2 class="c-white">About <strong>Wise Education</strong></h2>
+                      <p class="c-white">We use office search alchemy to take the complexity and guesswork out of
+                        finding your perfect
+                        office space.</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 ml-auto mb-4 mb-lg-0">
+                    <div class="description_full" data-aos="fade-up" data-aos-delay="100">
+                      <p>
+                        Wise Education, a premier organization in India was founded in 2014 with a vision to provide quality, economically viable education abroad.
+                      </p>
+                      <a href="<?= $router->generate('about-us'); ?>" class="btn btn_md_primary bg-white c-dark rounded-8 opacity-1">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="item__counter" data-aos="fade-up" data-aos-delay="0">
+                    <h4>
+                      <span class="counter">60</span>
+                      +
+                    </h4>
+                    <p>University partners</p>
+                  </div>
+                </div>
+                <div class="col-md-3 mx-auto">
+                  <div class="item__counter" data-aos="fade-up" data-aos-delay="100">
+                    <h4>
+                      <span class="counter">3000</span>
+                      +
+                    </h4>
+                    <p>Faculties onboard</p>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="item__counter" data-aos="fade-up" data-aos-delay="200">
+                    <h4>
+                      <span class="counter">1500</span>
+                      +
+                    </h4>
+                    <p>Classrooms available</p>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-md-3">
+                <div class="item__counter" data-aos="fade-up" data-aos-delay="200">
+                  <h4>
+                    <span class="counter">20,000</span>
+                    +
+                  </h4>
+                  <p>Satisfied students</p>
+                </div>
+              </div>
+            </div> -->
+
+            </div>
+          </div>
+        </section>
+        <!-- End About -->
+
+        <!-- Start Testimonials -->
         <section class="test_monials__workspace margin-t-2 padding-t-10" id="Testimonial">
           <div class="container-fluid">
             <div class="box__others">
@@ -780,10 +781,10 @@ require_once 'app/config/global.config.php';
             </div>
           </div>
         </section>
-        <!-- End. test_monials__workspace -->
+        <!-- End Testimonials -->
 
-        <!-- Start contact__workspace -->
-        <section class="contact__workspace margin-t-12 padding-py-10">
+        <!-- Start CTA -->
+        <section class="contact__workspace margin-t-12 padding-py-10 margin-b-10">
           <div class="container">
             <div class="row">
               <div class="col-lg-5">
@@ -803,10 +804,12 @@ require_once 'app/config/global.config.php';
             </div>
           </div>
         </section>
-        <!-- End.contact__workspace -->
+        <!-- End CTA -->
+
       </main>
+
     </div>
-    <!-- [id] content -->
+    <!-- Content -->
 
     <!-- Include Footer -->
     <?php

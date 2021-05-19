@@ -25,7 +25,7 @@
             <li class="nav-item dropdown dropdown-hover">
                 <a class="nav-link dropdown-toggle dropdown_menu" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Explore
-                    <span class="item_new bg-blue">Start Here</span>
+                    <span class="item_new bg-orange">Start Here</span>
                     <div class="icon_arrow">
                         <i class="tio chevron_right"></i>
                     </div>
@@ -38,9 +38,9 @@
                         <li class="dropdown-submenu dropdown-hover">
                             <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="<?= $router->generate('all-countries'); ?>">Countries</a>
                         </li>
-                        <li class="dropdown-submenu dropdown-hover">
+                        <!-- <li class="dropdown-submenu dropdown-hover">
                             <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="<?= $router->generate('all-locations'); ?>">Locations</a>
-                        </li>
+                        </li> -->
                         <li class="dropdown-submenu dropdown-hover">
                             <a class="dropdown-item dropdown_menu d-flex justify-content-between" href="<?= $router->generate('all-universities'); ?>">Universities</a>
                         </li>

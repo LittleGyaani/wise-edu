@@ -44,391 +44,201 @@ require_once 'app/config/global.config.php';
             <!-- Stat main -->
             <main>
 
-                <!-- Start banner_about -->
+                <!-- Start Service Banner -->
                 <section class="pt_banner_inner banner_px_image" id="Discover">
                     <div class="parallax_cover">
-                        <img class="cover-parallax" src="app/assets/img/backgrounds/banner-about.jpeg" alt="Wise Education About" height="auto" width="auto" />
+                        <img class="cover-parallax" src="app/assets/img/backgrounds/banner-services.jpeg" alt="Wise Education About" height="auto" width="auto" />
                     </div>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-lg-6">
                                 <div class="banner_title_inner">
                                     <h1 data-aos="fade-up" data-aos-delay="0">
-                                        About Us
+                                        Our Services
                                     </h1>
                                     <p data-aos="fade-up" data-aos-delay="100">
-                                        Leave us a little info, and we’ll be in touch.
+                                        We offer a variety of services to choose from, before leaving abroad.
                                     </p>
-                                    <div data-aos="fade-up" data-aos-delay="200">
-                                        <a href="#" class="btn btn_sm_primary bg-orange-red c-white rounded-8">Contact Us</a>
-                                    </div>
-
                                 </div>
                             </div>
 
                         </div>
                     </div>
                 </section>
-                <!-- End banner_about -->
+                <!-- End Service Banner -->
 
-                <!-- Start about_cc_grid -->
-                <section class="about_cc_grid padding-py-12" id="About">
+                <!-- Service Section Starts -->
+                <section class="section__showcase margin-b-6 margin-t-10">
                     <div class="container">
-                        <div class="row">
+                        <div class="row justify-content-center text-center">
                             <div class="col-lg-5">
-                                <div class="title_sections_inner mb-0">
-                                    <div class="before_title">
-                                        <span class="c-orange-red">About <strong>Wise Education</strong></span>
-                                    </div>
-                                    <h2>We are Wise Education, explore more about us.</h2>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 ml-auto">
-                                <div class="title_sections_inner mb-0">
-                                    <p style="text-align: justify;">
-                                        <strong>Wise Education</strong>, a premier organization in India was founded in 2014 with a vision to provide quality, economically viable education abroad. <strong>Wise Education</strong> takes great pride in being the pioneer organization to provide admission to worldwide. We have sent more than 1000 students into various Universities in Europe countries and gulf countries for the various courses, being aware of its commitment to the youth, Hundreds of students are benefited through the wide range of learning opportunities, commitment, service and moral support rendered towards the need of students throughout their period of learning.
-                                        <!-- <br />
-                                        <br />
-                                        <b>Wise Education</b> is more than just a student’s admissions firm. We are a team of doctors, career counselors & management experts with 6 years’ experience. We walked the same road as our students, going abroad to study. We understand the difficulty to decide whether to stay or leave the country but studying overseas is becoming an increasingly attractive option for students looking to obtain a world-class education.
-                                        <br />
-                                        <br />
-                                        Our goal is to help students make informed choices that are right for them, guiding them, as well as their parents and advisers, through the entire higher education process. Each year we send numerous students abroad to pursue their degrees. Our current students frequently recommend our admission service due to our transparent and reliable work. We have a commitment to provide an efficient admissions and application system for higher education abroad. -->
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- End. about_cc_grid -->
-
-                <section class="software_web our_story margin-t-8" id="About">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-5 margin-t-8">
-                                <div class="item__section mb-4 mb-lg-0">
-                                    <div class="media">
-                                        <div class="icon_sec">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="23.589" height="20.716" viewBox="0 0 23.589 20.716">
-                                                <path id="Combined-Shape" d="M25.56,17.147l.029-.012v5.4a1.178,1.178,0,0,1-2.011.833l-2.7-2.7H5.534A3.534,3.534,0,0,1,2,17.136V6.534A3.534,3.534,0,0,1,5.534,3H22.026A3.534,3.534,0,0,1,25.56,6.534v10.6S25.56,17.143,25.56,17.147ZM6.91,11.9c1.778,2.667,4.1,4.058,6.87,4.058s5.092-1.391,6.87-4.058a1.178,1.178,0,1,0-1.96-1.307c-1.363,2.044-2.971,3.009-4.91,3.009s-3.547-.965-4.91-3.009A1.178,1.178,0,1,0,6.91,11.9Z" transform="translate(-2 -3)" fill="#fff" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="title_sections mb-0">
-                                                <div class="before_title">
-                                                    <span class="c-green2">Explore a Bit More</span>
-                                                </div>
-                                                <h2>Our Vision</h2>
-                                                <p>
-                                                    Our vision is to become a peerless Overseas Education consultants who are capable to meet global competencies in Abroad study consulting and thereby set the highest benchmark on the foundation of growing aspiration of our clients.
-                                                </p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-5 mt-4 mt-lg-0 ml-auto">
-                                <div class="image_grid">
-                                    <img class="img-fluid img_one" src="app/assets/img/backgrounds/our-vision.png" alt="Wise Education Vision" height="auto" width="auto" />
-                                </div>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="row">
-                                <div class="col-lg-5 mt-4 mt-lg-0 mr-auto">
-                                    <div class="image_grid">
-                                        <img class="img-fluid img_one" src="app/assets/img/backgrounds/our-pursuit.png" alt="Wise Education Pursuit" height="auto" width="auto" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 margin-t-8">
-                                    <div class="item__section mb-4 mb-lg-0">
-                                        <div class="media">
-                                            <div class="icon_sec">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="23.589" height="20.716" viewBox="0 0 23.589 20.716">
-                                                    <path id="Combined-Shape" d="M25.56,17.147l.029-.012v5.4a1.178,1.178,0,0,1-2.011.833l-2.7-2.7H5.534A3.534,3.534,0,0,1,2,17.136V6.534A3.534,3.534,0,0,1,5.534,3H22.026A3.534,3.534,0,0,1,25.56,6.534v10.6S25.56,17.143,25.56,17.147ZM6.91,11.9c1.778,2.667,4.1,4.058,6.87,4.058s5.092-1.391,6.87-4.058a1.178,1.178,0,1,0-1.96-1.307c-1.363,2.044-2.971,3.009-4.91,3.009s-3.547-.965-4.91-3.009A1.178,1.178,0,1,0,6.91,11.9Z" transform="translate(-2 -3)" fill="#fff" fill-rule="evenodd"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="title_sections mb-0">
-                                                    <div class="before_title">
-                                                        <span class="c-green2">Explore a Bit More</span>
-                                                    </div>
-                                                    <h2>Our Pursuit</h2>
-                                                    <p>
-                                                        Our overseas consultancy service focuses on education especially MBBS, B-TECH, Management ETC degree abroad for aspiring Indian students in top universities or colleges in countries like the USA, UK, Ukraine, New Zealand, Canada, France, Poland, Australia, Singapore, etc.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-100"></div>
-                            <div class="col-lg-5 margin-t-8">
-                                <div class="item__section mb-4 mb-lg-0">
-                                    <div class="media">
-                                        <div class="icon_sec">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="23.589" height="20.716" viewBox="0 0 23.589 20.716">
-                                                <path id="Combined-Shape" d="M25.56,17.147l.029-.012v5.4a1.178,1.178,0,0,1-2.011.833l-2.7-2.7H5.534A3.534,3.534,0,0,1,2,17.136V6.534A3.534,3.534,0,0,1,5.534,3H22.026A3.534,3.534,0,0,1,25.56,6.534v10.6S25.56,17.143,25.56,17.147ZM6.91,11.9c1.778,2.667,4.1,4.058,6.87,4.058s5.092-1.391,6.87-4.058a1.178,1.178,0,1,0-1.96-1.307c-1.363,2.044-2.971,3.009-4.91,3.009s-3.547-.965-4.91-3.009A1.178,1.178,0,1,0,6.91,11.9Z" transform="translate(-2 -3)" fill="#fff" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="title_sections mb-0">
-                                                <div class="before_title">
-                                                    <span class="c-green2">Explore a Bit More</span>
-                                                </div>
-                                                <h2>Our Mission</h2>
-                                                <p>
-                                                    With ethics, honesty, transparency as our core strengths, we deliver our services in the most professional way. We are on the path of excellence by properly guiding our aspiring Indian students to study their dream course at an affordable cost.
-                                                </p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-5 mt-4 mt-lg-0 ml-auto">
-                                <div class="image_grid">
-                                    <img class="img-fluid img_one" src="app/assets/img/backgrounds/our-mission.png" alt="Wise Education Mission" height="auto" width="auto" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Vision, Mission Ends -->
-
-                <!-- Start group_logo_list -->
-                <section class="group_logo_list margin-b-12" data-aos="fade-up" data-aos-delay="0">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3 my-auto">
-                                <div class="title_section mb-0">
-                                    <p><strong>Trust us</strong>, we work with best <b>Universities</b> in the world.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-9 ml-auto my-auto">
-                                <div class="item_tto">
-
-                                    <a href="https://vnmu.edu.ua/en" target="_blank">
-                                        <img src="app/assets/img/logos/universities/vnmu.png" alt="Vinnytsia National Pirogov Medical University" height="auto" width="auto" />
-                                    </a>
-                                    <a href="https://tdmu.edu.ua/en/" target="_blank">
-                                        <img src="app/assets/img/logos/universities/tnmu.png" alt="Ternopil National Medical University" height="auto" width="auto" />
-                                    </a>
-                                    <a href="https://nmuofficial.com/" target="_blank">
-                                        <img src="app/assets/img/logos/universities/bogomolets.png" alt="Natsionalʹnyy Medychnyy Universytet Imeni O.o. Bohomolʹtsya" height="auto" width="auto" />
-                                    </a>
-                                    <a href="https://bsmu.edu.ua/" target="_blank">
-                                        <img src="app/assets/img/logos/universities/bukovinian.png" alt="Bukovinian State Medical University" height="auto" width="auto" />
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- End. group_logo_list -->
-
-                <!-- Start features__workspace -->
-                <section class="service__workspace features__workspace padding-py-12" id="Services">
-                    <div class="container">
-
-                        <div class="row">
-                            <div class="col-md-8 col-lg-4">
-                                <div class="title_sections_inner mb-0">
-                                    <div class="before_title">
-                                        <span class="c-orange-red">Our Values</span>
-                                    </div>
-                                    <h2>Core Values of
-                                        <br />
-                                        Wise Group
+                                <div class="title_sections margin-b-6">
+                                    <h2 class="c-dark">
+                                        SERVICES WE OFFER
                                     </h2>
-                                    <p> We care for our student’s future. We think and act like parents of the student, not as consultants. We share our student’s and their parent’s aspirations, work to understand their reality, and align our incentives with their objectives — so they know we’re in this together.
+                                    <p class="c-gray">
+                                        Explore our set of services provided to make it easy
+                                        for you to get admission to study MBBS, Engineering, Management courses abroad.
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-6 ml-auto mt-4 mt-lg-0">
-                                <div class="row">
-                                    <div class="col-md-6 fa_item">
-                                        <div class="inside__zoop" data-aos="fade-up" data-aos-delay="0">
-                                            <div class="media">
-                                                <div class="ico">
-                                                    <i class="tio dashboard_outlined"></i>
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="t_xt">
-                                                        <h4>Integrity Values</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
+                        </div>
+
+                        <div class="block__tab">
+                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="pills-free-counselling-tab" data-toggle="pill" href="#pills-free-counselling" role="tab" aria-controls="pills-free-counselling" aria-selected="false">
+                                        <div class="icon">
+                                            <img src="app/assets/img/icons/free-counselling.png" height="30" width="30" alt="Free Counselling Wise Education" />
                                         </div>
+                                        <h3>Free Counselling</h3>
+                                        <div class="prog"></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="pills-university-selection-tab" data-toggle="pill" href="#pills-university-selection" role="tab" aria-controls="pills-university-selection" aria-selected="false">
+                                        <div class="icon">
+                                            <img src="app/assets/img/icons/university-selection.png" height="30" width="30" alt="University Selection Wise Education" />
+                                        </div>
+                                        <h3>University Selection</h3>
+                                        <div class="prog"></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="pills-documentation-assistance-tab" data-toggle="pill" href="#pills-documentation-assistance" role="tab" aria-controls="pills-documentation-assistance" aria-selected="false">
+                                        <div class="icon">
+                                            <img src="app/assets/img/icons/document-assistance.png" height="30" width="30" alt="Documentation Assistance Wise Education" />
+                                        </div>
+                                        <h3>Documentation Assistance</h3>
+                                        <div class="prog"></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="pills-forex-assistance-tab" data-toggle="pill" href="#pills-forex-assistance" role="tab" aria-controls="pills-forex-assistance" aria-selected="true">
+                                        <div class="icon">
+                                            <img src="app/assets/img/icons/forex-assistance.png" height="30" width="30" alt="Forex Assistance Wise Education" />
+                                        </div>
+                                        <h3>Forex Assistance</h3>
+                                        <div class="prog"></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="pills-travel-assistance-tab" data-toggle="pill" href="#pills-travel-assistance" role="tab" aria-controls="pills-travel-assistance" aria-selected="true">
+                                        <div class="icon">
+                                            <img src="app/assets/img/icons/travel-assistance.png" height="30" width="30" alt="Forex Assistance Wise Education" />
+                                        </div>
+                                        <h3>Travel Assistance</h3>
+                                        <div class="prog"></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="pills-predeparture-guidance-tab" data-toggle="pill" href="#pills-predeparture-guidance" role="tab" aria-controls="pills-predeparture-guidance" aria-selected="true">
+                                        <div class="icon">
+                                            <img src="app/assets/img/icons/pre-departure-assistance.png" height="30" width="30" alt="Forex Assistance Wise Education" />
+                                        </div>
+                                        <h3>Pre-departure Guidance</h3>
+                                        <div class="prog"></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="pills-postdeparture-guidance-tab" data-toggle="pill" href="#pills-postdeparture-guidance" role="tab" aria-controls="pills-postdeparture-guidance" aria-selected="true">
+                                        <div class="icon">
+                                            <img src="app/assets/img/icons/post-departure-assistance.png" height="30" width="30" alt="Forex Assistance Wise Education" />
+                                        </div>
+                                        <h3>Post-departure Guidance</h3>
+                                        <div class="prog"></div>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade active show" id="pills-free-counselling" role="tabpanel" aria-labelledby="pills-free-counselling-tab">
+                                    <div class="ss_software">
+                                        <!-- <img src="app/assets/img/backgrounds/free-course-banner.png" alt=""  /> -->
                                     </div>
-                                    <div class="col-md-6 fa_item">
-                                        <div class="inside__zoop" data-aos="fade-up" data-aos-delay="100">
-                                            <div class="media">
-                                                <div class="ico">
-                                                    <i class="tio face_id"></i>
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="t_xt">
-                                                        <h4>Long Sightedness</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="about__info">
+                                        <p><strong>WISE EDUCATION</strong> has a team of trained and expert counselors, who provide help to identify the professional goals, enabling the student to take a wiser academic decision. These counselors give Personal Guidance to choose courses that perfectly fits your Career or Personal Goals.</p>
                                     </div>
-                                    <div class="col-md-6 fa_item">
-                                        <div class="inside__zoop" data-aos="fade-up" data-aos-delay="200">
-                                            <div class="media">
-                                                <div class="ico">
-                                                    <i class="tio account_square_outlined"></i>
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="t_xt">
-                                                        <h4>Best Services</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-university-selection" role="tabpanel" aria-labelledby="pills-university-selection-tab">
+                                    <div class="ss_software">
+                                        <!-- <img src="../../assets/img/software/ss2.png" alt=""> -->
                                     </div>
-                                    <div class="col-md-6 fa_item">
-                                        <div class="inside__zoop" data-aos="fade-up" data-aos-delay="300">
-                                            <div class="media">
-                                                <div class="ico">
-                                                    <i class="tio file_text_outlined"></i>
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="t_xt">
-                                                        <h4>Honest & Genuine</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="about__info">
+                                        <p><strong>WISE EDUCATION</strong> counselors help you to select the right University across the world according to the need and requirement of the student. We look at our students’ academic documents to make sure it is as per the norms specified by the University.</p>
                                     </div>
-                                    <div class="col-md-6 fa_item">
-                                        <div class="inside__zoop" data-aos="fade-up" data-aos-delay="400">
-                                            <div class="media">
-                                                <div class="ico">
-                                                    <i class="tio credit_card_outlined"></i>
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="t_xt">
-                                                        <h4>Quality Work</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-documentation-assistance" role="tabpanel" aria-labelledby="pills-documentation-assistance-tab">
+                                    <div class="ss_software">
+                                        <!-- <img src="../../assets/img/software/ss3.png" alt=""> -->
                                     </div>
-                                    <div class="col-md-6 fa_item">
-                                        <div class="inside__zoop" data-aos="fade-up" data-aos-delay="400">
-                                            <div class="media">
-                                                <div class="ico">
-                                                    <i class="tio credit_card_outlined"></i>
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="t_xt">
-                                                        <h4>Industry Expertise</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="about__info">
+                                        <p>
+                                            · Passport Assistance: <strong>WISE EDUCATION</strong> assists you completely while applying for the passport. We provide you with the admission letter that helps in acquiring the passport on Tatkal(immediate) Basis. <br/>
+                                            · Education Loan: <strong>WISE EDUCATION</strong> provides you with all the necessary documentations which provide assistance in getting the educational loans. <br/>
+                                            · Legalization of Documents: At <strong>WISE EDUCATION</strong>, we help you with the attestations, translations, and all the other documentation procedures of the student which are required to complete the admission procedure. <br/>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-forex-assistance" role="tabpanel" aria-labelledby="pills-forex-assistance-tab">
+                                    <div class="ss_software">
+                                        <!-- <img src="../../assets/img/software/ss4.png" alt=""> -->
+                                    </div>
+                                    <div class="about__info">
+                                        <p>We assist our students in getting currency exchange. At <strong>WISE EDUCATION</strong>, we make sure that our students get the best possible exchange rate. We have tie-ups with various International Banks that provide the students with Forex Card and traveler’s cheque at the time of departure.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-travel-assistance" role="tabpanel" aria-labelledby="pills-travel-assistance-tab">
+                                    <div class="ss_software">
+                                        <!-- <img src="../../assets/img/software/ss4.png" alt=""> -->
+                                    </div>
+                                    <div class="about__info">
+                                        <p>At <strong>WISE EDUCATION</strong>, we have a separate department called <strong>FLY WISE</strong> which provides you with the best possible options to travel. We help you identify the right airline for excess baggage schemes. The department helps you in your entire course period in traveling. We also arrange travel for parents and relatives of the student when required.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-predeparture-guidance" role="tabpanel" aria-labelledby="pills-predeparture-guidance-tab">
+                                    <div class="ss_software">
+                                        <!-- <img src="../../assets/img/software/ss4.png" alt=""> -->
+                                    </div>
+                                    <div class="about__info">
+                                        <p>Every year, <strong>WISE EDUCATION</strong> conducts <strong>WISE ANNUAL FEST</strong>, a get together of students and parents before the departure. In this session, they get to know about the ins and outs of the respective country and traveling guidelines. Also, we let you contact the other students who are already studying in the respective countries.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-postdeparture-guidance" role="tabpanel" aria-labelledby="pills-postdeparture-guidance-tab">
+                                    <div class="ss_software">
+                                        <!-- <img src="../../assets/img/software/ss4.png" alt=""> -->
+                                    </div>
+                                    <div class="about__info">
+                                        <p>
+                                            · We accompany our students from the Airport to the University. <br/>
+                                            · We provide the accommodation facilities to our students till they get a hostel room. <br/>
+                                            · We assist you in your hostel registration and allot you the room. <br/>
+                                            · We assist you with the final documentation in the University. <br/>
+                                            · We offer a 5-10 minutes complimentary call to our students from the University to your parents/ relatives. <br/>
+                                            · We provide you with a local SIM Card from the University. <br/>
+                                            · We assist you in getting enrollment in hostel mess. <br/>
+                                            · We facilitate the issuance of your library membership card. <br/>
+                                            · We help you with medical insurance. <br/>
+                                            · We help you for the medical check-up in the University at the time of arrival. <br/>
+                                            · We provide proper assistance in obtaining the Certificate of Equivalence from the Ministry of Education of the Destination Country. <br/>
+                                            · We let you coordinate with University authorities in Monitoring students’ academic progress and behavior. <br/>
+                                            · We provide you with the suitable information and consultation in obtaining a visa for students’ parents to visit their children. <br/>
+                                            &bull; We assist you in visa extension if required. <br/>
+                                            &bull; We take great care of our students during the entire period of study. <br/>
+                                            &bull; We facilitate in providing visas to the parents for a visit (if needed). <br/>
+                                            &bull; We assist parents in their smooth travel arrangements. <br/>
+                                            &bull; We assist you in getting air tickets during the whole period of study. <br/>
+                                            &bull; We assist our students in enrolling for MCI screening test coaching classes in the University. <br/>
+                                            &bull; If a student wishes to change the room in the hostel, assistance is given, provided a genuine reason given by the student. <br/>
+                                            &bull; At the time of emergency, complete assistance is provided. <br/>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- End. features__workspace -->
-
-                <!-- Start team_overlay_style -->
-                <section class="team_overlay_style margin-b-7">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="title_sections_inner margin-b-5">
-                                    <h2>People who work at <br /> <strong>Wise Education Group</strong> share the vision of our community.</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="item_group" data-aos="fade-up" data-aos-delay="0">
-                                    <div class="image_ps">
-                                        <img src="app/assets/img/team/team-default.jpeg" alt="Wise Education Team">
-                                    </div>
-                                    <div class="share_soisal">
-                                        <a href="javascript:void(0);">
-                                            <i class="tio instagram"></i>
-                                        </a>
-                                        <a href="javascript:void(0);">
-                                            <i class="tio twitter"></i>
-                                        </a>
-                                        <a href="javascript:void(0);">
-                                            <i class="tio messenger_outlined"></i>
-                                        </a>
-                                    </div>
-                                    <div class="content_txt">
-                                        <h3><b>Sushil Kumar</b> Das</h3>
-                                        <p><strong>Co-Founder</strong></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="item_group" data-aos="fade-up" data-aos-delay="0">
-                                    <div class="image_ps">
-                                        <img src="app/assets/img/team/team-default.jpeg" alt="Wise Education Team">
-                                    </div>
-                                    <div class="share_soisal">
-                                        <a href="javascript:void(0);">
-                                            <i class="tio instagram"></i>
-                                        </a>
-                                        <a href="javascript:void(0);">
-                                            <i class="tio twitter"></i>
-                                        </a>
-                                        <a href="javascript:void(0);">
-                                            <i class="tio messenger_outlined"></i>
-                                        </a>
-                                    </div>
-                                    <div class="content_txt">
-                                        <h3><b>Sushil Kumar</b> Das</h3>
-                                        <p><strong>Co-Founder</strong></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="item_group" data-aos="fade-up" data-aos-delay="0">
-                                    <div class="image_ps">
-                                        <img src="app/assets/img/team/team-default.jpeg" alt="Wise Education Team">
-                                    </div>
-                                    <div class="share_soisal">
-                                        <a href="javascript:void(0);">
-                                            <i class="tio instagram"></i>
-                                        </a>
-                                        <a href="javascript:void(0);">
-                                            <i class="tio twitter"></i>
-                                        </a>
-                                        <a href="javascript:void(0);">
-                                            <i class="tio messenger_outlined"></i>
-                                        </a>
-                                    </div>
-                                    <div class="content_txt">
-                                        <h3><b>Sushil Kumar</b> Das</h3>
-                                        <p><strong>Co-Founder</strong></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-2 my-auto mx-auto" data-aos="fade-up" data-aos-delay="200">
-                                <p class="font-s-20 c-dark font-w-600">You’ll work with creative people.</p>
-                                <a href="javascript:void(0);" class="btn btn_md_primary sweep_top sweep_letter bg-orange-red c-white rounded-8">
-                                    <div class="inside_item">
-                                        <span data-hover="Welcome!">Join us now</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- End. team_overlay_style -->
+                <!-- Service Section Ends -->
 
             </main>
         </div>

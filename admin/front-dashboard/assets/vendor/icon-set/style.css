@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'The-Icon-of';
-  src:  url('fonts/The-Icon-of.eot?ww946b');
-  src:  url('fonts/The-Icon-of.eot?ww946b#iefix') format('embedded-opentype'),
-    url('fonts/The-Icon-of.ttf?ww946b') format('truetype'),
-    url('fonts/The-Icon-of.woff?ww946b') format('woff'),
-    url('fonts/The-Icon-of.svg?ww946b#The-Icon-of') format('svg');
+  src:  url('fonts/The-Icon-of.eot');
+  src:  url('fonts/The-Icon-of.eot#iefix') format('embedded-opentype'),
+    url('fonts/The-Icon-of.ttf') format('truetype'),
+    url('fonts/The-Icon-of.woff') format('woff'),
+    url('fonts/The-Icon-of.svg#The-Icon-of') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
