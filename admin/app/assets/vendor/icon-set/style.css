@@ -189,7 +189,7 @@
   content: "\e92f";
 }
 .tio-first-page:before {
-  content: "\e930";
+  content: "\e9b2";
 }
 .tio-hashtag:before {
   content: "\e931";
@@ -240,7 +240,7 @@
   content: "\e940";
 }
 .tio-last-page:before {
-  content: "\e941";
+  content: "\e9b3";
 }
 .tio-layout:before {
   content: "\e942";

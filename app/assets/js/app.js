@@ -15,7 +15,7 @@ $(document).ready(function () {
     var apiUri = appUri + '/api/web/v1/';
 
     //Open Toast
-    // launch_toast();
+    //launch_toast();
 
     function searchToggle(obj, evt) {
         var container = $(obj).closest('.search-wrapper');
@@ -68,12 +68,10 @@ $(document).ready(function () {
         if ($('#countryChoice option:selected').val() === "") {
             console.log('Please select Country');
         }
-        else if ($('#courseChoice option:selected').val() === "")
-        {
+        else if ($('#courseChoice option:selected').val() === "") {
             console.log('Please select Course');
         }
-        else
-        {
+        else {
             // console.log('Proceed');
             // console.log($(this).serialize());
             //Send FORM Data
@@ -89,40 +87,52 @@ $(document).ready(function () {
         }
     });
 
-    //Quick Contact Form
+    //Contact Form
     $('#contactForm').submit(function (e) {
+        $(this).attr("disabled", true);
         e.preventDefault();
-            //Send FORM Data
-            $.ajax({
-                'type': 'POST',
-                'url': apiUri + 'process-form?req=ge',
-                data: $(this).serialize(),
-                dataType: 'JSON',
-                success: function (enquiryResponse) {
-                    console.log(enquiryResponse);
+        //Send FORM Data
+        $.ajax({
+            'type': 'POST',
+            'url': apiUri + 'process-form?req=ge',
+            data: $(this).serialize(),
+            dataType: 'JSON',
+            success: function (enquiryResponse) {
+                console.log(enquiryResponse.response);
+                if (enquiryResponse.code === 100) {
+
+                    //Fire SWAL
+                    swal.fire({
+                        title: 'We have received your Enquriy!',
+                        text: enquiryResponse.response,
+                        type: success,
+                        timer: 2000,
+                        showCancelButton: false,
+                        showConfirmButton: false
+                    }).then(
+                        function () {
+                            //Enable the FORM 
+                            $(this).attr("disabled", false);
+                        },
+                    );
+                } else {
+                    //Fire SWAL
+                    swal.fire({
+                        title: 'We are unable to receive your Enquriy!',
+                        text: enquiryResponse.response,
+                        type: error,
+                        timer: 2000,
+                        showCancelButton: false,
+                        showConfirmButton: false
+                    }).then(
+                        function () {
+                            //Enable the FORM 
+                            $(this).attr("disabled", false);
+                        },
+                    );
                 }
-            });
+            }
+        });
+
     });
-    function launch_toast() {
-    var x = document.getElementById("toast")
-    x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
-    }
-
-    // function filterUniversities(terms) {
-    //     var fTerms = terms;
-    //     console.log(fTerms);
-    // }
-    // $('#universityFilter').submit(function (e) {
-    //     e.preventDefault();
-
-    //     var universityType = $('#universityType :selected').val();
-    //     var universityProgram = $('#universityProgram :selected').val();
-    //     var universityCountry = $('#universityCountry :selected').val();
-    //     var universityCourse = $('#universityCourse :selected').val();
-    //     console.log(universityType + universityProgram + universityCountry + universityCourse);
-    //     // console.log($(this).serialize());
-        
-    // });
-
 });

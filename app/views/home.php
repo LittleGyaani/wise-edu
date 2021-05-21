@@ -150,13 +150,13 @@ require_once 'app/config/global.config.php';
                             <input type="text" name="full-name" id="fullName" class="form-control" placeholder="Enter your full name" required />
                           </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
                           <div class="form-group">
                             <label>Email ID <sup class="c-red">*</sup></label>
                             <input type="email" name="email-id" id="emailID" class="form-control" placeholder="Enter your email id" required />
                           </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
                           <div class="form-group">
                             <label>Phone Number <sup class="c-red">*</sup></label>
                             <input type="telephone" name="phone-number" id="phoneNumber" class="form-control" placeholder="Enter your phone number" required />
@@ -168,7 +168,7 @@ require_once 'app/config/global.config.php';
                             <input type="text" name="postal-address" id="postalAddress" class="form-control" placeholder="Enter your full address" required />
                           </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
                           <div class="form-group">
                             <label>Choose Country <sup class="c-red">*</sup></label>
                             <select class="form-control custom-select" name="country-choice" id="countryChoice" required>
@@ -184,7 +184,7 @@ require_once 'app/config/global.config.php';
                             </select>
                           </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
                           <div class="form-group">
                             <label>Choose Course <sup class="c-red">*</sup></label>
                             <select class="form-control custom-select" name="course-choice" id="courseChoice" required>
@@ -311,7 +311,7 @@ require_once 'app/config/global.config.php';
         <!-- End. Info -->
 
         <!-- Start Services -->
-        <section class="service__workspace features__workspace padding-py-12" id="Features">
+        <section class="service__workspace features__workspace padding-py-12">
           <div class="container">
             <div class="row justify-content-center text-center">
               <div class="col-md-8 col-lg-5">

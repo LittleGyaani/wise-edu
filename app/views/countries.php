@@ -255,7 +255,7 @@ require_once 'app/config/global.config.php';
                                                     <!-- End grid_blog_avatar -->
                                                     <br />
                                                     <center>
-                                                        <a type="button" href="<?= $router->generate('location-details') . $getAllLocationsInfo['we_location_alias']; ?>" class="btn btn_lg_primary scale border-0 sweep_letter sweep_top bg-orange-red c-white rounded-pill">
+                                                        <a href="<?= $router->generate('location-details') . $getAllLocationsInfo['we_location_alias']; ?>" class="btn btn_lg_primary scale border-0 sweep_letter sweep_top bg-orange-red c-white rounded-pill">
                                                             <div class="inside_item">
                                                                 <span data-hover="Let's Explore →">Explore Location</span>
                                                             </div>
@@ -341,7 +341,7 @@ require_once 'app/config/global.config.php';
                                                                     </div>
                                                                 </a>
 
-                                                                <a type="button" href="javascript:void(0);" class="btn btn_lg_primary scale border-0 sweep_letter sweep_top bg-red c-white rounded-pill ml-1">
+                                                                <a href="javascript:void(0);" class="btn btn_lg_primary scale border-0 sweep_letter sweep_top bg-red c-white rounded-pill ml-1">
                                                                     <div class="inside_item">
                                                                         <span data-hover="Let's Apply">Apply Now</span>
                                                                     </div>
