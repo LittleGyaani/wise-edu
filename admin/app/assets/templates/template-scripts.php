@@ -9,6 +9,9 @@
 <!-- Main JS -->
 <script src="<?= $base_URI; ?>/app/assets/js/theme.min.js"></script>
 
+<!-- APP JS -->
+<script src="<?= $base_URI; ?>/app/assets/js/app.js"></script>
+
 <!-- JS Plugins Init. -->
 <script>
     $(document).on('ready', function() {

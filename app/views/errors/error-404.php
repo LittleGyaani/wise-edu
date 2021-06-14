@@ -44,22 +44,27 @@ require_once 'app/config/global.config.php';
 
       <!-- Stat main -->
       <main>
-        <div class="row margin-t-12 margin-b-12 justify-item-center">
-          <div class="col-12">
-            <center>
-              <h2>Sorry this destination does not exists.</h2>
-              <br />
-              <a href="<?= $base_URI; ?>">
-                <img src="https://www.pristinit.com/assets/images/not-found.gif" alt="404 Not Found - WISE EDUCATION" height="auto" width="auto" />
-              </a>
-              <h1>404 Error occured. Please go back.</h1>
-              <br />
-              <a href="<?= $base_URI; ?>" class="btn btn_md_primary sweep_top sweep_letter c-white bg-dark opacity-1 rounded-8" onclick="window.history.go(-1); return false;">
-                <div class="inside_item">Go Back</div>
-              </a>
-            </center>
+        <section class="pt_404_banner_inner">
+          <div class="container">
+            <div class="row margin-t-12 margin-b-12 justify-item-center">
+              <div class="col-12">
+                <center>
+                  <h2>Sorry this destination does not exists.</h2>
+                  <br />
+                  <a href="<?= $base_URI; ?>">
+                    <img class="img-fluid rounded mx-auto d-block" src="app/assets/img/gif/error-404.gif" alt="404 Not Found - WISE EDUCATION" height="auto" width="auto" />
+                  </a>
+                  <h3><strong>404 Error occured. Please go back.</strong></h3>
+                  <br />
+                  <a href="<?= $base_URI; ?>" class="btn btn_md_primary sweep_top sweep_letter c-white bg-dark opacity-1 rounded-8" onclick="window.history.go(-1); return false;">
+                    <div class="inside_item">Go Back</div>
+                  </a>
+                </center>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
       </main>
     </div>
   </div>

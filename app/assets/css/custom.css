@@ -601,3 +601,6 @@ img {border : 0;}
     width: 500px !important;
     margin-left: 50%;
 }
+.pt_404_banner_inner {
+    padding-top: 5rem;
+}

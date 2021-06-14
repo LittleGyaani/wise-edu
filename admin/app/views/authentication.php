@@ -88,7 +88,7 @@ require_once 'app/config/global.config.php';
                 <div class="col-lg-6 d-flex justify-content-center align-items-center min-vh-lg-100">
                     <div class="w-100 pt-10 pt-lg-7 pb-7" style="max-width: 25rem;">
                         <!-- Form -->
-                        <form class="js-validate">
+                        <form class="js-validate" id="adminLogin" name="admin-login" method="" action="" enctype="multipart/form-data" autocomplete="off">
                             <div class="text-center mb-5">
                                 <h1 class="display-4"><strong>Sign In</strong></h1>
                                 <p>to access the Dashboard.</p>
