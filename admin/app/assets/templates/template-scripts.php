@@ -5,6 +5,7 @@
 <script src="<?= $base_URI; ?>/app/assets/vendor/chart.js/dist/Chart.min.js"></script>
 <script src="<?= $base_URI; ?>/app/assets/vendor/chart.js.extensions/chartjs-extensions.js"></script>
 <script src="<?= $base_URI; ?>/app/assets/vendor/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
+<script src="<?= $base_URI; ?>/app/assets/vendor/hs-step-form/hs-step-form.js"></script>
 
 <!-- Main JS -->
 <script src="<?= $base_URI; ?>/app/assets/js/theme.min.js"></script>

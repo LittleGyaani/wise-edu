@@ -1,10 +1,9 @@
-
 <!-- Start Footer -->
 
 <div class="footer">
     <div class="row justify-content-between align-items-center">
         <div class="col">
-            <p class="font-size-sm mb-0">© <?= date('Y'); ?><strong>WISE EDUCATION GROUP</strong>. <span class="d-none d-sm-inline-block">All rights reserved.</span></p>
+            <p class="font-size-sm mb-0">© <?= date('Y'); ?><strong> <a href="https://wiseeducation.in" target="_blank">WISE EDUCATION GROUP</a></strong>. <span class="d-none d-sm-inline-block">All rights reserved.</span></p>
         </div>
         <div class="col-auto">
             <div class="d-flex justify-content-end">

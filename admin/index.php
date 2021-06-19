@@ -30,6 +30,20 @@ $router->map('GET', '/', __DIR__ . '/app/views/dashboard.php', 'dashboard-page')
 //Login Page Route
 $router->map('GET', '/login', __DIR__ . '/app/views/authentication.php', 'authentication-page');
 
+/*Country Page Routes*/
+
+//Country Lists Route
+$router->map('GET', '/countries', __DIR__ . '/app/views/countries.php', 'countries-list');
+
+//Country Add Route
+$router->map('GET', '/country/add', __DIR__ . '/app/views/authentication.php', 'country-add');
+
+//Country View Route
+$router->map('GET', '/country/view', __DIR__ . '/app/views/country-view.php', 'country-view');
+
+//Country Edit Route
+$router->map('GET', '/country/edit/[i:cid]', __DIR__ . '/app/views/country-edit.php', 'country-edit');
+
 //Match Routes
 $match = $router->match();
 

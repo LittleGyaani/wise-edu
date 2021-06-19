@@ -1,4 +1,3 @@
-
 <!-- Header Section Starts -->
 
 <!-- Favicon -->
@@ -13,5 +12,8 @@
 
 <!-- CSS Front Template -->
 <link rel="stylesheet" href="<?= $base_URI; ?>/app/assets/css/theme.min.css?v=1.0">
+
+<!-- Custom CSS Template -->
+<link rel="stylesheet" href="<?= $base_URI; ?>/app/assets/css/custom.css?v=1.0">
 
 <!-- End Header Section -->
