@@ -1,13 +1,14 @@
 <?php
 
 /* Global Configuration */
-include BASE_PATH . '/app/config/global.config.php';
+require BASE_PATH . '/app/config/global.config.php';
 
 header('content-type: application/json');
 
 // echo '<pre>';
 // print_r($_POST);
 // print_R($_GET);
+// exit;
 
 /* GLOBAL DECLARATIONS */
 
@@ -38,6 +39,9 @@ $university_course_duration = '';
 $university_course_fee = '';
 $university_degree_duration = '';
 
+$admin_email = '';
+$admin_password = '';
+
 //Receive Values
 $action = $_GET['action'];
 $context = $_GET['context'];
@@ -62,6 +66,9 @@ $university_course_language = $_POST['university_course_language'];
 $university_course_duration = $_POST['university_course_duration'];
 $university_course_fee = $_POST['university_course_fee'];
 $university_degree_duration = $_POST['university_degree_duration'];
+
+$admin_email = $db_conn -> real_escape_string($_POST['email']);
+$admin_password = $db_conn -> real_escape_string($_POST['password']);
 
 if(($action === 'edit') && ($context === 'university'))
 {
@@ -99,6 +106,29 @@ if(($action === 'edit') && ($context === 'university'))
         $resp = 'error';
         $msg = 'University data not updated.';
     }
+
+} else if (($action === 'login') && ($context === 'admin'))
+{
+
+    $validateAdmin = 'SELECT * FROM `we_admin_login` WHERE `we_admin_email` = "'.$admin_email.'" AND `we_admin_password` =  "'.$admin_password.'"';
+    $checkValidateAdmin = $db_conn -> query($validateAdmin);
+    $getValidatedAdmin = $checkValidateAdmin -> fetch_assoc();
+    if($checkValidateAdmin -> num_rows > 0)
+    {
+        $status = 401;
+        $resp = 'authorized';
+        $msg = 'Admin login verified.';
+
+        //Set and Start SESSION(s) Globally
+        $_SESSION['admin_id'] = $getValidatedAdmin['we_admin_id'];
+    }
+    else
+    {
+        $status = 400;
+        $resp = 'unauthorized';
+        $msg = 'Admin login invalid.';
+    }
+
 
 }
 // echo $university_update_query;

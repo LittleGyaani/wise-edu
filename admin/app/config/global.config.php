@@ -5,10 +5,10 @@
 //** to be used in different files and will be called back in header file.**//
 
 //Errors and notices
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);//E_ALL
-//error_reporting(0);//Hide All errors
+// ini_set('display_errors', '1');
+// ini_set('display_startup_errors', '1');
+// error_reporting(E_ALL);//E_ALL
+error_reporting(0);//Hide All errors
 
 //Enable gzip Compression
 if (!in_array('ob_gzhandler', ob_list_handlers()))
@@ -244,13 +244,13 @@ if ($site_status === 'DEVELOPMENT') //If Site is still under development
     }
     else
     {
-        $base_URI = $server_protocol . 'dev.wiseeducation.in'; //Our Demo Website or Preproduction URL
-        $router->setBasePath(''); //Our Demo Website or Preproduction URL
+        $base_URI = $server_protocol . 'dev.wiseeducation.in/admin'; //Our Demo Website or Preproduction URL
+        $router->setBasePath('/admin'); //Our Demo Website or Preproduction URL
     }
 }
 else
 {
-    $base_URI = $server_protocol . 'admin.wiseeducation.in'; //Live Production Website
+    $base_URI = $server_protocol . 'manage.wiseeducation.in'; //Live Production Website
     $router->setBasePath(''); //Live Production Website
 }
 
@@ -282,8 +282,20 @@ $current_URI = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https"
 $urlArray = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $segments = explode('/', $urlArray);
 $numSegments = count($segments);
-$currentSegment = $segments[$numSegments - 2];
-
+$currentSegment = $segments[$numSegments - 1];
+$currentSegmentAPI = $segments[$numSegments - 3];
 //print_r($segments);
 
 // ob_start('compress');
+
+// echo $page_id;
+
+//Handle Sessions
+if((empty($_SESSION['admin_id'])) && ($currentSegment != 'login') && ($currentSegmentAPI != 'api'))
+    header('Location:' . $base_URI . '/login');
+// echo 'hi';
+
+if ((!empty($_SESSION['admin_id'])) && ($currentSegment === 'login') && ($currentSegmentAPI != 'api'))
+header('Location:' . $base_URI . '/');
+
+    // echo $_SESSION['admin_id'];

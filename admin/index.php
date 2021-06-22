@@ -30,21 +30,23 @@ $router->map('GET', '/', __DIR__ . '/app/views/dashboard.php', 'dashboard-page')
 //Login Page Route
 $router->map('GET', '/login', __DIR__ . '/app/views/authentication.php', 'authentication-page');
 
+//Logout Page Route
+$router->map('GET', '/logout', __DIR__ . '/app/views/logout.php', 'logout-page');
+
 /*Country Page Routes*/
 
 //Country Lists Route
 $router->map('GET', '/countries', __DIR__ . '/app/views/countries.php', 'countries-list');
 
 //Country Add Route
-$router->map('GET', '/country/add', __DIR__ . '/app/views/authentication.php', 'country-add');
-
-//Country View Route
-$router->map('GET', '/country/view', __DIR__ . '/app/views/country-view.php', 'country-view');
+$router->map('GET', '/country/add', __DIR__ . '/app/views/country-add.php', 'country-add');
 
 //Country Edit Route
 $router->map('GET', '/country/edit/[i:cid]', __DIR__ . '/app/views/country-edit.php', 'country-edit');
 
 /*Univesity Page Routes*/
+
+
 
 //Universities List Route
 $router->map('GET', '/universities', __DIR__ . '/app/views/universities.php', 'universities-list');

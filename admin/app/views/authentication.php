@@ -37,7 +37,7 @@ require_once 'app/config/global.config.php';
                     <div class="position-absolute top-0 left-0 right-0 mt-3 mx-3">
                         <div class="d-none d-lg-flex justify-content-between">
                             <a href="index.html">
-                                <img class="w-100" src="<?= $base_URI; ?>/app/assets/svg/logos/logo.svg" alt="Image Description" style="min-width: 7rem; max-width: 7rem;">
+                                <img class="w-100" src="<?= $base_URI; ?>/app/assets/img/logos/wise-education.png" alt="Image Description" style="min-width: 7rem; max-width: 7rem;">
                             </a>
                         </div>
                     </div>
@@ -49,11 +49,11 @@ require_once 'app/config/global.config.php';
                         </div>
 
                         <div class="mb-5">
-                            <h2 class="display-4">Build digital products with:</h2>
+                            <h2 class="display-4">Access the Dashboard : <strong>WISE GROUP</strong></h2>
                         </div>
 
                         <!-- List Checked -->
-                        <ul class="list-checked list-checked-lg list-checked-primary list-unstyled-py-4">
+                        <!-- <ul class="list-checked list-checked-lg list-checked-primary list-unstyled-py-4">
                             <li class="list-checked-item">
                                 <span class="d-block font-weight-bold mb-1">All-in-one tool</span>
                                 Build, run, and scale your apps - end to end
@@ -63,10 +63,10 @@ require_once 'app/config/global.config.php';
                                 <span class="d-block font-weight-bold mb-1">Easily add &amp; manage your services</span>
                                 It brings together your tasks, projects, timelines, files and more
                             </li>
-                        </ul>
+                        </ul> -->
                         <!-- End List Checked -->
 
-                        <div class="row justify-content-between mt-5 gx-2">
+                        <!-- <div class="row justify-content-between mt-5 gx-2">
                             <div class="col">
                                 <img class="img-fluid" src="<?= $base_URI; ?>/app/assets/svg/brands/gitlab-gray.svg" alt="Image Description">
                             </div>
@@ -79,7 +79,7 @@ require_once 'app/config/global.config.php';
                             <div class="col">
                                 <img class="img-fluid" src="<?= $base_URI; ?>/app/assets/svg/brands/layar-gray.svg" alt="Image Description">
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Row -->
                     </div>
                 </div>
@@ -88,7 +88,7 @@ require_once 'app/config/global.config.php';
                 <div class="col-lg-6 d-flex justify-content-center align-items-center min-vh-lg-100">
                     <div class="w-100 pt-10 pt-lg-7 pb-7" style="max-width: 25rem;">
                         <!-- Form -->
-                        <form class="js-validate" id="adminLogin" name="admin-login" method="" action="" enctype="multipart/form-data" autocomplete="off">
+                        <form class="js-validate" id="adminLogin" name="admin-login" method="POST" action="javascript:void(0);" enctype="multipart/form-data" autocomplete="off">
                             <div class="text-center mb-5">
                                 <h1 class="display-4"><strong>Sign In</strong></h1>
                                 <p>to access the Dashboard.</p>

@@ -20,6 +20,24 @@ $(document).ready(function () {
         ],
     });
 
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": true,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+
     //Initialize Select2
     $('.select2').select2();
 
@@ -53,10 +71,34 @@ $(document).ready(function () {
     /* Admin Login */
     $('#adminLogin').submit(function (e) {
         e.preventDefault();
-        if ($('#adminLogin :input').val != '')
-            console.log('yes');
+        if ($('#adminLogin :input').val() != '') {
+            $.ajax({
+                type: 'POST',
+                url: apiURI + '?action=login&context=admin',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function (adminLoginResponse) {
+                    // console.log(adminLoginResponse);
+                    if (adminLoginResponse.status === 401)
+                    {
+                        toastr.success(adminLoginResponse.message);
+                        setTimeout(function () {
+                            window.location.reload();
+                        },3000);
+                    }
+                    else
+                    {
+                        toastr.error(adminLoginResponse.message);
+                    }
+                }
+
+            });
+        }
         else
-            console.log('no');
+        {
+            toastr.error('Both fields must be filled');
+        }
+        
     });
 
     /*Country CRUD */
@@ -101,7 +143,7 @@ $(document).ready(function () {
         // console.log(universityUpdateData);
         $.ajax({
             type: 'POST',
-            url: apiURI+'?action=edit&&context=university',
+            url: apiURI+'?action=edit&context=university',
             data: universityBasicData,
             dataType: 'json',
             success: function (universityUpdateResponse) {

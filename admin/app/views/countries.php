@@ -304,7 +304,7 @@ require_once 'app/config/global.config.php';
                         <div class="col-sm-auto">
                             <div class="d-flex justify-content-center justify-content-sm-end">
                                 <!-- Pagination -->
-                                <nav id="datatablePagination" aria-label="Activity pagination" style="">
+                                <nav id="datatablePagination" aria-label="Activity pagination">
                                     <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
                                         <ul id="datatable_pagination" class="pagination datatable-custom-pagination">
                                             <li class="paginate_item page-item disabled"><a class="paginate_button previous page-link" aria-controls="datatable" data-dt-idx="0" tabindex="0" id="datatable_previous"><span aria-hidden="true">Prev</span></a></li>

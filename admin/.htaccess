@@ -12,9 +12,9 @@ SetEnv TZ Asia/Kolkata
     RewriteRule ^/(.*)/$ /$1 [R=301,L]
 
 
-	RewriteCond %{HTTP_HOST} ^www.wiseeducation.in$ [NC] 
+	RewriteCond %{HTTP_HOST} ^manage.wiseeducation.in$ [NC] 
 	RewriteCond %{HTTPS} =on 
-	RewriteRule ^(.*)$ https://wiseeducation.in/$1 [R=301,L]
+	RewriteRule ^(.*)$ https://manage.wiseeducation.in/$1 [R=301,L]
 
 	RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC] 
 	RewriteCond %{HTTPS} =on 
