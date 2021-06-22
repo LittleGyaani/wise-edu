@@ -44,6 +44,23 @@ $router->map('GET', '/country/view', __DIR__ . '/app/views/country-view.php', 'c
 //Country Edit Route
 $router->map('GET', '/country/edit/[i:cid]', __DIR__ . '/app/views/country-edit.php', 'country-edit');
 
+/*Univesity Page Routes*/
+
+//Universities List Route
+$router->map('GET', '/universities', __DIR__ . '/app/views/universities.php', 'universities-list');
+
+//Universities Profile List Route
+$router->map('GET', '/universities/profiles', __DIR__ . '/app/views/universities-profile.php', 'universities-profiles');
+
+//University Edit Route
+$router->map('GET', '/university/edit/[i:uid]', __DIR__ . '/app/views/university-edit.php', 'university-edit');
+
+
+/* API Routes */
+
+//API Route
+$router->map('GET|POST', '/api/web/v1', __DIR__ . '/app/api/index.php', 'web-api-v1');
+
 //Match Routes
 $match = $router->match();
 

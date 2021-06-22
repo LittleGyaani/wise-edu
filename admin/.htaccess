@@ -8,6 +8,10 @@ SetEnv TZ Asia/Kolkata
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteRule . index.php [L]
 
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^/(.*)/$ /$1 [R=301,L]
+
+
 	RewriteCond %{HTTP_HOST} ^www.wiseeducation.in$ [NC] 
 	RewriteCond %{HTTPS} =on 
 	RewriteRule ^(.*)$ https://wiseeducation.in/$1 [R=301,L]

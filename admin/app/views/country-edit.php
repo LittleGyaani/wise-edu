@@ -24,7 +24,7 @@ $country_id = $match["params"]["cid"];
     ?>
 
     <!-- Title -->
-    <title><?= $title_constant; ?> | Dashboard</title>
+    <title><?= $title_constant; ?> | Edit Country </title>
 
     <?php
     //Calling Header Section
@@ -108,15 +108,28 @@ $country_id = $match["params"]["cid"];
                     </ul>
                     <!-- End Nav -->
 
-                    <form>
+                    <form method="POST" action="javscript:void(0);" id="countryEdit" name="country_edit" enctype="multipart/form-data">
                         <!-- Tab Content -->
                         <div class="tab-content mt-8" id="editUserModalTabContent">
                             <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                Tab 1
+                                <div class="form-row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="countryName" class="input-label">Country Name*</label>
+                                            <input type="text" class="form-control" placeholder="Country Name" style="text-transform:uppercase" value="<?= $listCountryData['we_country_name']; ?>" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="form-group">
+                                            <label for="countryDemographics" class="input-label">Country Introduction*</label>
+                                            <textarea class="form-control summer-note" rows="5" cols="5" required> <?= $listCountryData["we_country_demographics"]; ?></textarea>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="tab-pane fade" id="billing-address" role="tabpanel" aria-labelledby="billing-address-tab">
-                                Tab 2
+
                             </div>
 
                             <div class="tab-pane fade" id="change-password" role="tabpanel" aria-labelledby="change-password-tab">
@@ -125,6 +138,14 @@ $country_id = $match["params"]["cid"];
 
                             <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
                                 Tab 4
+                            </div>
+                            <div class="row mt-10">
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-success">
+                                        Save Country Edits
+                                        <i class="tio-shopping-basket ml-1"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <!-- End Tab Content -->

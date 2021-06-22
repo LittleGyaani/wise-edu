@@ -5,13 +5,10 @@
     <div class="navbar-vertical-footer-offset">
       <div class="navbar-brand-wrapper justify-content-between">
         <!-- Logo -->
-
-
-        <a class="navbar-brand" href="<?= $base_URI; ?>" aria-label="Front">
-          <img class="navbar-brand-logo" src="<?= $base_URI; ?>/app/assets/svg/logos/logo.svg" alt="Logo">
-          <img class="navbar-brand-logo-mini" src="<?= $base_URI; ?>/app/assets/svg/logos/logo-short.svg" alt="Logo">
+        <a class="navbar-brand" href="<?= $base_URI; ?>" aria-label="Wise Education">
+          <img class="navbar-brand-logo" src="<?= $base_URI; ?>/app/assets/img/logos/wise-education.png" alt="Wise Education Group" />
+          <img class="navbar-brand-logo-mini" src="<?= $base_URI; ?>/app/assets/img/logos/wise-education.png" alt="Wise Education Group" />
         </a>
-
         <!-- End Logo -->
 
         <!-- Navbar Vertical Toggle -->
@@ -25,12 +22,13 @@
       <div class="navbar-vertical-content">
         <ul class="navbar-nav navbar-nav-lg nav-tabs">
           <!-- Dashboards -->
-          <li class="nav-item active">
-            <a class="js-nav-tooltip-link nav-link" href="javascript:void(0);" title="Dashboards">
+          <!-- <li class="nav-item"> -->
+          <!--active-->
+          <!-- <a class="js-nav-tooltip-link nav-link" href="javascript:void(0);" title="Dashboard">
               <i class="tio-home-vs-1-outlined nav-icon"></i>
-              <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Dashboards</span>
-            </a>
-          </li>
+              <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Dashboard</span>
+            </a> -->
+          <!-- </li> -->
           <!-- End Dashboards -->
 
           <li class="nav-item">
@@ -40,7 +38,7 @@
 
           <!-- Country -->
           <li class="navbar-vertical-aside-has-menu ">
-            <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle " href="javascript:void(0);" title="Pages">
+            <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle " href="javascript:void(0);" title="Country">
               <i class="tio-globe nav-icon"></i>
               <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Country</span>
             </a>
@@ -54,9 +52,9 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link " href="javascript:void(0);" title="Overview">
+                <a class="nav-link " href="<?= $router->generate('countries-list'); ?>" title="Overview">
                   <span class="tio-circle-outlined nav-indicator-icon"></span>
-                  <span class="text-truncate">View Country</span>
+                  <span class="text-truncate">View Countries</span>
                 </a>
               </li>
             </ul>
@@ -114,7 +112,7 @@
           <!-- End Programs -->
 
           <li class="navbar-vertical-aside-has-menu ">
-            <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle " href="javascript:void(0);" title="Authentication">
+            <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle " href="javascript:void(0);" title="Universities">
               <i class="tio-neighborhood nav-icon"></i>
               <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">University</span>
             </a>
@@ -135,9 +133,9 @@
               </li>
 
               <li class="navbar-vertical-aside-has-menu ">
-                <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:void(0);" title="Sign Up">
+                <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:void(0);" title="Universities">
                   <span class="tio-circle nav-indicator-icon"></span>
-                  <span class="text-truncate">University Profile</span>
+                  <span class="text-truncate">University Profiles</span>
                 </a>
 
                 <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
@@ -151,9 +149,9 @@
 
                 <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
                   <li class="nav-item">
-                    <a class="nav-link " href="javascript:void(0);" title="Overview">
+                    <a class="nav-link " href="<?= $router->generate('universities-profiles'); ?>" title="Overview">
                       <span class="tio-circle-outlined nav-indicator-icon"></span>
-                      <span class="text-truncate">View Profile</span>
+                      <span class="text-truncate">View Profiles</span>
                     </a>
                   </li>
                 </ul>

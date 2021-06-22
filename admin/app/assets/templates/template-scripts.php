@@ -1,11 +1,21 @@
 <!-- Start Scripts -->
 
-<!-- JS Implementing Plugins -->
+<!-- JS Plugins -->
 <script src="<?= $base_URI; ?>/app/assets/js/vendor.min.js"></script>
 <script src="<?= $base_URI; ?>/app/assets/vendor/chart.js/dist/Chart.min.js"></script>
 <script src="<?= $base_URI; ?>/app/assets/vendor/chart.js.extensions/chartjs-extensions.js"></script>
 <script src="<?= $base_URI; ?>/app/assets/vendor/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
-<script src="<?= $base_URI; ?>/app/assets/vendor/hs-step-form/hs-step-form.js"></script>
+
+<!-- Summernote CSS/JS -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
+<!-- Select2 CSS/JS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<!-- SWAL2 Library -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- Main JS -->
 <script src="<?= $base_URI; ?>/app/assets/js/theme.min.js"></script>

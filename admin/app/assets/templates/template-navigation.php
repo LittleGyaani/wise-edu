@@ -2,14 +2,15 @@
     <div class="navbar-nav-wrap">
         <div class="navbar-brand-wrapper">
             <!-- Logo -->
-            <a class="navbar-brand" href="<?= $base_URI; ?>" aria-label="Front">
-                <img class="navbar-brand-logo" src="<?= $base_URI ; ?>/app/assets/svg/logos/logo.svg" alt="Logo">
-                <img class="navbar-brand-logo-mini" src="<?= $base_URI ; ?>/app/assets/svg/logos/logo-short.svg" alt="Logo">
+            <a class="navbar-brand" href="<?= $base_URI; ?>" aria-label="Wise Education">
+                <img class="navbar-brand-logo" src="<?= $base_URI; ?>/app/assets/img/logos/wise-education.png" alt="Wise Education Group" />
+                <img class="navbar-brand-logo-mini" src="<?= $base_URI; ?>/app/assets/img/logos/wise-education.png" alt="Wise Education Group" />
             </a>
             <!-- End Logo -->
         </div>
 
         <div class="navbar-nav-wrap-content-left">
+
             <!-- Navbar Vertical Toggle -->
             <button type="button" class="js-navbar-vertical-aside-toggle-invoker close mr-3">
                 <i class="tio-first-page navbar-vertical-aside-toggle-short-align" data-toggle="tooltip" data-placement="right" title="" data-original-title="Collapse"></i>
@@ -27,25 +28,25 @@
                                 <i class="tio-search"></i>
                             </div>
                         </div>
-                        <input type="search" class="js-form-search form-control" placeholder="Search in front" aria-label="Search in front" data-hs-form-search-options="{
+                        <input type="search" class="js-form-search form-control" placeholder="Search in this panel" aria-label="Search in this panel" data-hs-form-search-options="{
                      &quot;clearIcon&quot;: &quot;#clearSearchResultsIcon&quot;,
                      &quot;dropMenuElement&quot;: &quot;#searchDropdownMenu&quot;,
                      &quot;dropMenuOffset&quot;: 20,
                      &quot;toggleIconOnFocus&quot;: true,
                      &quot;activeClass&quot;: &quot;focus&quot;
                    }">
-                        <a class="input-group-append" href="javascript:;">
+                        <!-- <a class="input-group-append" href="javascript:;">
                             <span class="input-group-text">
                                 <i id="clearSearchResultsIcon" class="tio-clear" style="display: none;"></i>
                             </span>
-                        </a>
+                        </a> -->
                     </div>
                     <!-- End Input Group -->
 
                     <!-- Card Search Content -->
-                    <div id="searchDropdownMenu" class="hs-form-search-menu-content card dropdown-menu dropdown-card overflow-hidden animated hs-form-search-menu-hidden hs-form-search-menu-initialized">
-                        <!-- Body -->
-                        <div class="card-body-height py-3">
+                    <!-- <div id="searchDropdownMenu" class="hs-form-search-menu-content card dropdown-menu dropdown-card overflow-hidden animated hs-form-search-menu-hidden hs-form-search-menu-initialized"> -->
+                    <!-- Body -->
+                    <!-- <div class="card-body-height py-3">
                             <small class="dropdown-header mb-n2">Recent searches</small>
 
                             <div class="dropdown-item bg-transparent text-wrap my-2">
@@ -95,7 +96,7 @@
 
                             <a class="dropdown-item my-2" href="./index.html">
                                 <div class="media align-items-center">
-                                    <img class="avatar avatar-xs avatar-circle mr-2" src="<?= $base_URI ; ?>/app/assets/img/160x160/img10.jpg" alt="Image Description">
+                                    <img class="avatar avatar-xs avatar-circle mr-2" src="<?= $base_URI; ?>/app/assets/img/160x160/img10.jpg" alt="Image Description">
                                     <div class="media-body text-truncate">
                                         <span>Amanda Harvey <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Top endorsed"></i></span>
                                     </div>
@@ -104,7 +105,7 @@
 
                             <a class="dropdown-item my-2" href="./index.html">
                                 <div class="media align-items-center">
-                                    <img class="avatar avatar-xs avatar-circle mr-2" src="<?= $base_URI ; ?>/app/assets/img/160x160/img3.jpg" alt="Image Description">
+                                    <img class="avatar avatar-xs avatar-circle mr-2" src="<?= $base_URI; ?>/app/assets/img/160x160/img3.jpg" alt="Image Description">
                                     <div class="media-body text-truncate">
                                         <span>David Harrison</span>
                                     </div>
@@ -121,16 +122,16 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
-                        <!-- End Body -->
+                        </div> -->
+                    <!-- End Body -->
 
-                        <!-- Footer -->
-                        <a class="card-footer text-center" href="./index.html">
+                    <!-- Footer -->
+                    <!-- <a class="card-footer text-center" href="./index.html">
                             See all results
                             <i class="tio-chevron-right"></i>
-                        </a>
-                        <!-- End Footer -->
-                    </div>
+                        </a> -->
+                    <!-- End Footer -->
+                    <!-- </div> -->
                     <!-- End Card Search Content -->
                 </form>
             </div>
@@ -159,7 +160,7 @@
 
                 <li class="nav-item d-none d-sm-inline-block">
                     <!-- Notification -->
-                    <div class="hs-unfold">
+                    <div class="hs-unfold" style="display: none;">
                         <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;" data-hs-unfold-options="{
                  &quot;target&quot;: &quot;#notificationDropdown&quot;,
                  &quot;type&quot;: &quot;css-animation&quot;
@@ -234,7 +235,7 @@
                                                                 <span class="custom-checkbox-list-stretched-bg"></span>
                                                             </div>
                                                             <div class="avatar avatar-sm avatar-circle">
-                                                                <img class="avatar-img" src="<?= $base_URI ; ?>/app/assets/img/160x160/img3.jpg" alt="Image Description">
+                                                                <img class="avatar-img" src="<?= $base_URI; ?>/app/assets/img/160x160/img3.jpg" alt="Image Description">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -287,7 +288,7 @@
                                                                 <span class="custom-checkbox-list-stretched-bg"></span>
                                                             </div>
                                                             <div class="avatar avatar-sm avatar-circle">
-                                                                <img class="avatar-img" src="<?= $base_URI ; ?>/app/assets/img/160x160/img10.jpg" alt="Image Description">
+                                                                <img class="avatar-img" src="<?= $base_URI; ?>/app/assets/img/160x160/img10.jpg" alt="Image Description">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -312,7 +313,7 @@
                                                                 <span class="custom-checkbox-list-stretched-bg"></span>
                                                             </div>
                                                             <div class="avatar avatar-sm avatar-circle">
-                                                                <img class="avatar-img" src="<?= $base_URI ; ?>/app/assets/svg/brands/google.svg" alt="Image Description">
+                                                                <img class="avatar-img" src="<?= $base_URI; ?>/app/assets/svg/brands/google.svg" alt="Image Description">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -337,7 +338,7 @@
                                                                 <span class="custom-checkbox-list-stretched-bg"></span>
                                                             </div>
                                                             <div class="avatar avatar-sm avatar-circle">
-                                                                <img class="avatar-img" src="<?= $base_URI ; ?>/app/assets/img/160x160/img7.jpg" alt="Image Description">
+                                                                <img class="avatar-img" src="<?= $base_URI; ?>/app/assets/img/160x160/img7.jpg" alt="Image Description">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -391,7 +392,7 @@
                                                                 <span class="custom-checkbox-list-stretched-bg"></span>
                                                             </div>
                                                             <div class="avatar avatar-sm avatar-circle">
-                                                                <img class="avatar-img" src="<?= $base_URI ; ?>/app/assets/img/160x160/img5.jpg" alt="Image Description">
+                                                                <img class="avatar-img" src="<?= $base_URI; ?>/app/assets/img/160x160/img5.jpg" alt="Image Description">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -441,7 +442,7 @@
                                                                 <span class="custom-checkbox-list-stretched-bg"></span>
                                                             </div>
                                                             <div class="avatar avatar-sm avatar-circle">
-                                                                <img class="avatar-img" src="<?= $base_URI ; ?>/app/assets/img/160x160/img8.jpg" alt="Image Description">
+                                                                <img class="avatar-img" src="<?= $base_URI; ?>/app/assets/img/160x160/img8.jpg" alt="Image Description">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -499,7 +500,7 @@
 
                 <li class="nav-item d-none d-sm-inline-block">
                     <!-- Apps -->
-                    <div class="hs-unfold">
+                    <div class="hs-unfold" style="display: none;">
                         <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;" data-hs-unfold-options="{
                  &quot;target&quot;: &quot;#appsDropdown&quot;,
                  &quot;type&quot;: &quot;css-animation&quot;
@@ -521,7 +522,7 @@
                                     <a class="nav-link" href="#">
                                         <div class="media align-items-center">
                                             <span class="mr-3">
-                                                <img class="avatar avatar-xs avatar-4by3" src="<?= $base_URI ; ?>/app/assets/svg/brands/atlassian.svg" alt="Image Description">
+                                                <img class="avatar avatar-xs avatar-4by3" src="<?= $base_URI; ?>/app/assets/svg/brands/atlassian.svg" alt="Image Description">
                                             </span>
                                             <div class="media-body text-truncate">
                                                 <span class="h5 mb-0">Atlassian</span>
@@ -533,7 +534,7 @@
                                     <a class="nav-link" href="#">
                                         <div class="media align-items-center">
                                             <span class="mr-3">
-                                                <img class="avatar avatar-xs avatar-4by3" src="<?= $base_URI ; ?>/app/assets/svg/brands/slack.svg" alt="Image Description">
+                                                <img class="avatar avatar-xs avatar-4by3" src="<?= $base_URI; ?>/app/assets/svg/brands/slack.svg" alt="Image Description">
                                             </span>
                                             <div class="media-body text-truncate">
                                                 <span class="h5 mb-0">Slack <span class="badge badge-primary badge-pill text-uppercase ml-1">Try</span></span>
@@ -545,7 +546,7 @@
                                     <a class="nav-link" href="#">
                                         <div class="media align-items-center">
                                             <span class="mr-3">
-                                                <img class="avatar avatar-xs avatar-4by3" src="<?= $base_URI ; ?>/app/assets/svg/brands/google-webdev.svg" alt="Image Description">
+                                                <img class="avatar avatar-xs avatar-4by3" src="<?= $base_URI; ?>/app/assets/svg/brands/google-webdev.svg" alt="Image Description">
                                             </span>
                                             <div class="media-body text-truncate">
                                                 <span class="h5 mb-0">Google webdev</span>
@@ -557,7 +558,7 @@
                                     <a class="nav-link" href="#">
                                         <div class="media align-items-center">
                                             <span class="mr-3">
-                                                <img class="avatar avatar-xs avatar-4by3" src="<?= $base_URI ; ?>/app/assets/svg/brands/frontapp.svg" alt="Image Description">
+                                                <img class="avatar avatar-xs avatar-4by3" src="<?= $base_URI; ?>/app/assets/svg/brands/frontapp.svg" alt="Image Description">
                                             </span>
                                             <div class="media-body text-truncate">
                                                 <span class="h5 mb-0">Frontapp</span>
@@ -569,7 +570,7 @@
                                     <a class="nav-link" href="#">
                                         <div class="media align-items-center">
                                             <span class="mr-3">
-                                                <img class="avatar avatar-xs avatar-4by3" src="<?= $base_URI ; ?>/app/assets/svg/illustrations/review-rating-shield.svg" alt="Image Description">
+                                                <img class="avatar avatar-xs avatar-4by3" src="<?= $base_URI; ?>/app/assets/svg/illustrations/review-rating-shield.svg" alt="Image Description">
                                             </span>
                                             <div class="media-body text-truncate">
                                                 <span class="h5 mb-0">HS Support</span>
@@ -625,12 +626,12 @@
                 <li class="nav-item">
                     <!-- Account -->
                     <div class="hs-unfold">
-                        <a class="js-hs-unfold-invoker navbar-dropdown-account-wrapper" href="javascript:;" data-hs-unfold-options="{
+                        <a class="js-hs-unfold-invoker navbar-dropdown-account-wrapper" href="javascript:void(0);" data-hs-unfold-options="{
                  &quot;target&quot;: &quot;#accountNavbarDropdown&quot;,
                  &quot;type&quot;: &quot;css-animation&quot;
                }" data-hs-unfold-target="#accountNavbarDropdown" data-hs-unfold-invoker="">
                             <div class="avatar avatar-sm avatar-circle">
-                                <img class="avatar-img" src="<?= $base_URI ; ?>/app/assets/img/160x160/img6.jpg" alt="Image Description">
+                                <img class="avatar-img" src="<?= $base_URI; ?>/app/assets/img/160x160/img6.jpg" alt="Image Description">
                                 <span class="avatar-status avatar-sm-status avatar-status-success"></span>
                             </div>
                         </a>
@@ -639,11 +640,11 @@
                             <div class="dropdown-item-text">
                                 <div class="media align-items-center">
                                     <div class="avatar avatar-sm avatar-circle mr-2">
-                                        <img class="avatar-img" src="<?= $base_URI ; ?>/app/assets/img/160x160/img6.jpg" alt="Image Description">
+                                        <img class="avatar-img" src="<?= $base_URI; ?>/app/assets/img/160x160/img6.jpg" alt="Image Description">
                                     </div>
                                     <div class="media-body">
-                                        <span class="card-title h5">Mark Williams</span>
-                                        <span class="card-text">mark@example.com</span>
+                                        <span class="card-title h5">Wise Admin</span>
+                                        <!-- <span class="card-text">mark@example.com</span> -->
                                     </div>
                                 </div>
                             </div>
@@ -651,7 +652,7 @@
                             <div class="dropdown-divider"></div>
 
                             <!-- Unfold -->
-                            <div class="hs-unfold w-100">
+                            <div class="hs-unfold w-100" style="display: none;">
                                 <a class="js-hs-unfold-invoker navbar-dropdown-submenu-item dropdown-item d-flex align-items-center" href="javascript:;" data-hs-unfold-options="{
                      &quot;target&quot;: &quot;#navSubmenuPagesAccountDropdown1&quot;,
                      &quot;event&quot;: &quot;hover&quot;
@@ -687,20 +688,6 @@
 
                             <a class="dropdown-item" href="#">
                                 <span class="text-truncate pr-2" title="Settings">Settings</span>
-                            </a>
-
-                            <div class="dropdown-divider"></div>
-
-                            <a class="dropdown-item" href="#">
-                                <div class="media align-items-center">
-                                    <div class="avatar avatar-sm avatar-dark avatar-circle mr-2">
-                                        <span class="avatar-initials">HS</span>
-                                    </div>
-                                    <div class="media-body">
-                                        <span class="card-title h5">Htmlstream <span class="badge badge-primary badge-pill text-uppercase ml-1">PRO</span></span>
-                                        <span class="card-text">hs.example.com</span>
-                                    </div>
-                                </div>
                             </a>
 
                             <div class="dropdown-divider"></div>
