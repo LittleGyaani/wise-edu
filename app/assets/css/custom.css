@@ -604,3 +604,7 @@ img {border : 0;}
 .pt_404_banner_inner {
     padding-top: 5rem;
 }
+
+.fbox {
+    cursor: pointer;
+}

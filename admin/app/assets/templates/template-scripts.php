@@ -1,6 +1,11 @@
 <!-- Start Scripts -->
 
 <!-- JS Plugins -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.3.1/jQuery.tagify.min.js" integrity="sha512-YGNdO1x6peaA2qNN51qbj6YLikIE1BbUlzkxpYn4+y/iKCF4dQ3FauyWG3Y1amxYEoMx4W3KnSKpwMKk7vt1TQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="<?= $base_URI; ?>/app/assets/js/vendor.min.js"></script>
 <script src="<?= $base_URI; ?>/app/assets/vendor/chart.js/dist/Chart.min.js"></script>
 <script src="<?= $base_URI; ?>/app/assets/vendor/chart.js.extensions/chartjs-extensions.js"></script>
@@ -26,8 +31,12 @@
 <!-- Main JS -->
 <script src="<?= $base_URI; ?>/app/assets/js/theme.min.js"></script>
 
+<!-- Dropzone Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.css" integrity="sha512-jU/7UFiaW5UBGODEopEqnbIAHOI8fO6T99m7Tsmqs2gkdujByJfkCbbfPSN4Wlqlb9TGnsuC0YgUgWkRBK7B9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js" integrity="sha512-VQQXLthlZQO00P+uEu4mJ4G4OAgqTtKG1hri56kQY1DtdLeIqhKUp9W/lllDDu3uN3SnUNawpW7lBda8+dSi7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <!-- APP JS -->
-<script src="<?= $base_URI; ?>/app/assets/js/app.js"></script>
+<script src="<?= $base_URI; ?>/app/assets/js/app.js?v=1.0.1.<?= date('dmyhis'); ?>"></script>
 
 <!-- JS Plugins Init. -->
 <script>

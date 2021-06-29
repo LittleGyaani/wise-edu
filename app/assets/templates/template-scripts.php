@@ -33,16 +33,20 @@
 <script src="<?= $base_URI; ?>/app/assets/js/vendor/aos.js" type="text/javascript"></script>
 <!-- Main JS -->
 <script src="<?= $base_URI; ?>/app/assets/js/main.js" type="text/javascript"></script>
-<!-- Main APP JS -->
-<script src="<?= $base_URI; ?>/app/assets/js/app.js" type="text/javascript"></script>
 <!-- Sweetalert2 JS -->
 <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@10" type="text/javascript"></script>
 <?php if ($currentSegment === 'university')
   echo '<!-- University Page Specific JS -->
-      <script src="'.$base_URI.'/app/assets/js/pages/university-details.js?v=1.0.0" type="text/javascript"></script>';
+      <script src="' . $base_URI . '/app/assets/js/pages/university-details.js?v=1.0.0" type="text/javascript"></script>';
 ?>
 <!-- Easy Autcomplete JS -->
 <script defer href="<?= $base_URI; ?>/app/assets/js/vendor/easy-autocomplete.min.js?v=1.4.0" type="text/javascript"></script>
+<!-- Fancy Box -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.0-alpha.2/dist/fancybox.umd.min.js" type="text/javascript"></script>
+<!-- Filterizr -->
+<script src="<?= $base_URI; ?>/app/assets/js/vendor/jquery.filterizr.min.js" type="text/javascript"></script>
+<!-- Main APP JS -->
+<script src="<?= $base_URI; ?>/app/assets/js/app.js" type="text/javascript"></script>
 
 <!-- Script Section Ends -->
 

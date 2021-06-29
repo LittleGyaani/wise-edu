@@ -2,7 +2,7 @@
 
 <div class="footer">
     <div class="row justify-content-between align-items-center">
-        <div class="col">
+        <div class="col-12">
             <p class="font-size-sm mb-0">© <?= date('Y'); ?><strong> <a href="https://wiseeducation.in" target="_blank">WISE EDUCATION GROUP</a></strong>. <span class="d-none d-sm-inline-block">All rights reserved.</span>
                 Beautifully Crafted with <i class="fa fa-heart heart fa-beat"></i> by <a href="https://linktr.ee/meetbrahma" class="" target="_blank" data-toggle="tooltip" data-placement="top" title="Meet BRAHMA a.k.a Little Gyaani" data-html="true"><strong>Little Gyaani</strong></a>.
             </p>

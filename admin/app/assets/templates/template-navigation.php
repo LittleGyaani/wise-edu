@@ -631,7 +631,7 @@
                  &quot;type&quot;: &quot;css-animation&quot;
                }" data-hs-unfold-target="#accountNavbarDropdown" data-hs-unfold-invoker="">
                             <div class="avatar avatar-sm avatar-circle">
-                                <img class="avatar-img" src="<?= $base_URI; ?>/app/assets/img/160x160/img6.jpg" alt="Image Description">
+                                <img class="avatar-img" src="<?= $base_URI; ?>/app/assets/img/logos/we-icon.png" alt="Wise Admin" />
                                 <span class="avatar-status avatar-sm-status avatar-status-success"></span>
                             </div>
                         </a>
@@ -640,7 +640,7 @@
                             <div class="dropdown-item-text">
                                 <div class="media align-items-center">
                                     <div class="avatar avatar-sm avatar-circle mr-2">
-                                        <img class="avatar-img" src="<?= $base_URI; ?>/app/assets/img/160x160/img6.jpg" alt="Image Description">
+                                        <img class="avatar-img" src="<?= $base_URI; ?>/app/assets/img/logos/we-icon.png" alt="Wise Admin" />
                                     </div>
                                     <div class="media-body">
                                         <span class="card-title h5">Wise Admin</span>
@@ -724,7 +724,7 @@
 
                             <div class="dropdown-divider"></div>
 
-                            <a class="dropdown-item" href="<?= $router -> generate('logout-page'); ?>">
+                            <a class="dropdown-item" href="<?= $router->generate('logout-page'); ?>">
                                 <span class="text-truncate pr-2" title="Sign out">Sign out</span>
                             </a>
                         </div>

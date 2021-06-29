@@ -111,6 +111,7 @@
           </li>
           <!-- End Programs -->
 
+          <!-- Start University -->
           <li class="navbar-vertical-aside-has-menu ">
             <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle " href="javascript:void(0);" title="Universities">
               <i class="tio-neighborhood nav-icon"></i>
@@ -119,47 +120,74 @@
 
             <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
               <li class="nav-item">
-                <a class="nav-link " href="javascript:void(0);" title="Overview">
+                <a class="nav-link " href="<?= $router->generate('university-add'); ?>" title="Overview">
                   <span class="tio-circle-outlined nav-indicator-icon"></span>
                   <span class="text-truncate">Add University</span>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link " href="javascript:void(0);" title="Overview">
+                <a class="nav-link " href="<?= $router->generate('universities-list'); ?>" title="Overview">
                   <span class="tio-circle-outlined nav-indicator-icon"></span>
-                  <span class="text-truncate">View University</span>
+                  <span class="text-truncate">View Universities</span>
                 </a>
-              </li>
-
-              <li class="navbar-vertical-aside-has-menu ">
-                <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:void(0);" title="Universities">
-                  <span class="tio-circle nav-indicator-icon"></span>
-                  <span class="text-truncate">University Profiles</span>
-                </a>
-
-                <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
-                  <li class="nav-item">
-                    <a class="nav-link " href="javascript:void(0);" title="Overview">
-                      <span class="tio-circle-outlined nav-indicator-icon"></span>
-                      <span class="text-truncate">Add Profile</span>
-                    </a>
-                  </li>
-                </ul>
-
-                <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
-                  <li class="nav-item">
-                    <a class="nav-link " href="<?= $router->generate('universities-profiles'); ?>" title="Overview">
-                      <span class="tio-circle-outlined nav-indicator-icon"></span>
-                      <span class="text-truncate">View Profiles</span>
-                    </a>
-                  </li>
-                </ul>
-
               </li>
 
             </ul>
           </li>
+          <!-- Start University -->
+
+          <!-- Start Gallery -->
+          <li class="navbar-vertical-aside-has-menu ">
+            <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle " href="javascript:void(0);" title="Gallery">
+              <i class="tio-photo-gallery nav-icon"></i>
+              <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Gallery</span>
+            </a>
+
+            <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+              <li class="nav-item">
+                <a class="nav-link " href="<?= $router->generate('gallery-add'); ?>" title="Overview">
+                  <span class="tio-circle-outlined nav-indicator-icon"></span>
+                  <span class="text-truncate">Add Gallery</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="<?= $router->generate('universities-list'); ?>" title="Overview">
+                  <span class="tio-circle-outlined nav-indicator-icon"></span>
+                  <span class="text-truncate">View Galleries</span>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+          <!-- End Gallery -->
+
+          <!-- Start FAQ -->
+          <li class="navbar-vertical-aside-has-menu ">
+            <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle " href="javascript:void(0);" title="FAQ">
+              <i class="tio-help nav-icon"></i>
+              <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">FAQ</span>
+            </a>
+
+            <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+              <li class="nav-item">
+                <a class="nav-link " href="<?= $router->generate('faq-add'); ?>" title="Overview">
+                  <span class="tio-circle-outlined nav-indicator-icon"></span>
+                  <span class="text-truncate">Add FAQ</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="<?= $router->generate('universities-list'); ?>" title="Overview">
+                  <span class="tio-circle-outlined nav-indicator-icon"></span>
+                  <span class="text-truncate">View FAQ</span>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+          <!-- End FAQ -->
 
           <!-- Help -->
           <li class="navbar-vertical-aside-has-menu nav-footer-item ">

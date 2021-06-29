@@ -44,19 +44,27 @@ $router->map('GET', '/country/add', __DIR__ . '/app/views/country-add.php', 'cou
 //Country Edit Route
 $router->map('GET', '/country/edit/[i:cid]', __DIR__ . '/app/views/country-edit.php', 'country-edit');
 
-/*Univesity Page Routes*/
+/* Univesity Page Routes */
 
-
+//University Add Route
+$router->map('GET', '/university/add', __DIR__ . '/app/views/university-add.php', 'university-add');
 
 //Universities List Route
 $router->map('GET', '/universities', __DIR__ . '/app/views/universities.php', 'universities-list');
 
-//Universities Profile List Route
-$router->map('GET', '/universities/profiles', __DIR__ . '/app/views/universities-profile.php', 'universities-profiles');
-
 //University Edit Route
 $router->map('GET', '/university/edit/[i:uid]', __DIR__ . '/app/views/university-edit.php', 'university-edit');
 
+/* Gallery Page Routes */
+
+//Add Gallery
+$router->map('GET', '/gallery/add', __DIR__ . '/app/views/gallery-upload.php', 'gallery-add');
+
+
+/* FAQ Page Routes */
+
+//Add FAQ
+$router->map('GET', '/faq/add', __DIR__ . '/app/views/faq-add.php', 'faq-add');
 
 /* API Routes */
 

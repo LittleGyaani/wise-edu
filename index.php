@@ -75,6 +75,8 @@ $router->map('GET', '/apply', __DIR__ . '/app/views/contact-us.php', 'apply-now'
 //Form Process
 $router->map('GET|POST', '/api/web/v1/process-form', __DIR__ . '/app/api/process-requests.php', 'process-form');
 
+$router->map('GET', '/gallery', __DIR__ . '/app/views/gallery.php', 'wise-gallery');
+
 //404 error
 $router->map('GET', '/404', __DIR__ . '/app/views/errors/error-404.php', 'error-404');
 

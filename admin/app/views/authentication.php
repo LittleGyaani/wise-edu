@@ -24,7 +24,7 @@ require_once 'app/config/global.config.php';
 
 </head>
 
-<body class="d-flex align-items-center min-h-100">
+<body class="d-flex align-items-center min-h-100" style="overflow: hidden !important;">
 
     <!-- ========== MAIN CONTENT ========== -->
     <main id="content" role="main" class="main pt-0">
