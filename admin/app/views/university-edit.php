@@ -24,7 +24,7 @@ $university_id = $match["params"]["uid"];
     ?>
 
     <!-- Title -->
-    <title><?= $title_constant; ?> | Edit Country </title>
+    <title><?= $title_constant; ?> | Edit Univeristy </title>
 
     <?php
     //Calling Header Section

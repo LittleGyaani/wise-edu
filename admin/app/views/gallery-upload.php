@@ -100,7 +100,7 @@ require_once 'app/config/global.config.php';
                         <p>*10 tags allowed per gallery</p>
                     </div>
                 </div>
-                <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                <button class="btn btn-primary btn-lg" type="submit">Add Gallery</button>
             </div>
             </form>
         </div>

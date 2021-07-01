@@ -334,6 +334,71 @@ $(document).ready(function () {
         });
     }
 
+    var readURL = function (input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#avatarImg').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $('#avatarUploader').change(function (e) {
+        e.preventDefault();
+        readURL(this);
+    });
+
+    $('#studentTestimonial').summernote({
+        height: 250,
+        // placeholder: 'Testimonial here...',
+        toolbar: [
+            ['style', ['bold', 'italic', 'underline',]],
+        ]
+    });
+
+    $('#studentTestimonialForm').submit(function () {
+        // e.preventDefault();
+        // alert('yes');
+        // console.log($(this).serialize());
+        var stfd = new FormData();
+        var stdImg = $('#avatarUploader')[0].files[0];
+        // console.log(stdImg);
+        var stdName = $('#studentName').val();
+        var stdTestimonial = $('#studentTestimonial').summernote('code').replace(/\s+/g, '');
+        var stdDesignation = $('#studentDesignation').val();
+        // console.log(stdTestimonial);
+        stfd.append('file', stdImg);
+        stfd.append('std_name', stdName);
+        stfd.append('std_testimonial', stdTestimonial);
+        stfd.append('std_designation', stdDesignation);
+        // exit;
+        // console.log($('#studentTestimonial').summernote('isEmpty'));
+        if (stdTestimonial.length <= 0)
+        {
+            $('#studentTestimonial').summernote('focus');
+            toastr.error('Please add content to testimonial.');
+        }
+        else
+        {
+            $.ajax({
+                type: 'POST',
+                url: apiURI + '?action=add&context=testimonial',
+                data: stfd,
+                contentType: false,
+                cache: false,
+                processData: false,
+                dataType: 'json',
+                success: function (testimonailAddResponse) {
+                    // console.log(testimonailAddResponse);
+                    runSwal(testimonailAddResponse.code, testimonailAddResponse.message);
+                }
+            });
+        }
+    });
+
     //Start All Functionalities Here
 
     /* Admin Login */

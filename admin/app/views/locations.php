@@ -15,7 +15,7 @@ require_once 'app/config/global.config.php';
     ?>
 
     <!-- Title -->
-    <title><?= $title_constant; ?> | Universities</title>
+    <title><?= $title_constant; ?> | View Locations</title>
 
     <?php
     //Calling Header Section
@@ -52,31 +52,30 @@ require_once 'app/config/global.config.php';
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col-sm mb-2 mb-sm-0">
-                        <h1 class="page-header-title">University Profiles</h1>
+                        <h1 class="page-header-title">Locations</h1>
                     </div>
 
                     <div class="col-sm-auto">
-                        <a class="btn btn-primary" href="javascript:;" data-toggle="modal" data-target="#inviteUserModal"> <i class="tio-add-circle mr-1"></i> Add University </a>
+                        <a class="btn btn-primary" href="javascript:;" data-toggle="modal" data-target="#inviteUserModal"> <i class="tio-add-circle mr-1"></i> Add Location </a>
                     </div>
                 </div>
             </div>
             <!-- End Page Header -->
 
-            <!-- University List -->
+            <!-- Country List -->
             <div class="card mb-3 mb-lg-5">
                 <!-- Header -->
                 <div class="card-header">
                     <div class="row justify-content-between align-items-center flex-grow-1">
                         <div class="col-12 col-md">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="card-header-title">University Profiles</h5>
+                                <h5 class="card-header-title">Location</h5>
                             </div>
                         </div>
 
                         <div class="col-auto">
                             <!-- Filter -->
                             <div class="row align-items-sm-center">
-
                                 <div class="col-md">
                                     <form action="javascript:void(0);" method="" enctype="multipart/form-data">
                                         <!-- Search -->
@@ -86,7 +85,7 @@ require_once 'app/config/global.config.php';
                                                     <i class="tio-search"></i>
                                                 </div>
                                             </div>
-                                            <input id="universityList" type="search" class="form-control" placeholder="Search University" aria-label="Search Univesity" />
+                                            <input id="locationSearch" type="search" class="form-control" placeholder="Search Location" aria-label="Search Location" />
                                         </div>
                                         <!-- End Search -->
                                     </form>
@@ -101,13 +100,13 @@ require_once 'app/config/global.config.php';
                 <!-- Table -->
                 <div class="table-responsive datatable-custom">
                     <div id="datatable_wrapper" class="dataTables_wrapper no-footer">
-                        <table id="datatable" class="table exportOptionsDatatables universityList table-borderless table-thead-bordered table-nowrap table-align-middle card-table dataTable no-footer" role="grid" aria-describedby="datatable_info" data-hs-datatables-options='{
-                        "search": "#universityList",
+                        <table id="datatable" class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table dataTable no-footer" role="grid" aria-describedby="datatable_info" data-hs-datatables-options='{
+                        "search": "#locationSearch",
                         "isResponsive": true,
                         "isShowPaging": true,
-                        "pagination": "universityListPagination"
-                    }'>
-                            <thead class="thead-light" style="text-align: left; align-items:center;">
+                        "pagination": "locationListPagination"
+                            }'>
+                            <thead class="thead-light" style="text-align: center; align-items:center;">
                                 <tr role="row">
                                     <!-- <th scope="col" class="table-column-pr-0 sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 31.7812px;">
                                         <div class="custom-control custom-checkbox">
@@ -118,25 +117,24 @@ require_once 'app/config/global.config.php';
                                     <th class="sorting_disabled" tabindex="0" aria-label="SL">SL</th>
                                     <th class="sorting" tabindex="0" aria-label="ID">ID</th>
                                     <th class="sorting_disabled" tabindex="0" aria-label="SL">Action</th>
-                                    <th class="sorting" tabindex="0" aria-label="SL">University Name</th>
-                                    <th class="sorting_disabled" tabindex="0" aria-label="ID">University Type</th>
-                                    <th class="sorting_disabled" tabindex="0" aria-label="ID">University Program</th>
-                                    <th class="sorting_disabled" tabindex="0" aria-label="SL">University Course</th>
-                                    <th class="sorting_disabled" tabindex="0" aria-label="ID">University Course Language</th>
-                                    <th class="sorting_disabled" tabindex="0" aria-label="ID">University Course Duration</th>
-                                    <th class="sorting_disabled" tabindex="0" aria-label="ID">University Course Fee</th>
-                                    <th class="sorting_disabled" tabindex="0" aria-label="ID">University Data Added</th>
-                                    <th class="sorting_disabled" tabindex="0" aria-label="ID">University Data Updated</th>
+                                    <th class="sorting" tabindex="0" aria-label="SL">Location Name</th>
+                                    <th class="sorting" tabindex="0" aria-label="SL">Location Demographics</th>
+                                    <th class="sorting" tabindex="0" aria-label="SL">Location Country</th>
+                                    <th class="sorting" tabindex="0" aria-label="SL">Location Added At</th>
+                                    <th class="sorting" tabindex="0" aria-label="SL">Location Updated At</th>
+                                    <th class="sorting" tabindex="0" aria-label="SL">Location Added By</th>
+                                    <th class="sorting" tabindex="0" aria-label="SL">Location Status</th>
                                 </tr>
                             </thead>
 
                             <tbody style="text-align: left; align-items:center;">
                                 <?php
-                                //Fetch University List
-                                $getUniversityList = "SELECT * FROM `we_univeristy_list` wul JOIN `we_university_data` wud ON wud.`we_university_id` = wul.`we_univeristy_id` WHERE wul.`we_univeristy_id` = wud.`we_university_id` AND wul.`we_univeristy_status` = 1";
-                                $fetchUniversityList = $db_conn->query($getUniversityList);
+
+                                //Fetch Locations List
+                                $getLocationList = "SELECT * FROM `we_location_list` wll JOIN `we_country_list` wcl ON wll.`we_location_country_id` = wcl.`we_country_id` WHERE wll.`we_location_status` = 1";
+                                $fetchLocationList = $db_conn->query($getLocationList);
                                 $count = 1;
-                                while ($showUniversityList = $fetchUniversityList->fetch_assoc()) {
+                                while ($showLocationList = $fetchLocationList->fetch_assoc()) {
                                 ?>
                                     <tr role="row" class="even">
                                         <!-- <td class="table-column-pr-0">
@@ -149,48 +147,47 @@ require_once 'app/config/global.config.php';
                                             <?= $count++; ?>
                                         </td>
                                         <td>
-                                            <?= $showUniversityList['we_university_id']; ?>
+                                            <?= $showLocationList['we_location_id']; ?>
                                         </td>
                                         <td>
 
                                             <!-- Start Edit Action -->
-                                            <a class="btn btn-icon btn-soft-primary rounded-circle mr-2" href="<?= $router->generate('university-edit') . $showUniversityList['we_university_data_id']; ?>" data-toggle="tooltip" data-html="true" title="Edit University">
+                                            <a class="btn btn-icon btn-soft-primary rounded-circle mr-2" href="<?= $router->generate('country-edit') . $showLocationList['we_country_id']; ?>" data-toggle="tooltip" data-html="true" title="Edit Location">
                                                 <i class="tio-edit"></i>
                                             </a>
                                             <!-- End Edit Action -->
 
                                             <!-- View Action -->
-                                            <a class="btn btn-icon btn-soft-primary rounded-circle mr-2" href="" data-toggle="tooltip" data-html="true" title="View University">
+                                            <a class="btn btn-icon btn-soft-primary rounded-circle mr-2" href="" data-toggle="tooltip" data-html="true" title="View Location">
                                                 <i class="tio-visible-outlined"></i>
                                             </a>
                                             <!-- End View Action -->
 
                                         </td>
                                         <td>
-                                            <a class="media align-items-center" href="javascript:void(0);">
+                                            <a class="media align-items-left" href="javascript:void(0);">
                                                 <div class="media-body">
-                                                    <span class="h5 text-hover-primary mb-0"><?= $showUniversityList['we_univeristy_name']; ?></span>
+                                                    <span class="h5 text-hover-primary mb-0"><?= $showLocationList['we_location_name']; ?></span>
                                                 </div>
                                             </a>
                                         </td>
                                         <td>
-                                            <?= $showUniversityList['we_university_data_university_type']; ?>
+                                            <span class="new">
+                                                <?= $showLocationList['we_location_description']; ?>
+                                            </span>
                                         </td>
-                                        <td>
-                                            <?= strtoupper(str_replace('-', ' ', $showUniversityList['we_university_data_program_type'])); ?>
-                                        </td>
-                                        <td><b><?= $showUniversityList['we_university_data_course_offered']; ?></b></td>
-                                        <td><?= $showUniversityList['we_university_data_course_language']; ?></td>
-                                        <td><?= $showUniversityList['we_university_data_course_duration']; ?></td>
-                                        <td><?= $showUniversityList['we_university_data_course_fee']; ?></td>
-                                        <td><?= $showUniversityList['we_university_data_added_at']; ?></td>
-                                        <td><?= $showUniversityList['we_university_data_updated_at']; ?></td>
+                                        <td><?= $showLocationList['we_country_name']; ?></td>
+                                        <td><b><?= $showLocationList['we_location_details_added_at']; ?></b></td>
+                                        <td><?= $showLocationList['we_location_details_updated_at']; ?></td>
+                                        <td><?= (($showLocationList['we_location_details_added_by'] == 1) ? 'Admin' : 'None'); ?></td>
+                                        <td><?= (($showLocationList['we_location_status'] != 1) ? 'Inactive' : 'Active'); ?></td>
                                     </tr>
                                 <?php
                                 }
                                 ?>
                             </tbody>
                         </table>
+                        <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 8 of 17 entries</div>
                     </div>
                 </div>
                 <!-- End Table -->
@@ -199,13 +196,13 @@ require_once 'app/config/global.config.php';
                 <div class="card-footer">
                     <!-- Pagination -->
                     <div class="d-flex justify-content-center justify-content-sm-end">
-                        <nav id="universityListPagination" aria-label="Activity pagination"></nav>
+                        <nav id="locationListPagination" aria-label="Activity pagination"></nav>
                     </div>
                     <!-- End Pagination -->
                 </div>
                 <!-- End Footer -->
             </div>
-            <!-- End University List -->
+            <!-- End Country List -->
 
         </div>
         <!-- End Content -->

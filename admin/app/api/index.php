@@ -51,6 +51,11 @@ $university_course_duration = '';
 $university_course_fee = '';
 $university_degree_duration = '';
 
+//Testimonial Data
+$student_name = '';
+$student_designation = '';
+$student_testimonial = '';
+
 //Gallery Upload Declarations
 $gallery_tags = '';
 
@@ -84,6 +89,10 @@ $university_degree_duration = $_POST['university_degree_duration'];
 
 //Additonl DATA for Univeristy Create
 
+//Testimonial Data
+$student_name = $_POST['std_name'];
+$student_testimonial = $_POST['std_testimonial'];
+$student_designation = $_POST['std_designation'];
 
 //Gallery Upload Data
 $gallery_tags = json_decode($_POST['tags'],true)[0];
@@ -457,13 +466,74 @@ else if (($action == 'add') && ($context == 'faq'))
     {
         $status = 200;
         $resp = 'success';
-        $msg = 'FAQs inserted successfully.';
+        $msg = 'FAQ(s) inserted successfully.';
     }
     else
     {
         $status = 400;
         $resp = 'error';
-        $msg = 'FAQs not inserted.';
+        $msg = 'FAQ(s) not saved.';
+    }
+}
+else if (($action == 'add') && ($context == 'testimonial')) 
+{
+    $find_testimonial = "SELECT * FROM `we_testimonial_list` WHERE `we_testimonial_student_name` = '".$student_name."'";
+
+    $run_find_testimonial = $db_conn -> query($find_testimonial);
+
+    if($run_find_testimonial -> num_rows > 0)
+    {
+        $status = 400;
+        $resp = 'error';
+        $msg = 'Testimonial exists with that Student Name.';
+    }
+    else 
+    {
+        $file_name = explode('.', $_FILES["file"]["name"]);
+        $ext = end($file_name);
+        $new_file_name = strtolower(str_replace(' ', '-', $student_name) . '-testimonial' . '.' . $ext);
+        // echo $new_file_name;
+        $uploadFilePath =  $_SERVER['DOCUMENT_ROOT'] . "/wise/app/uploads/testimonials/" . $new_file_name;
+        // $location = $uploadFilePath . ;
+        move_uploaded_file($_FILES["file"]["tmp_name"], $uploadFilePath);
+
+        $save_student_testimonial = '
+        INSERT INTO `we_testimonial_list`
+        (
+            `we_testimonial_student_name`, 
+            `we_testimonial_student_designation`, 
+            `we_testimonial_student_testimonial`, 
+            `we_testimonial_student_photo`,
+            `we_testimonial_student_testimonial_added_at`, 
+            `we_testimonial_student_testimonial_updated_at`, 
+            `we_testimonial_student_testimonial_added_by`, 
+            `we_testimonial_student_testimonial_status`
+            ) 
+        VALUES 
+        (
+            "' . $student_name . '",
+            "' . $student_designation . '",
+            "' . $student_testimonial . '",
+            "' . $new_file_name . '",
+            "' . $now . '",
+            "' . $now . '",
+            1,
+            1
+        )';
+
+        $run_save_student_testimonial = $db_conn->query($save_student_testimonial);
+
+        if ($save_student_testimonial) 
+        {
+            $status = 200;
+            $resp = 'success';
+            $msg = 'Testimonial Saved.';
+        } else
+        {
+            $status = 400;
+            $resp = 'error';
+            $msg = 'Testimonial not Saved.';
+        }
     }
 }
 

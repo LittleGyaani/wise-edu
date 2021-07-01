@@ -27,6 +27,8 @@ include __DIR__ . '/app/config/global.config.php';
 //Index Page Route
 $router->map('GET', '/', __DIR__ . '/app/views/dashboard.php', 'dashboard-page');
 
+/* Auth Routes */
+
 //Login Page Route
 $router->map('GET', '/login', __DIR__ . '/app/views/authentication.php', 'authentication-page');
 
@@ -44,6 +46,25 @@ $router->map('GET', '/country/add', __DIR__ . '/app/views/country-add.php', 'cou
 //Country Edit Route
 $router->map('GET', '/country/edit/[i:cid]', __DIR__ . '/app/views/country-edit.php', 'country-edit');
 
+/* Location Page Routes */
+
+//Location Lists Route
+$router->map('GET', '/locations', __DIR__ . '/app/views/locations.php', 'locations-list');
+
+//Location Add Route
+$router->map('GET', '/location/add', __DIR__ . '/app/views/locations.php', 'location-add');
+
+//Location Edit Route
+$router->map('GET', '/location/edit/[i:lid]', __DIR__ . '/app/views/locations.php', 'locations-edit');
+
+/* Program Page Routes */
+
+//Program Lists Route
+// $router->map('GET', '/locations', __DIR__ . '/app/views/locations.php', 'locations-list');
+
+//Program Add Route
+// $router->map('GET', '/program/add', __DIR__ . '/app/views/program-add.php', 'program-add');
+
 /* Univesity Page Routes */
 
 //University Add Route
@@ -60,11 +81,15 @@ $router->map('GET', '/university/edit/[i:uid]', __DIR__ . '/app/views/university
 //Add Gallery
 $router->map('GET', '/gallery/add', __DIR__ . '/app/views/gallery-upload.php', 'gallery-add');
 
-
 /* FAQ Page Routes */
 
 //Add FAQ
 $router->map('GET', '/faq/add', __DIR__ . '/app/views/faq-add.php', 'faq-add');
+
+/* Testimonial Page Routes */
+
+//Add FAQ
+$router->map('GET', '/testimonial/add', __DIR__ . '/app/views/testimonial-add.php', 'testimonial-add');
 
 /* API Routes */
 

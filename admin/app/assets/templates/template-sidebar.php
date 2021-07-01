@@ -70,14 +70,14 @@
 
             <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
               <li class="nav-item">
-                <a class="nav-link " href="javascript:void(0);" title="Overview">
+                <a class="nav-link " href="<?= $router->generate('location-add'); ?>" title="Overview">
                   <span class="tio-circle-outlined nav-indicator-icon"></span>
                   <span class="text-truncate">Add Location</span>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link " href="javascript:void(0);" title="Overview">
+                <a class="nav-link " href="<?= $router->generate('locations-list'); ?>" title="Overview">
                   <span class="tio-circle-outlined nav-indicator-icon"></span>
                   <span class="text-truncate">View Location</span>
                 </a>
@@ -88,7 +88,7 @@
 
           <!-- Programs -->
           <li class="navbar-vertical-aside-has-menu ">
-            <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle " href="javascript:void(0);" title="Authentication">
+            <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle " href="javascript:void(0);" title="Programs">
               <i class="tio-document-outlined nav-icon"></i>
               <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Programs</span>
             </a>
@@ -188,6 +188,32 @@
             </ul>
           </li>
           <!-- End FAQ -->
+
+          <!-- Start Testimonials -->
+          <li class="navbar-vertical-aside-has-menu ">
+            <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle " href="javascript:void(0);" title="Testimonial">
+              <i class="tio-message nav-icon"></i>
+              <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Testimonial</span>
+            </a>
+
+            <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
+              <li class="nav-item">
+                <a class="nav-link " href="<?= $router->generate('testimonial-add'); ?>" title="Add Testimonial">
+                  <span class="tio-circle-outlined nav-indicator-icon"></span>
+                  <span class="text-truncate">Add Testimonial</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="javascript:void(0);" title="View Testimonials">
+                  <span class="tio-circle-outlined nav-indicator-icon"></span>
+                  <span class="text-truncate">View Testimonials</span>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+          <!-- End Testimonials -->
 
           <!-- Help -->
           <li class="navbar-vertical-aside-has-menu nav-footer-item ">
